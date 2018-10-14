@@ -1,27 +1,39 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title>Jake Swartwout</title>
     <script src="mainPageJavascript.js"></script>
+    <script src="postFunctionality.js"></script>
     <script src="posts.js"></script>
     <link rel="stylesheet" type="text/css" href="mainPageCSS.css" />
 </head>
-<body onload="addPosts(5);">
-    <div class="pageTopper">
-        Jake Swartwout
+
+<body id="entireBody" onload="loadData();" onresize="checkWidth(900)">
+    <div id="pageTopper">
+        <div id="nameTopper">Jake Swartwout</div>
+        <div id="contactInfo">jacob.swartwout@gmail.com - 720-425-3243</div>
     </div>
     <hr />
+    <div id="leftSpacer"></div>
     <div id="mainWrapper" class="wrapper">
-        <div class="content">
+
+        <div id="content">
             <div id="postStream">
-                Posts will display once page is loaded </br>(assuming the javascript is correct)
+                Posts will display once page is loaded <br>(assuming the javascript is correct)
             </div>
         </div>
         <div id="sideBar">
-            This is sample text to display where the sidebar is located
+            <strong>Other Places to Visit</strong>
+            <div id="linksList">
+                <a href="https://jakeshortstories.blogspot.com/" title="jakesshortstories.blogspot.com">My Writing Blog</a>
+                <br /> <a href="http://bugadventures.us/" title="bugadventures.us">The blog for my books</a>
+                <br /> <a href="https://www.linkedin.com/in/jake-swartwout-3a082a172" title="You need an account to view it">My linkedIn Profile</a>
+                <br /> My 'Traditional Style' Resume
+            </div>
         </div>
+
     </div>
 </body>
 </html>
