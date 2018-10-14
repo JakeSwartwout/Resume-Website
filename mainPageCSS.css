@@ -1,21 +1,72 @@
-﻿.pageTopper {
-    font-size: 30px;
+#entireBody {
     font-family: Arial;
+    text-align: left;
+}
+
+#nameTopper {
+    font-size: 33px;
     text-align: center;
 }
 
-#mainWrapper {
-    width: 95%;
-    height: 100px;
-    padding: 5px;
+#contactInfo {
+    font-size: 20px;
+    text-align: center;
 }
 
-.content {
+#leftSpacer {
     float: left;
-    width: 70%;
+    width: 100px;
+}
+
+#mainWrapper {
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    float: left;
+}
+
+#content {
+    float: left;
+    width: 65%;
 }
 
 #sideBar {
     float: right;
-    width: 22%;
+    width: 27%;
+    line-height: 150%;
+}
+
+.postTitle {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 3px;
+}
+
+.postDate {
+    font-style: italic;
+    font-size: 95%;
+    padding-bottom: 3px;
+}
+
+.postContent {
+    line-height: 135%;
+}
+
+.image {
+    width: 75%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    border:dashed;
+    border-width: 1px;
+    border-color: lightgrey;
+}
+
+a {
+    color: cadetblue;
+}
+
+a:hover {
+    color: blue;
 }
