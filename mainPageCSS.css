@@ -1,0 +1,21 @@
+﻿.pageTopper {
+    font-size: 30px;
+    font-family: Arial;
+    text-align: center;
+}
+
+#mainWrapper {
+    width: 95%;
+    height: 100px;
+    padding: 5px;
+}
+
+.content {
+    float: left;
+    width: 70%;
+}
+
+#sideBar {
+    float: right;
+    width: 22%;
+}
