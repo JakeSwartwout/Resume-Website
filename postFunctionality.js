@@ -27,3 +27,10 @@ function imageString(location, description) {
      */
     return string;
 }
+
+function linkString(text, url) {
+    var string = "";
+    string += "<a href=\"" + url + "\">";
+    string += text += "</a>";
+    return string;
+}
