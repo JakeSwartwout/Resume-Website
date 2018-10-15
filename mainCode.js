@@ -1,21 +1,40 @@
 //called from onload, this loads in all the data from other files, formats, and displays it
 function loadData() {
-    checkWidth(900);
     addPosts(5);
+    whenResize();
 }
 
-function checkWidth(maxStretch) {
+function whenResize() {
+    checkWidth(900, 640);
+}
+
+function checkWidth(maxStretch, minSquish) {
     var space = window.innerWidth;
     if (space > maxStretch) {
         var barWidth = (space - maxStretch - 50)/2;
         document.getElementById("leftSpacer").innerHTML = "&nbsp";
         document.getElementById("leftSpacer").style.width = barWidth + "px";
+
         document.getElementById("mainWrapper").style.width = maxStretch + "px";
-    }
-    else {
+
+        document.getElementById("content").style.width = "";
+        document.getElementById("sideBar").style.width = "";
+    } else if (space < minSquish) {
         document.getElementById("leftSpacer").innerHTML = "";
         document.getElementById("leftSpacer").style.width = "0px";
+
         document.getElementById("mainWrapper").style.width = "97%";
+
+        document.getElementById("content").style.width = "97%";
+        document.getElementById("sideBar").style.width = "97%";
+    } else {
+        document.getElementById("leftSpacer").innerHTML = "";
+        document.getElementById("leftSpacer").style.width = "0px";
+
+        document.getElementById("mainWrapper").style.width = "97%";
+
+        document.getElementById("content").style.width = "";
+        document.getElementById("sideBar").style.width = "";
     }
 }
 
@@ -51,3 +70,7 @@ function addPosts(numberToAdd) {
     }
     document.getElementById("postStream").innerHTML = htmlToAdd;
 }
+
+//next, make a new page for my resume and link to it
+//make a tab selector bar across the top
+//have a button to look at older posts

@@ -1,27 +1,54 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title>Jake Swartwout</title>
-    <script src="mainPageJavascript.js"></script>
+    <script src="mainCode.js"></script>
     <script src="postFunctionality.js"></script>
     <script src="posts.js"></script>
-    <link rel="stylesheet" type="text/css" href="mainPageCSS.css" />
+    <link rel="stylesheet" type="text/css" href="mainStyle.css" />
 </head>
 
-<body id="entireBody" onload="loadData();" onresize="checkWidth(900)">
+<body id="entireBody" onresize="whenResize()">
     <div id="pageTopper">
-        <div id="nameTopper">Jake Swartwout</div>
-        <div id="contactInfo">jacob.swartwout@gmail.com - 720-425-3243</div>
+        <div class="mainTopper">Jake Swartwout</div>
+        <div class="underTopper">Public Email: SupesSpam@gmail.com</div>
     </div>
     <hr />
     <div id="leftSpacer"></div>
     <div id="mainWrapper" class="wrapper">
 
         <div id="content">
-            <div id="postStream">
-                Posts will display once page is loaded <br>(assuming the javascript is correct)
+            <div id="aboutMe">
+                <p>
+                    Hi! Welcome to my website
+                </p>
+                <p>
+                    My name is Jake Swartwout, and I'm currently a Freshman at
+                    CU Boulder, in Boulder, Colorado. In 2022, I'll graduate with a
+                    BS in Computer Science and a minor in Business.
+                </p>
+                <p>
+                    This website is meant to act as an expanded version of a resume.
+                    It will still have a copy of a traditional resume, but will
+                    hopefully also give you a better idea of who I am, along with
+                    showing off some of my skills.
+                </p>
+                <p>
+                    Feel free to contact me at the email above. I'm currently looking
+                    for a summer internship related to computer science, so if you
+                    have something like that, email away! From there, I can give you my
+                    official email and phone number.
+                </p>
+                <p>
+                    <a href="resume.html" style="text-decoration:none;color:black;"><b>The web version of my resume</b></a>
+                </p>
+                <p>
+                    <b>Examples of My Code:</b> <br />
+                    A blog explaining how I built this website:
+                    <a href="postsPage.html">Blog Posts</a>
+                </p>
             </div>
         </div>
         <div id="sideBar">
@@ -30,7 +57,7 @@
                 <a href="https://jakeshortstories.blogspot.com/" title="jakesshortstories.blogspot.com">My Writing Blog</a>
                 <br /> <a href="http://bugadventures.us/" title="bugadventures.us">The blog for my books</a>
                 <br /> <a href="https://www.linkedin.com/in/jake-swartwout-3a082a172" title="You need an account to view it">My linkedIn Profile</a>
-                <br /> My 'Traditional Style' Resume
+                <br />
             </div>
         </div>
 

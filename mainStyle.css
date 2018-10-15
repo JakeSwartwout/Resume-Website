@@ -3,12 +3,12 @@
     text-align: left;
 }
 
-#nameTopper {
+.mainTopper {
     font-size: 33px;
     text-align: center;
 }
 
-#contactInfo {
+.underTopper {
     font-size: 20px;
     text-align: center;
 }
@@ -63,10 +63,43 @@
     border-color: lightgrey;
 }
 
-a {
+aLlink, a:visited {
     color: cadetblue;
 }
 
 a:hover {
     color: blue;
+}
+
+#homeButton {
+    background-color: azure;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+#aboutMe {
+    line-height: 150%;
+}
+
+.resumeSection {
+    list-style: circle;
+    line-height: 150%;
+    overflow: auto;
+}
+
+.resumeRight {
+    text-align: right;
+    width: 49%;
+    float: right;
+}
+
+.resumeEntry {
+    overflow:auto;
 }
