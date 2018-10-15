@@ -40,3 +40,21 @@ posts.push(new mediaPost(
         , "And then uploaded the changes to gitHub"
     )
 ));
+
+posts.push(new post(
+    "More Pages",
+    "October 14th, 2018",
+    "This change involved a few different things. First, I augmented my size detection so that the side bar will move to the bottom when the window gets too small. After that, I created an actual main page, and worked to fill it and create links between it and the posts page."
+));
+
+posts.push(new mediaPost(
+    "Lots of Updates",
+    "October 14th, 2018",
+    new Array(
+        "Now that I have enough posts to overflow one page, I'll start grouping"
+        , " updates by day. Along with writing some text for the main page,"
+        , " I turned my resume into an HTML website. It was especially difficult to"
+        , " avoid overlap between the div tags, as they overflowed into each other"
+        , " when the width became too tight and forced them onto other lines."
+    )
+));
