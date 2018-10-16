@@ -13,17 +13,24 @@ var mediaPost = function (theTitle, theDate, contentMediaArray) {
 
 }
 
-function imageString(location, description) {
-    var string = "";
-    string += "<img src=\"./images/" + location + "\"";
-    string += "alt = \"" + description + "\"";
-    string += "class=\"image\"";
-    string += "title = \"" + description + "\" />";
 
-    /* <img src= location
+//to specify the image's size
+function imageString(location, description, size) {
+    var string = "<img src=\"./images/" + location + "\"";
+    string += "alt=\"" + description + "\"";
+    string += "class=\"image\"";
+    string += "title=\"" + description + "\"";
+    if (size != undefined) {
+        string += "style=\"width: " + size + "%\"";
+    }
+    string += "/>";
+
+    /* <img src= ./images/location
      * alt= description
      * class="image"
-     * title= description />
+     * title= description 
+     * style="width: size%"
+     * />
      */
     return string;
 }
