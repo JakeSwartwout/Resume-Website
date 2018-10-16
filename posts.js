@@ -48,7 +48,7 @@ posts.push(new post(
 ));
 
 posts.push(new mediaPost(
-    "Lots of Updates",
+    "Resume Page",
     "October 14th, 2018",
     new Array(
         "Now that I have enough posts to overflow one page, I'll start grouping"
@@ -56,5 +56,23 @@ posts.push(new mediaPost(
         , " I turned my resume into an HTML website. It was especially difficult to"
         , " avoid overlap between the div tags, as they overflowed into each other"
         , " when the width became too tight and forced them onto other lines."
+    )
+));
+
+posts.push(new mediaPost(
+    "Bottom Bar and Old Posts",
+    "October 15th, 2018",
+    new Array(
+        "Today, I added in a bar across the bottom. Real tough, right? Well,"
+        , " everything else was poorly designed I guess, because it was showing"
+        , " up in all the wrong places, so I had to make a new wrapper div,"
+        , " which meant I had to change the javascript for the width, which means"
+        , " I had to do a lot of work and redesign to make it work. But, I think"
+        , " it's designed better now, so hopefully I can keep things working. I"
+        , " also set it to load in by function rather than hard code, so I can"
+        , " easily change what it says across all pages."
+        , "<br />"
+        , " After that, I added some links on the bottom to navigate through"
+        , " the older posts. Somehow, that was a lot easier than adding a bottom bar."
     )
 ));

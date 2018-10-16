@@ -15,7 +15,7 @@ var mediaPost = function (theTitle, theDate, contentMediaArray) {
 
 function imageString(location, description) {
     var string = "";
-    string += "<img src=\"" + location + "\"";
+    string += "<img src=\"./images/" + location + "\"";
     string += "alt = \"" + description + "\"";
     string += "class=\"image\"";
     string += "title = \"" + description + "\" />";
