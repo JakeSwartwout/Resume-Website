@@ -82,3 +82,9 @@ posts.push(new post(
     "October 15th, 2018",
     "Since my resume <i>is</i> a website, I thought I would go beyond the abilities of a traditional resume. So, I went through and turned several words into links to other explanatory websites, such as CU Boulder's, Youth Commission's, Global's, and more. It was hard to keep all of the links uncolored though, and I probably wasted time doing that."
 ));
+
+posts.push(new post(
+    "App page",
+    "October 16th, 2018",
+    "I created another possible tab for the website, and there I posted my progress in working with Android Studio to develop apps and app powered programs for my smart phone. I also added a size parameter to the image html generating function, as I wanted to shrink some images. I'm a little upset, as refreshing brings the user to the middle of the page"
+));
