@@ -52,7 +52,7 @@ posts.push(new mediaPost(
     "October 14th, 2018",
     new Array(
         "Now that I have enough posts to overflow one page, I'll start grouping"
-        , " updates by day. Along with writing some text for the main page,"
+        , " updates by session. Along with writing some text for the main page,"
         , " I turned my resume into an HTML website. It was especially difficult to"
         , " avoid overlap between the div tags, as they overflowed into each other"
         , " when the width became too tight and forced them onto other lines."
@@ -75,4 +75,10 @@ posts.push(new mediaPost(
         , " After that, I added some links on the bottom to navigate through"
         , " the older posts. Somehow, that was a lot easier than adding a bottom bar."
     )
+));
+
+posts.push(new post(
+    "Resume Links",
+    "October 15th, 2018",
+    "Since my resume <i>is</i> a website, I thought I would go beyond the abilities of a traditional resume. So, I went through and turned several words into links to other explanatory websites, such as CU Boulder's, Youth Commission's, Global's, and more. It was hard to keep all of the links uncolored though, and I probably wasted time doing that."
 ));
