@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -10,45 +10,49 @@
     <link rel="stylesheet" type="text/css" href="mainStyle.css" />
 </head>
 
-<body id="entireBody" onload="loadPosts()" onresize="whenResize()">
+<body id="entireBody"
+      onload="loadPoster()"
+      onresize="whenResize()">
     <a id="top" href="#top"></a>
     <div id="pageTopper">
         <div class="mainTopper">The Process of Building This Website</div>
         <div class="underTopper">Blog posts describing what I'm doing to improve the website</div>
     </div>
-    <hr />
-    <div id="mainWrapper" class="wrapper">
-        <div id="leftSpacer"></div>
-        <div id="contentAndBar" class="wrapper">
-            <div id="content">
-                <div id="postNavigation">
-                    <a onclick="showNewerPosts()" href="#top" style="float: left">Newer Posts</a>
-                    <a onclick="showOlderPosts()" href="#top" style="float: right">Older Posts</a>
+    <nav id="navbar"></nav>
+    <div class="padder">
+        <div id="mainWrapper" class="wrapper">
+            <div id="leftSpacer"></div>
+            <div id="contentAndBar" class="wrapper">
+                <div id="content">
+                    <div class="postNavigation">
+                        <a onclick="showNewerPosts()" href="#top" style="float: left">Newer Posts</a>
+                        <a onclick="showOlderPosts()" href="#top" style="float: right">Older Posts</a>
+                    </div>
+                    <br /><br />
+                    <div id="postStream">
+                        Posts will display once page is loaded <br>(assuming the javascript is correct)
+                    </div>
+                    <div class="postNavigation">
+                        <a onclick="showNewerPosts()" href="#top" style="float: left">Newer Posts</a>
+                        <a onclick="showOlderPosts()" href="#top" style="float: right">Older Posts</a>
+                        <br />
+                        <hr />
+                        <br />
+                    </div>
                 </div>
-                <br /><br />
-                <div id="postStream">
-                    Posts will display once page is loaded <br>(assuming the javascript is correct)
-                </div>
-                <div id="postNavigation">
-                    <a onclick="showNewerPosts()" href="#top" style="float: left">Newer Posts</a>
-                    <a onclick="showOlderPosts()" href="#top" style="float: right">Older Posts</a>
-                </div>
-            </div>
-            <div id="sideBar">
-                <a href="index.html" id="homeButton">Home Page</a>
-                <br />
-                <br />
-                <strong>Other Places to Visit</strong>
-                <br />
-                <div id="linksList">
-                    <a href="https://jakeshortstories.blogspot.com/" title="jakesshortstories.blogspot.com">My Writing Blog</a>
-                    <br /> <a href="http://bugadventures.us/" title="bugadventures.us">The blog for my books</a>
-                    <br /> <a href="https://www.linkedin.com/in/jake-swartwout-3a082a172" title="You need an account to view it">My linkedIn Profile</a>
+                <div id="sideBar">
+                    <strong>Other Places to Visit</strong>
                     <br />
+                    <div id="linksList">
+                        <a href="https://jakeshortstories.blogspot.com/" title="jakesshortstories.blogspot.com">My Writing Blog</a>
+                        <br /> <a href="http://bugadventures.us/" title="bugadventures.us">The blog for my books</a>
+                        <br /> <a href="https://www.linkedin.com/in/jake-swartwout-3a082a172" title="You need an account to view it">My linkedIn Profile</a>
+                        <br />
+                    </div>
                 </div>
             </div>
+            <br />
         </div>
-        <br />
     </div>
     <div id="bottomBar"></div>
 </body>

@@ -1,6 +1,14 @@
-﻿#entireBody {
+﻿body {
     font-family: Arial;
     text-align: left;
+    background-color: #fffdf4;
+    margin: 0px;
+}
+
+#pageTopper {
+    background-color: lightcyan;
+    padding: 8px;
+    overflow: auto;
 }
 
 .mainTopper {
@@ -13,16 +21,59 @@
     text-align: center;
 }
 
-#leftSpacer {
-    float: left;
-    width: 100px;
+#navbar {
+    overflow: auto;
+    background-color: #abafcc;
+    text-align: center;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: black;
+}
+
+
+    #navbar a {
+        background-color: #b1b5d3;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+        width: 14.666%;
+        height: inherit;
+        float: left;
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+        #navbar a:hover {
+            background-color: #bcc0e0;
+        }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+    .sticky + p {
+        margin-top: 51.5px;
+    }
+
+.padder {
+    padding: 15px;
+    overflow: auto;
 }
 
 #mainWrapper {
-    width: 99%;
-    padding: 5px;
+    width: 100%;
     float: left;
     overflow: auto;
+}
+
+#leftSpacer {
+    float: left;
+    width: 100px;
 }
 
 #content {
@@ -58,62 +109,52 @@
     line-height: 135%;
 }
 
+.imageBoxWrapper {
+    width: 99%;
+    overflow: auto;
+}
+
+.imageDiv {
+    float: left;
+}
+
+    .imageDiv .image {
+        width: 90%;
+    }
+
 .image {
     width: 75%;
     text-align: center;
     display: block;
     margin-left: auto;
-    margin-right:auto;
-    border:dashed;
+    margin-right: auto;
+    border: dashed;
     border-width: 1px;
     border-color: lightgrey;
 }
 
 a:link, a:visited {
-    color: cadetblue;
+    color: #ff6316;
 }
 
 a:hover {
     color: blue;
 }
 
-#homeButton {
-    background-color: azure;
-    color: black;
-    text-align: center;
-    display: inline-block;
-    width: 93%;
-    padding: 5px;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 8px;
-    text-decoration: none;
-}
-
-#aboutMe {
-    line-height: 150%;
-}
-
-.resumeSection {
-    list-style: circle;
-    line-height: 150%;
-    overflow: auto;
-}
-
-.resumeRight {
-    text-align: right;
-    width: 49%;
-    float: right;
-}
-
-.resumeEntry {
-    overflow:auto;
-}
-
 #bottomBar {
-    text-align:center;
-    font-style:italic;
-    font-size:10px;
+    text-align: center;
+    font-style: italic;
+    font-size: 10px;
     width: 100%;
     bottom: 5px;
+}
+
+.plainLink:visited, .plainLink:link {
+    text-decoration: none;
+    color: darkslategray;
+}
+
+.plainLink:hover {
+    text-decoration: underline;
+    color: darkslateblue;
 }

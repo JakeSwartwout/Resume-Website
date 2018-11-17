@@ -1,0 +1,153 @@
+﻿body {
+    font-family: Arial;
+    text-align: left;
+    background-color: #535563;
+    margin: 0px;
+}
+
+#pageTopper {
+    background-color: lightcyan;
+    padding: 8px;
+    overflow: auto;
+}
+
+.mainTopper {
+    font-size: 33px;
+    text-align: center;
+}
+
+.underTopper {
+    font-size: 20px;
+    text-align: center;
+}
+
+#navbar {
+    overflow: auto;
+    background-color: #abafcc;
+    text-align: center;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: black;
+    z-index: 2;
+}
+
+
+    #navbar a {
+        background-color: #b1b5d3;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+        width: 14.666%;
+        height: inherit;
+        float: left;
+        display: block;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+        #navbar a:hover {
+            background-color: #bcc0e0;
+        }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+    .sticky + p {
+        margin-top: 51.5px;
+    }
+
+.padder {
+    padding: 5px;
+    overflow: auto;
+    border: solid;
+    border-color: black;
+    border-width: 2px;
+    border-bottom: none;
+}
+
+#mainWrapper {
+    width: 100%;
+    float: left;
+    overflow: auto;
+    color: ghostwhite;
+}
+
+#leftSpacer {
+    float: left;
+    width: 100px;
+}
+
+#contentAndBar {
+    float: left;
+    width: 100%;
+}
+
+#content {
+    float: left;
+    width: 60%;
+}
+
+#sideBar {
+    float: right;
+    width: 40%;
+    line-height: 150%;
+    
+}
+
+a:link, a:visited {
+    color: #b6b7c1;
+}
+
+a:hover {
+    color: #d7daea;
+}
+
+
+#aboutMe {
+    line-height: 150%;
+}
+
+#bottomBar {
+    text-align: center;
+    font-style: italic;
+    font-size: 10px;
+    width: 100%;
+    bottom: 5px;
+}
+
+.plainLink:visited, .plainLink:link {
+    text-decoration: none;
+    color: darkslategray;
+}
+
+.plainLink:hover {
+    text-decoration: underline;
+    color: darkslateblue;
+}
+
+.code {
+    font-size: 11pt;
+    font-style: italic;
+    border: dashed;
+    border-width: 1px;
+    border-color: lightgreen;
+    padding: 4px;
+}
+
+.picsAcross {
+    width: 100%;
+    overflow: hidden;
+}
+
+img {
+    float: left;
+    height: 100%;
+    position: relative;
+    opacity: 1;
+    transition: .5s ease;
+}
