@@ -7,11 +7,16 @@
     <script src="mainCode.js"></script>
     <script src="postFunctionality.js"></script>
     <script src="websitePostsList.js"></script>
+    <script>
+        function setActive() {
+            document.getElementById("website").classList.add("active");
+        }
+    </script>
     <link rel="stylesheet" type="text/css" href="mainStyle.css" />
 </head>
 
 <body id="entireBody"
-      onload="loadPoster()"
+      onload="loadPoster(); setActive();"
       onresize="whenResize()">
     <a id="top" href="#top"></a>
     <div id="pageTopper">

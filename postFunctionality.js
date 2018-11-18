@@ -24,7 +24,7 @@ var projectPost = function (theTitle, theIDE, theLanguage, theContentArray) {
     switch (this.ide.toLowerCase()) {
         case "processing":
             this.framework = "Processing";
-            this.theEnvironment += this.ide + ", using " + this.lang + " and the " + this.framework + " framwork";
+            this.theEnvironment += this.ide + ", using " + this.lang + " and the " + this.framework + " framework";
             break;
         case "sublime":
             this.framework = "p5.js";

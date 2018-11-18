@@ -1,18 +1,12 @@
 ﻿function addBottomBar() {
+    var date = "November 17th";
     document.getElementById("bottomBar").innerHTML =
-        "&nbsp;<br />----- Built by Jake Swartwout - Last updated November 15th, 2018 -----<br />&nbsp;";
+        "&nbsp;<br />----- Built by Jake Swartwout - Last updated " + date + ", 2018 -----<br />&nbsp;";
 }
 
 var numPosts = 5;
 var show;
 
-
-function loadMain() {
-    addBottomBar();
-    setStickyNav();
-    whenResize();
-    loadMainPics();
-}
 
 function loadPoster() {
     loadPosts();
@@ -31,12 +25,12 @@ function loadResume() {
 
 
 function setStickyNav() {
-    var navbar = "<a href=\"index.html\">Home Page</a>";
-    navbar = navbar.concat("<a href=\"resume.html\">My Resume</a>");
-    navbar = navbar.concat("<a href=\"websitePostsPage.html\">Website Building</a>");
-    navbar = navbar.concat("<a href=\"appPostsPage.html\">App Building</a>");
-    navbar = navbar.concat("<a href=\"gamePostsPage.html\">Video Game</a>");
-    navbar = navbar.concat("<a href=\"projectsPostsPage.html\">Other Projects</a>");
+    var navbar = "<a href=\"index.html\" id=\"home\">Home Page</a>";
+    navbar = navbar.concat("<a href=\"resume.html\" id=\"resume\">My Resume</a>");
+    navbar = navbar.concat("<a href=\"websitePostsPage.html\" id=\"website\">Website Build</a>");
+    navbar = navbar.concat("<a href=\"appPostsPage.html\" id=\"apps\">App Building</a>");
+    navbar = navbar.concat("<a href=\"gamePostsPage.html\" id=\"game\">Video Game</a>");
+    navbar = navbar.concat("<a href=\"projectsPostsPage.html\" id=\"other\">Other Projects</a>");
     document.getElementById("navbar").innerHTML = navbar;
 
     window.onscroll = function () {
@@ -100,28 +94,5 @@ function checkWidth(maxStretch, minSquish) {
 
         document.getElementById("content").style.width = "";
         document.getElementById("sideBar").style.width = "";
-    }
-}
-
-
-//make the pics 
-function loadMainPics() {
-    var lines = document.getElementsByClassName("picsAcross");
-    for (var j = 0; j < lines.length; j++) {
-        var wrapper = lines[j];
-        var pics = wrapper.getElementsByTagName("img");
-        var sumWidths = 0.000000;
-        for (var i = 0; i < pics.length; i++) {
-            var wide = getComputedStyle(pics[i]).width;
-            var high = getComputedStyle(pics[i]).height;
-            //add the number of widths per 1 height
-            sumWidths += Number(wide.substring(0, wide.length - 2)) / Number(high.substring(0, high.length - 2));
-            //make them notice the hovering
-        }
-        //the total width then is going to be the sum of widths per height times total height
-        //so the total height should be the total width divided by the sum
-        var totWide = getComputedStyle(wrapper).width;
-        var totHigh = Number(totWide.substring(0, totWide.length - 2)) / (sumWidths+.0001);
-        wrapper.style.height = totHigh + "px";
     }
 }

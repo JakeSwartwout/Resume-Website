@@ -51,6 +51,18 @@
             background-color: #bcc0e0;
         }
 
+    #navbar .active {
+        background-color: #afd3be;
+        outline: solid;
+        outline-width: 3px;
+        outline-offset: -3px;
+        outline-color: #8ca597;
+    }
+
+        #navbar .active:hover {
+            background-color: #b9e5cc;
+        }
+
 .sticky {
     position: fixed;
     top: 0;
@@ -64,10 +76,6 @@
 .padder {
     padding: 5px;
     overflow: auto;
-    border: solid;
-    border-color: black;
-    border-width: 2px;
-    border-bottom: none;
 }
 
 #mainWrapper {
@@ -96,7 +104,6 @@
     float: right;
     width: 40%;
     line-height: 150%;
-    
 }
 
 a:link, a:visited {
@@ -130,15 +137,6 @@ a:hover {
     color: darkslateblue;
 }
 
-.code {
-    font-size: 11pt;
-    font-style: italic;
-    border: dashed;
-    border-width: 1px;
-    border-color: lightgreen;
-    padding: 4px;
-}
-
 .picsAcross {
     width: 100%;
     overflow: hidden;
@@ -148,6 +146,37 @@ img {
     float: left;
     height: 100%;
     position: relative;
+}
+
+.fadeAcross {
+    width: 100%;
+}
+
+.fade {
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.fadeText {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+    .fadeText h1 {
+        opacity: 0;
+        transition: .5s ease;
+        padding: 5px;
+        width: 100%;
+    }
+
+.fade:hover .fadeText h1 {
+    margin-bottom: 0px;
     opacity: 1;
     transition: .5s ease;
+    background-color: rgba(66, 90, 130, .8);
 }

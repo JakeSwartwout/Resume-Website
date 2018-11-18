@@ -5,6 +5,11 @@
     <meta charset="utf-8" />
     <title>Resume</title>
     <script src="mainCode.js"></script>
+    <script>
+        function setActive() {
+            document.getElementById("resume").classList.add("active");
+        }
+    </script>
     <style>
         .resumeSection {
             list-style: circle;
@@ -43,13 +48,12 @@
         #entireBody {
             background: white;
         }
-
     </style>
     <link rel="stylesheet" type="text/css" href="mainStyle.css" />
 </head>
 
 <body id="entireBody"
-      onload="loadResume()"
+      onload="loadResume(); setActive();"
       onresize="checkWidth(950,950)">
     <div id="pageTopper">
         <div class="mainTopper">Jake Swartwout</div>

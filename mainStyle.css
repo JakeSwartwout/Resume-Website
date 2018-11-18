@@ -50,6 +50,18 @@
             background-color: #bcc0e0;
         }
 
+    #navbar .active {
+        background-color: #afd3be;
+        outline: solid;
+        outline-width: 3px;
+        outline-offset: -3px;
+        outline-color: #8ca597;
+    }
+
+        #navbar .active:hover {
+            background-color: #b9e5cc;
+        }
+
 .sticky {
     position: fixed;
     top: 0;

@@ -124,7 +124,7 @@ posts.push(new mediaPost(
 posts.push(new post(
     "Navigation Bar",
     "November 14th, 2018",
-    "It took soo long, but I managed to make a navigation bar at the top of my website! It took a long time because I wanted it to be sticky, so I had to figure out how to get it to detect the scroll of the website, calculate if it should be sticking, then change the indentation of the content if it was supposed to be sticking, so that it didn't jump. Super tough, but it looks reaaally good now. I also tinted some of the things to be peachy, and it's a little nicer than the pure white."
+    "It took soo long, but I managed to make a navigation bar at the top of my website! It took a long time because I wanted it to be sticky, so I had to figure out how to get it to detect the scroll of the website, calculate if it should be sticking, then change the indentation of the content if it was supposed to be sticking, so that it didn't jump. Super tough, but it looks reaaally good now. One downside though, my links to things in the page are now hidden underneath the navbar, which I don't know how to fix. Maybe I'll just leave it for now. Also, I tinted some of the things to be peachy, and it's a little nicer than the pure white."
 ));
 
 posts.push(new mediaPost(
@@ -138,27 +138,41 @@ posts.push(new mediaPost(
         , " height across, while also being the right width. I eventually solved it"
         , " by creating a function that pretended to scale them all to height 1,"
         , " found the width of that, and then found the height of it if it were"
-        , " then scaled to be the full width. Here's how it looks now. The rest of the"
-        , " pages look the same as before."
+        , " then scaled to be the full width. Here's how it looks now:"
         , imageString("WebsiteMain11_15_18.PNG", "the website late on the 15th")
+        , "The rest of the"
+        , " pages look the same as before. Oh, also, all of these pictures are either"
+        , " my own, or a family member's. I don't want to deal with copyright, sooo"
     )
+));
+
+posts.push(new post(
+    "Uploading the Changes",
+    "November 16th, 2018",
+    "So, it's been quite a while since I actually uploaded my progress, and there are a lot of big changes. I was dreading it because I thought I had to go through each file, copy and paste the new version, and then commit it, and I really wasn't looking forward to that. But, I asked a friend, and apparently you can just <i>drag</i> something into github and it does everything automatically? Like, what? So that made it a lot better."
+));
+
+posts.push(new post(
+    "Picture Explanation",
+    "November 17th, 2018",
+    "I worked on it a little bit yesterday, but I didn't get any further than getting my pictures to change color. So, today, I made it so that hovering over one of the front page photos causes words to slide down from invisible and explain what the picture is. And, I made it so that it would be easy to add more, or change others to do it. This was only tough because I was being stupid. I couldn't figure out why my pictures were turning out too small, and was even joking with myself that they were being counted twice or something, when they obviously weren't. I fiddled with some more stuff, accidentally got it to move downwards by deleting the margins only on the hovered version, and then realized something. I had put the image in a div, but the image itself still had the same class. It <i>was</i> being counted twice. Wow. So, I fixed that by removing the class name if it's been counted already, so that way a faded image can either have the class or not, making it a pretty simply copy paste to make something have words overtop. I also just love the extra motion it adds to the page, I think I might try to do more like that, as hard as it may be. (Well, no, the cool part's actually the CSS, I just overcomplicated it)"
+));
+
+posts.push(new post(
+    "Active Page",
+    "November 17th, 2018",
+    "Quick modification, I added a function that highlighted the page you were on, just to look nicer."
 ));
 
 
 //things I want to try adding:
-/* Colors
- * nicer fonts
+/* nicer fonts
  * look more professional
  * Different speed scrolling (background moves slow, overlay moves quicker)
- * On hover highlight links
  * resize event listener rather than onresize()
- * hover event listener highlight pictures
- * - ~actually~ important things:
+ * - ~actually~ important things about me:
  *  - light or dark theme
  *  - tabs or spaces
- * a <nav> bar
- * -highlights the current page
- * 
  * add tags to the posts that can be used to search/sort
  * 
  */

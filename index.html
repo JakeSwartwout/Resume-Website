@@ -5,10 +5,64 @@
     <meta charset="utf-8" />
     <title>Jake Swartwout</title>
     <script src="mainCode.js"></script>
+    <script>
+        function loadMain() {
+            addBottomBar();
+            setStickyNav();
+            whenResize();
+            loadMainPics();
+            onscroll();
+        }
+
+        //make the pics
+        function loadMainPics() {
+            //find each line across
+            var lines = document.getElementsByClassName("picsAcross");
+            //go through each one
+            for (var j = 0; j < lines.length; j++) {
+                var sumWidths = 0.000000;
+                var wrapper = lines[j];
+                //tally up all of the fade divs
+                pics = wrapper.getElementsByClassName("fade");
+                for (var i = 0; i < pics.length; i++) {
+                    //make an image to find the dimensions
+                    var image = pics[i].getElementsByTagName("img")[0];
+                    //get the values
+                    var wide = image.width;
+                    var high = image.height;
+                    //add the number of widths per 1 height
+                    sumWidths += wide / high;
+                    image.classList.remove("pic");
+                }
+                //tally up all of the images
+                var pics = wrapper.getElementsByClassName("pic");
+                for (var i = 0; i < pics.length; i++) {
+                    //get the style's width
+                    var wide = getComputedStyle(pics[i]).width;
+                    var high = getComputedStyle(pics[i]).height;
+                    //add the number of widths per 1 height
+                    sumWidths += Number(wide.substring(0, wide.length - 2)) / Number(high.substring(0, high.length - 2));
+                }
+                //the total width then is going to be the sum of widths per height times total height
+                //so the total height should be the total width divided by the sum
+                var totWide = getComputedStyle(wrapper).width;
+                var totHigh = Number(totWide.substring(0, totWide.length - 2)) / (sumWidths + .0075);
+                //set the height to what it should be, and everything else will adjust automatically
+                wrapper.style.height = totHigh + "px";
+            }
+        }
+    </script>
+    <script>
+        function setActive() {
+            var link = document.getElementById("home");
+            link.classList.add("active");
+            link.href = "";
+        }
+    </script>
     <link rel="stylesheet" type="text/css" href="indexStyle.css" />
 </head>
 
-<body onload="loadMain();"
+<body onload="loadMain(); setActive();"
       onresize="whenResize(); loadMainPics()">
     <div id="pageTopper">
         <div class="mainTopper">Jake Swartwout</div>
@@ -21,29 +75,59 @@
         <div id="contentAndBar" class="wrapper">
             <div id="content">
                 <div class="picsAcross">
-                    <img src="./images/Front Page/MeBricks.jpg" class="pic">
-                    <img src="./images/Front Page/MeDoor.jpg" class="pic">
+                    <div class="fade">
+                        <img src="./images/Front Page/MeBricks.jpg" class="pic">
+                        <div class="fadeText">
+                            <h1>This is me</h1>
+                        </div>
+                    </div>
                 </div>
                 <div class="picsAcross">
                     <img src="./images/Front Page/MeSnowdog.jpg" class="pic">
                     <img src="./images/Front Page/MeSnowman.jpg" class="pic">
+                    <img src="./images/Front Page/MeDoor.jpg" class="pic">
                 </div>
                 <div class="picsAcross">
                     <img src="./images/Front Page/PanoramaCrop.jpg" class="pic">
                 </div>
                 <div class="picsAcross">
-                    <img src="./images/Front Page/View.jpg" class="pic">
+                    <div class="fade">
+                        <img src="./images/Front Page/View.jpg">
+                        <div class="fadeText">
+                            <h1>Beautiful Colorado</h1>
+                        </div>
+                    </div>
                 </div>
                 <div class="picsAcross">
-                    <img src="./images/Front Page/Cooking.jpg" class="pic">
-                    <img src="./images/Front Page/Running.jpg" class="pic">
+                    <div class="fade">
+                        <img src="./images/Front Page/Cooking.jpg" class="pic">
+                        <div class="fadeText">
+                            <h1>Cooking</h1>
+                        </div>
+                    </div>
+                    <div class="fade">
+                        <img src="./images/Front Page/Running.jpg" class="pic">
+                        <div class="fadeText">
+                            <h1>Running</h1>
+                        </div>
+                    </div>
                 </div>
                 <div class="picsAcross">
                     <img src="./images/Front Page/Spaghetti.jpg" class="pic">
-                    <img src="./images/Front Page/Cake.jpg" class="pic">
+                    <div class="fade">
+                        <img src="./images/Front Page/Cake.jpg">
+                        <div class="fadeText">
+                            <h1>Food</h1>
+                        </div>
+                    </div>
                 </div>
                 <div class="picsAcross">
-                    <img src="./images/Front Page/Sunflower.jpg" class="pic">
+                    <div class="fade">
+                        <img src="./images/Front Page/Sunflower.jpg">
+                        <div class="fadeText">
+                            <h1>Gardening</h1>
+                        </div>
+                    </div>
                     <img src="./images/Front Page/Pansy.jpg" class="pic">
                 </div>
                 <div class="picsAcross">
@@ -61,9 +145,10 @@
                             Hi! Welcome to my website
                         </p>
                         <p>
-                            My name is Jake Swartwout (pronounced sss-wart-out), and I'm currently a Freshman at
-                            CU Boulder, in Boulder, Colorado. In 2022, I'll graduate with a
-                            BS in Computer Science and a minor in Business.
+                            My name is Jake Swartwout (pronounced sss-wart-out), and I'm
+                            currently a Freshman at the University of Colorado, Boulder.
+                            In 2022, I'll graduate with a BS in Computer Science and a
+                            minor in Business.
                         </p>
                         <p>
                             This website is meant to act as an expanded version of a resume.
@@ -82,6 +167,7 @@
                         <a href="https://jakeshortstories.blogspot.com/" title="jakesshortstories.blogspot.com">My Writing Blog</a>
                         <br /> <a href="http://bugadventures.us/" title="bugadventures.us">The blog for my books</a>
                         <br /> <a href="https://www.linkedin.com/in/jake-swartwout-3a082a172" title="You need an account to view it">My linkedIn Profile</a>
+                        <br /> <a href="https://natalieswartwout.wordpress.com/image/you-move-like-a-poem/final-photos/" title="My Sister's Website">Source of Some Photos</a>
                         <br />
                     </div>
                 </div>

@@ -7,6 +7,11 @@
     <script src="mainCode.js"></script>
     <script src="postFunctionality.js"></script>
     <script src="projectsPostsList.js"></script>
+    <script>
+        function setActive() {
+            document.getElementById("other").classList.add("active");
+        }
+    </script>
     <link rel="stylesheet" type="text/css" href="mainStyle.css" />
     <style>
         .code {
@@ -20,7 +25,7 @@
     </style>
 </head>
 
-<body id="entireBody" onload="loadPoster()" onresize="whenResize()">
+<body id="entireBody" onload="loadPoster(); setActive();" onresize="whenResize()">
     <a id="top" href="#top"></a>
     <div id="pageTopper">
         <div class="mainTopper">Other Cool Things I've Coded</div>

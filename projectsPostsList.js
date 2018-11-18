@@ -125,7 +125,8 @@ posts.push(new projectPost(
     "Sublime",
     "Javascript",
     new Array(
-        "Stuff"
+        "Stuff."
+        , " The project is complete, I'm just still working on the post for it"
     )
 ));
 
