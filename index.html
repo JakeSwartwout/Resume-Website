@@ -7,6 +7,7 @@
     <script src="mainCode.js"></script>
     <script>
         function loadMain() {
+            document.getElementById("warning").innerHTML = "";
             addBottomBar();
             setStickyNav();
             whenResize();
@@ -74,6 +75,7 @@
         <div id="leftSpacer"></div>
         <div id="contentAndBar" class="wrapper">
             <div id="content">
+                <p id="warning" style="margin:0">The page is loading. There are a lot of pictures, just give it a moment</p>
                 <div class="picsAcross">
                     <div class="fade">
                         <img src="./images/Front Page/MeBricks.jpg" class="pic">
