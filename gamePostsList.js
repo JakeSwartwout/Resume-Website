@@ -42,7 +42,7 @@ posts.push(new mediaPost(
         , " really isn't as complex as I thought it was, everything is linked really nicely and makes sense."
         , " Today, the tutorial had me use Tiled to create level maps. I drew up a bunch of ground pieces so"
         , " that I could actually build some stuff without stealing (even though that original grass was stolen):"
-        , pixelArtString("Grounds.png", "the ground pieces")
+        , pixelArtString("grounds.png", "the ground pieces")
         , "along with a few props to add in as well: "
         , pixelArtString("Props.png", "A tree and lamppost I drew myself")
         , "After that, we made a second map, adding in the needed scripts and colliders so that the player would"
