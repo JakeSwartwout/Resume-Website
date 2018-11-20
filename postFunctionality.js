@@ -67,6 +67,15 @@ function imageString(location, description, size) {
     return string;
 }
 
+//for making pixel art non-pixelated
+function pixelArtString(location, description) {
+    var string = "<img src=\"./images/" + location + "\"";
+    string += "alt=\"" + description + "\"";
+    string += "class=\"image pixelated\"";              //adds the pixelated class to the image
+    string += "/>";
+    return string;
+}
+
 //to place multiple images in the same line
 function imageLineString(imageStringArray) {
     var string = "<div style=\"text-align:center;\"><div class=\"imageBoxWrapper\">";

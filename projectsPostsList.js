@@ -125,13 +125,27 @@ posts.push(new projectPost(
     "Sublime",
     "Javascript",
     new Array(
-        "Stuff."
-        , " The project is complete, I'm just still working on the post for it"
+        "This was a fun project. My Dad had previously taught a programming class"
+        , " at a college, and one of the assignments was to create a dinosaur"
+        , " simulation. So, many years later, he decided to have me do the project"
+        , " as well, and together we competed to make the better program. Each"
+        , " dino is represented with a different shape and has different properties."
+        , " some can cross mountains, or lakes, some eat grass, others eat anything"
+        , " they can, leaving small bloodstains on the ground. It was a little weird"
+        , " because I used classes in javascript, but it did work really well. For a"
+        , " display, I used the p5.js stuff, which draws a window in an html page"
+        , " and allows the coder to use a graphical coordinate display, rather than"
+        , " a text or wrapper/box based one. For the code itself, they move in ticks,"
+        , " and the speed can be changed. The humans move in lines and leave when they"
+        , " hit water and the dinosaurs move in lines with random turning. When the"
+        , " humans see blood or a dinosaur, they turn around and speed up."
+        , "<br/>Here's what the final result looks like:"
+        , imageString("Dinos.PNG", "Dinosaur Simulation")
     )
 ));
 
-//Dinosaur Simulation
 //youtube analysis
-//Pixels
+//Pixels to Pixels
 //Jeopardy Dice
 //Book Reccommender system
+//Oregon Trail
