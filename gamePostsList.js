@@ -51,3 +51,24 @@ posts.push(new mediaPost(
         , " same start point no matter where it came from."
     )
 ));
+
+posts.push(new mediaPost(
+    "Learning Unity: Enemies and Death",
+    "November 21st, 2018",
+    new Array(
+        "A combination of yesterday and today, I made some enemies for the game. They're"
+        , " inspired by the pictures of cats that look like they only have two legs:"
+        , pixelArtString("enemy.png", "The enemy")
+        , "I think they're actually super cute though, as they bounce up and down when"
+        , " standing still. But, since they're enemies, I had to also add a way for them"
+        , " to kill the player, causing a kill animation and restarting the room"
+        , pixelArtString("personDeath.png", "When the player dies")
+        , "I think it's working pretty well. Even though this is just a practice, it's"
+        , " still coming along really well! I'm having a lot of fun too. Here's what"
+        , " it looks like so far:"
+        , imageString("EarlyGamePractice.PNG", "The appearance of the early game")
+        , "The background is still really bad, but I think it's something to do with"
+        , " Tiled, the software I'm using to make all of them. It makes them super"
+        , " easy to create them, but it also makes everything blurry and not snap together."
+    )
+));
