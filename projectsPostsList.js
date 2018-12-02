@@ -130,8 +130,8 @@ posts.push(new projectPost(
         , " simulation. So, many years later, he decided to have me do the project"
         , " as well, and together we competed to make the better program. Each"
         , " dino is represented with a different shape and has different properties."
-        , " some can cross mountains, or lakes, some eat grass, others eat anything"
-        , " they can, leaving small bloodstains on the ground. It was a little weird"
+        , " Some can cross mountains, or lakes, some eat grass, others eat the"
+        , " other dinosaurs and humans, leaving small bloodstains on the ground. It was a little weird"
         , " because I used classes in javascript, but it did work really well. For a"
         , " display, I used the p5.js stuff, which draws a window in an html page"
         , " and allows the coder to use a graphical coordinate display, rather than"
@@ -139,13 +139,39 @@ posts.push(new projectPost(
         , " and the speed can be changed. The humans move in lines and leave when they"
         , " hit water and the dinosaurs move in lines with random turning. When the"
         , " humans see blood or a dinosaur, they turn around and speed up."
+        , " around the edge, I randomly generated a either water or beach, the next layer"
+        , " in is either beach or grass, and then the rest is grass. The mountains and"
+        , " lakes are drawn for the most part manually, but do shift randomly, even if"
+        , " it's only slightly."
         , "<br/>Here's what the final result looks like:"
         , imageString("Dinos.PNG", "Dinosaur Simulation")
     )
 ));
+
+
 
 //youtube analysis
 //Pixels to Pixels
 //Jeopardy Dice
 //Book Reccommender system
 //Oregon Trail
+
+
+
+posts.push(new projectPost(
+    "Monopoly",
+    "Processing",
+    "Java",
+    new Array(
+        "On December 1st, 2018, me and a group of friends attended our local hackathon"
+        , ". We decided to try to code Monopoly (fish themed, because why not)"
+        , " and got pretty far. It's hosted on "
+        , linkString("github", "https://github.com/ryguyqwerty/MonopolyHackCU")
+        , ", if you'd like to see it. We finished most things, but then I got super"
+        , " overwhelmed because I needed to fix bugs and didn't know how to do that"
+        , " collaboratively. So, I finished as much as I could at the end, but it"
+        , " wasn't completely done. Still pretty impressive for one day though."
+        , " Maybe I'll finish it eventually."
+    )
+
+))

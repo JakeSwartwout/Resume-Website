@@ -69,7 +69,7 @@ function imageString(location, description, size) {
 
 //for making pixel art non-pixelated
 function pixelArtString(location, description) {
-    var string = "<img src=\"./images/" + location + "\"";
+    var string = "<img src=\"./images/Videogame/" + location + "\"";
     string += "alt=\"" + description + "\"";
     string += "class=\"image pixelated\"";              //adds the pixelated class to the image
     string += "/>";
@@ -105,6 +105,8 @@ function setPosts(lowInclusive, highExclusive) {
         var i = j;
         // the overarching container
         htmlToAdd += "<div class=\"post\" id=\"post" + i + "\">";
+        //the anchor
+        htmlToAdd += "<a id=\"postAnchor" + i + "\" class=\"postAnchor\">&nbsp;</a>";
         //the title
         htmlToAdd += "\n<div class=\"postTitle\" >" + posts[i].title + "</div >";
         //the date
@@ -112,7 +114,7 @@ function setPosts(lowInclusive, highExclusive) {
         //the content
         htmlToAdd += "\n<div class=\"postContent\">" + posts[i].content + "</div>";
         //a link at the bottom of the post linking to the top of the post
-        htmlToAdd += "\n<div class=\"postLink\" style=\"float: right\"> <a href=\"#post" + i + "\" class=\"plainLink\">Top of Post \"" + posts[i].title + "\"</a></div > ";
+        htmlToAdd += "\n<div class=\"postLink\" style=\"float: right\"> <a href=\"#postAnchor" + i + "\" class=\"plainLink\">Top of Post \"" + posts[i].title + "\"</a></div > ";
         //closing the container
         htmlToAdd += "</div >";
         //add a space

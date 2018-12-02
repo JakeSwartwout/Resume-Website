@@ -40,15 +40,18 @@ posts.push(new mediaPost(
     new Array(
         "I watched some more tutorials, and I'm enjoying this process a lot more than I thought I would. Unity"
         , " really isn't as complex as I thought it was, everything is linked really nicely and makes sense."
-        , " Today, the tutorial had me use Tiled to create level maps. I drew up a bunch of ground pieces so"
-        , " that I could actually build some stuff without stealing (even though that original grass was stolen):"
-        , pixelArtString("grounds.png", "the ground pieces")
-        , "along with a few props to add in as well: "
+        , " Today, the tutorial had me use "
+        , linkString("Tiled", "https://www.mapeditor.org/")
+        , " to create level maps. I drew up a bunch of ground pieces so"
+        , " that I could actually build some stuff without stealing:"
+        , pixelArtString("Grounds.png", "the ground pieces")
+        , "The grass was originally stolen, but then I drew my own and added a really"
+        , " ugly border, so I don't know how I feel. I also added a few props as well: "
         , pixelArtString("Props.png", "A tree and lamppost I drew myself")
         , "After that, we made a second map, adding in the needed scripts and colliders so that the player would"
         , " transfer between them when it walks across a certain point. I even went ~beyond~ the tutorial, by adding"
-        , " in a way for it to distinguish between the starting rooms, because I hated how it always started from the"
-        , " same start point no matter where it came from."
+        , " in a way for it to distinguish between where to start based on the last room, mostly because I hated how"
+        , " it always started from the same start point no matter where it came from."
     )
 ));
 
@@ -66,9 +69,33 @@ posts.push(new mediaPost(
         , "I think it's working pretty well. Even though this is just a practice, it's"
         , " still coming along really well! I'm having a lot of fun too. Here's what"
         , " it looks like so far:"
-        , imageString("EarlyGamePractice.PNG", "The appearance of the early game")
+        , imageString("Videogame/EarlyGamePractice.PNG", "The appearance of the early game")
         , "The background is still really bad, but I think it's something to do with"
         , " Tiled, the software I'm using to make all of them. It makes them super"
         , " easy to create them, but it also makes everything blurry and not snap together."
     )
+));
+
+posts.push(new post(
+    "Sharing with the Group",
+    "November 25th, 2018",
+    "Since we're making this game collaboratively, I finally shared my progress with the group. I moved all of the files from my project to our joint project and uploaded them to the shared unity game."
+));
+
+posts.push(new mediaPost(
+    "Plants and Plot",
+    "November 29th, 2018",
+    new Array(
+        "I didn't know where to go from where I was, so I decided to try an write"
+        , " some plot. I want the player to start on a farm like thing to learn"
+        , " some of the controls, so I drew up a dirt patch and some plants:"
+        , pixelArtString("crops.png", "The dirt patch")
+        , pixelArtString("Plants.png", "some plants I drew")
+    )
+));
+
+posts.push(new post(
+    "Brainstorming",
+    "December 1st, 2018",
+    "I asked a friend for some feedback on my plot, and we went way beyond, talking about huge plot parts. We went between ideas, but we both really liked the idea of the player having powers they don't know about, guarding an orb (that channels their powers) which goes missing, and the orb before kept the winter out with a physical wall. Then, they would travel to the farm after and experience the beauty of summer to be influenced towards liking eternal summer, but by the end learn that it's bad."
 ));
