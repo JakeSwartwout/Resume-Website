@@ -161,7 +161,19 @@ posts.push(new post(
 posts.push(new post(
     "Active Page",
     "November 17th, 2018",
-    "Quick modification, I added a function that highlighted the page you were on, just to look nicer."
+    "Quick modification, I added a function that highlighted the tab of the navbar that corresponded to the page you were on, just to look nicer."
+));
+
+posts.push(new post(
+    "Active Page Style",
+    "November 20th, 2018",
+    "Another quick fix, I didn't like the surrounded style of the other active bar, so I put it on just the bottom. Before, I used an outline with a negative offset, which worked okay, but had to be on every side. I couldn't just use borders since they add width to the box, and would push everything onto another line. But, if I only put the border on the bottom, it just expands the height of the box, and nothing is pushed over. Small change, but it looks better now. Also, the home page has its own style (which I forget about) and that's really annoying. I kinda want to make a style sheet for the navbar, but it seems weird to have a sheet with so few things on it."
+));
+
+posts.push(new post(
+    "Post Links and Resume Update",
+    "November 24th, 2018",
+    "I made the 'top of post' links finally work, just by creating an anchor at the top that's positioned further up thatn the text itself. That way, linking to the anchor links to above the post, pushing it down out of the way. Also, I updated my resume to: actually explain my coding experience better, describe Cybersecurity now that I've been in it, and have creativity as a skill."
 ));
 
 
@@ -170,9 +182,12 @@ posts.push(new post(
  * look more professional
  * Different speed scrolling (background moves slow, overlay moves quicker)
  * resize event listener rather than onresize()
- * - ~actually~ important things about me:
+ * ~actually~ important things about me:
  *  - light or dark theme
  *  - tabs or spaces
  * add tags to the posts that can be used to search/sort
  * 
+ * 
+ * sticky header only using the position: sticky?
+ * https://www.w3schools.com/css/css_positioning.asp
  */

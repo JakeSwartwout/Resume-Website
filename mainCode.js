@@ -1,7 +1,7 @@
 ﻿function addBottomBar() {
-    var date = "November 17th";
+    var date = "24th";
     document.getElementById("bottomBar").innerHTML =
-        "&nbsp;<br />----- Built by Jake Swartwout - Last updated " + date + ", 2018 -----<br />&nbsp;";
+        "&nbsp;<br />----- Built by Jake Swartwout - Last updated November " + date + ", 2018 -----<br />&nbsp;";
 }
 
 var numPosts = 5;
@@ -25,6 +25,7 @@ function loadResume() {
 
 
 function setStickyNav() {
+    //build the navbar
     var navbar = "<a href=\"index.html\" id=\"home\">Home Page</a>";
     navbar = navbar.concat("<a href=\"resume.html\" id=\"resume\">My Resume</a>");
     navbar = navbar.concat("<a href=\"websitePostsPage.html\" id=\"website\">Website Build</a>");
@@ -33,21 +34,23 @@ function setStickyNav() {
     navbar = navbar.concat("<a href=\"projectsPostsPage.html\" id=\"other\">Other Projects</a>");
     document.getElementById("navbar").innerHTML = navbar;
 
+    //set the scroll
     window.onscroll = function () {
         var navbar = document.getElementById("navbar");
-        var navHeight = getComputedStyle(navbar).height;
         var topStyle = getComputedStyle(document.getElementById("pageTopper"));
         var topHeight = Number(topStyle.height.substr(0, topStyle.height.length - 2))
             + Number(topStyle.paddingTop.substr(0, topStyle.paddingTop.length - 2))
             + Number(topStyle.paddingBottom.substr(0, topStyle.paddingBottom.length - 2));
         if (window.pageYOffset > topHeight) {
+            var navHeight = getComputedStyle(navbar).height;
             navbar.classList.add("sticky");
-            document.getElementById("navbar").nextElementSibling.style.marginTop = "" + (Number(navHeight.substr(0,navHeight.length-2)) + 2) + "px";
+            navbar.nextElementSibling.style.marginTop = "" + (Number(navHeight.substr(0, navHeight.length - 2)) + 2) + "px";
         } else {
             navbar.classList.remove("sticky");
-            document.getElementById("navbar").nextElementSibling.style.marginTop = "0px";
+            navbar.nextElementSibling.style.marginTop = "0px";
         }
     }
+
 }
 
 

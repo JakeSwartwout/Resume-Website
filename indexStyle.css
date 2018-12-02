@@ -53,10 +53,9 @@
 
     #navbar .active {
         background-color: #afd3be;
-        outline: solid;
-        outline-width: 3px;
-        outline-offset: -3px;
-        outline-color: #8ca597;
+        border-bottom: solid;
+        border-width: 4px;
+        border-bottom-color: #8ca597;
     }
 
         #navbar .active:hover {
