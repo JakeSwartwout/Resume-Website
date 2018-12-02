@@ -44,7 +44,7 @@ posts.push(new mediaPost(
         , linkString("Tiled", "https://www.mapeditor.org/")
         , " to create level maps. I drew up a bunch of ground pieces so"
         , " that I could actually build some stuff without stealing:"
-        , pixelArtString("Grounds.png", "the ground pieces")
+        , pixelArtString("grounds.png", "the ground pieces")
         , "The grass was originally stolen, but then I drew my own and added a really"
         , " ugly border, so I don't know how I feel. I also added a few props as well: "
         , pixelArtString("Props.png", "A tree and lamppost I drew myself")
