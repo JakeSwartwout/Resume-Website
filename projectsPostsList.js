@@ -61,7 +61,7 @@ posts.push(new projectPost(
             imageString("MouseMosaic.PNG", "a mouse mosaic")
             , imageString("ChewyMosaic.PNG", "my cat as a mosaic")
             , imageString("JupiterMosaic.PNG", "jupiter mosaic")
-            ))
+        ))
         , "And a slightly higher resolution one:"
         , imageString("HighResMosaic.PNG", "the starry night", 100)
         , "If you're curious, some of the images I used include: pencil,"
@@ -90,12 +90,7 @@ posts.push(new projectPost(
         , " the next step. The hardest part was likely designing a user"
         , " interface, as I didn't really know what I wanted. I could code it,"
         , " but I didn't know what I wanted to code. Also, you can see how"
-        , " they wrap around the screen. I was pretty proud of that for some"
-        , " reason. Here's the final positions of that beginning:"
-        , imageLineString(new Array(
-            imageString("GameOfLifeEnd1.PNG", "the final positions"),
-            imageString("GameOfLifeEnd2.PNG", "the final positions2")
-        ))
+        , " they wrap around the screen. I was pretty proud of that for some reason."
     )
 ));
 
@@ -148,12 +143,73 @@ posts.push(new projectPost(
     )
 ));
 
+posts.push(new projectPost(
+    "Youtube Analysis",
+    "Eclipse",
+    "Java",
+    new Array(
+        "After downloading an insane amount of watch history data from both of"
+        , " my Google accounts, I was very interested to analyze the data and"
+        , " see what I could find. I used something online to turn the HTML"
+        , " document into a String (crazy, right? my computer could barely load"
+        , " the page, yet it all fit into a string?). From that, I broke it into"
+        , " individual entries which I could then analyze. At first, I was reading"
+        , " it into an ArrayList, so that took forever, but I turned it into an"
+        , " array and now the loading is pretty quick. In all, I wrote functions to find:"
+        , "</br>-the most watched ever"
+        , "</br>-the most watched video in clusters of x videos (I usually broke it into groups of 100)"
+        , "</br>-my most watched channel"
+        , "</br>-how many titles contained a certain string"
+        , "</br>-the top x most used words in the title (usually boring unless you go up to 40 or so)"
+        , "</br>Here's a sample run through, only calling some of the functions:"
+        , codeString(new Array(
+            "Loading"
+            , "..................................................-"
+            , "..................................................-"
+            , "..................................................-"
+            , "..................................................-"
+            , "................................"
+            , ""
+            , "Most watched of 23252 videos(watched 15 times) : cloud atlas - sextet(extended version)"
+            , ""
+            , "Most watched channel of 23252 videos: collegehumor"
+            , ""
+            , "The phrase \"cooking\" appears 311 times"
+            , ""
+            , "The 1th most used is \"the\""
+            , "The 2th most used is \"-\""
+            , "The 3th most used is \"a\""
+            , "The 4th most used is \"to\""
+            , "The 5th most used is \"how\""
+            , "The 6th most used is \"|\""
+            , "The 7th most used is \"of\""
+            , "The 8th most used is \"in\""
+            , "The 9th most used is \"and\""
+            , "The 10th most used is \"with\""
+            , "The 11th most used is \"is\""
+            , "The 12th most used is \"you\""
+            , "The 13th most used is \"make\""
+            , "The 14th most used is \"why\""
+            , "The 15th most used is \"for\""
+            , "The 16th most used is \"your\""
+            , "The 17th most used is \"what\""
+            , "The 18th most used is \"on\""
+            , "The 19th most used is \"&\""
+            , "The 20th most used is \"from\""
+            , ""
+        ))
+        , "A loading dot would print for every 100 videos read in and a dash for every 5000."
+        , " Again, it became useless after removing the ArrayLists since there was no loading."
+        , " And sadly, I believe they changed their formatting, so my code is"
+        , " unable to properly parse any newly downloaded data. And even when it did work, there"
+        , " were still issues. For example, the data only showed each video"
+        , " once per day, so songs I knew I had looped repeatedly showed up only once."
+    )
+));
 
 
-//youtube analysis
+
 //Pixels to Pixels
-//Jeopardy Dice
-//Book Reccommender system
 //Oregon Trail
 
 
@@ -164,14 +220,43 @@ posts.push(new projectPost(
     "Java",
     new Array(
         "On December 1st, 2018, me and a group of friends attended our local hackathon"
-        , ". We decided to try to code Monopoly (fish themed, because why not)"
-        , " and got pretty far. It's hosted on "
+        , ". I was upset that there was nothing that we were supposed to be hacking,"
+        , " no challenge to complete, or anything like that. But, rather than just give up, we decided to work"
+        , " together to code Monopoly (fish themed, one of my 3 big themes) and got"
+        , " pretty far. Afterwards, I fixed some things up (I was sort of team"
+        , " leader) and now it's pretty much done. It's hosted on "
         , linkString("github", "https://github.com/ryguyqwerty/MonopolyHackCU")
-        , ", if you'd like to see it. We finished most things, but then I got super"
-        , " overwhelmed because I needed to fix bugs and didn't know how to do that"
-        , " collaboratively. So, I finished as much as I could at the end, but it"
-        , " wasn't completely done. Still pretty impressive for one day though."
-        , " Maybe I'll finish it eventually."
+        , ", if you'd like to play it yourself. Here's a screenshot of the gameplay:"
+        , imageString("Monopoly.PNG", "after landing on a card tile")
+        , "One member drew the background tiles, fish, and boats; another"
+        , " wrote the cards' saying; and the rest of us each did one file's worth."
+        , " I think mine was input, which actually had the most problems, so whoops."
+        , " They all actually did pretty good for their first time working in"
+        , " Processing, as instead of the traditional wait-for-input approach of c++,"
+        , " Processing is constantly running and you have to have something always"
+        , " checking the state of the game and trigger things with input."
     )
 
 ))
+
+
+posts.push(new projectPost(
+    "Flocking Simulation",
+    "Processing",
+    "Java",
+    new Array(
+        "In attempting to create a neural network (and failing), I watched so many tutorials that my youtube"
+        , " feed is now mostly coding videos once more. I'm not upset, but it did inspire me to try making"
+        , " some of the things that I saw. The one I went with was a flocking simulator as taught by "
+        , linkString("The Coding Train", "https://www.youtube.com/watch?v=mhjuuHl6qHM")
+        , ". I followed along loosely (he used javascript, I used java) and ended up with a great result."
+        , imageString("Flocking.PNG", "base")
+        , "It's tough to understand without motion, but the triangles all move individually, but attempt"
+        , " to have the same direction as their neighbors, get close to their neighbors, and repell their"
+        , " neighbors (in a certain perception radius). The effect is that they clump up and travel in packs."
+        , " This image is a cooler view of all the interactions happening:"
+        , imageString("FlockingStructure.png")
+        , "The dark blue lines connect who they've detected, the blue lines are the separation, the yellow lines"
+        , " are the cohesion, and the red lines are the direction alignment."
+    )
+));

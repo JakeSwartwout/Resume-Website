@@ -1,30 +1,22 @@
 ﻿function addBottomBar() {
-    var date = "24th";
     document.getElementById("bottomBar").innerHTML =
-        "&nbsp;<br />----- Built by Jake Swartwout - Last updated November " + date + ", 2018 -----<br />&nbsp;";
+        "&nbsp;<br />----- Built by Jake Swartwout - Last updated " +
+        "December 27th, 2018"
+        + ", ----- <br /> &nbsp; ";
 }
 
-var numPosts = 5;
-var show;
 
-
-function loadPoster() {
+function fillInPoster() {
     loadPosts();
     addBottomBar();
-    setStickyNav();
+    fillInNav();
+    fillInSideBar();
     whenResize();
 }
 
-function loadResume() {
-    checkWidth(950, 950);
-    addBottomBar();
-    setStickyNav();
-}
 
 
-
-
-function setStickyNav() {
+function fillInNav() {
     //build the navbar
     var navbar = "<a href=\"index.html\" id=\"home\">Home Page</a>";
     navbar = navbar.concat("<a href=\"resume.html\" id=\"resume\">My Resume</a>");
@@ -53,16 +45,18 @@ function setStickyNav() {
 
 }
 
+function fillInSideBar() {
+    var string = "<strong>Other Places to Visit</strong>";
+    string += "<br />";
+    string += "<div id=\"linksList\">";
+    string += "<a href=\"https://jakeshortstories.blogspot.com/\" title=\"jakesshortstories.blogspot.com\">My Writing Blog</a>";
+    string += "<br /> <a href=\"http://bugadventures.us/\" title=\"bugadventures.us\">The blog for my books</a>";
+    string += "<br /> <a href=\"https://www.linkedin.com/in/jake-swartwout-3a082a172\" title=\"You need an account to view it\">My linkedIn Profile</a>";
+    string += "<br /> <a href=\"https://github.com/JakeSwartwout\" title=\"so sad\">My poor neglected Github</a>";
+    string += "<br />";
+    string += "</div>";
 
-//called from onload, this loads in all the data from other files, formats, and displays it
-function loadPosts() {
-    if (posts.length != 0) {
-        show = posts.length - numPosts;
-        setPosts(show, show + numPosts);
-    } else {
-        document.getElementById("postStream").innerHTML = "There are no posts";
-    }
-    whenResize();
+    document.getElementById("sideBar").innerHTML = string;
 }
 
 
@@ -81,6 +75,8 @@ function checkWidth(maxStretch, minSquish) {
 
         document.getElementById("sideBar").style.width = "";
         document.getElementById("content").style.width = "";
+
+        document.getElementById("sideBar").style.textAlign = "left";
     } else if (space < minSquish) {
         document.getElementById("leftSpacer").innerHTML = "";
         document.getElementById("leftSpacer").style.width = "0px";
@@ -89,6 +85,8 @@ function checkWidth(maxStretch, minSquish) {
 
         document.getElementById("sideBar").style.width = "100%";
         document.getElementById("content").style.width = "100%";
+
+        document.getElementById("sideBar").style.textAlign = "center";
     } else {
         document.getElementById("leftSpacer").innerHTML = "";
         document.getElementById("leftSpacer").style.width = "0px";
@@ -97,5 +95,7 @@ function checkWidth(maxStretch, minSquish) {
 
         document.getElementById("content").style.width = "";
         document.getElementById("sideBar").style.width = "";
+
+        document.getElementById("sideBar").style.textAlign = "left";
     }
 }

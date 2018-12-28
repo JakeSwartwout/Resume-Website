@@ -25,7 +25,9 @@
     </style>
 </head>
 
-<body id="entireBody" onload="loadPoster(); setActive();" onresize="whenResize()">
+<body id="entireBody"
+      onload="fillInPoster(); setActive();"
+      onresize="whenResize()">
     <a id="top" href="#top"></a>
     <div id="pageTopper">
         <div class="mainTopper">Other Cool Things I've Coded</div>
@@ -42,9 +44,12 @@
                         <a onclick="showOlderPosts()" href="#top" style="float: right">Go Right</a>
                     </div>
                     <br /><br />
-                    <div id="postStream">
-                        Posts will load in once the page has loaded.
+                    <div class="padder postStream">
+                        <div id="postStream">
+                            Posts will load in once the page has loaded.
+                        </div>
                     </div>
+                    <br />
                     <div class="postNavigation">
                         <a onclick="showNewerPosts()" href="#top" style="float: left">Newer Posts</a>
                         <a onclick="showOlderPosts()" href="#top" style="float: right">Older Posts</a>
@@ -53,16 +58,7 @@
                         <br />
                     </div>
                 </div>
-                <div id="sideBar">
-                    <strong>Other Places to Visit</strong>
-                    <br />
-                    <div id="linksList">
-                        <a href="https://jakeshortstories.blogspot.com/" title="jakesshortstories.blogspot.com">My Writing Blog</a>
-                        <br /> <a href="http://bugadventures.us/" title="bugadventures.us">The blog for my books</a>
-                        <br /> <a href="https://www.linkedin.com/in/jake-swartwout-3a082a172" title="You need an account to view it">My linkedIn Profile</a>
-                        <br />
-                    </div>
-                </div>
+                <div id="sideBar"></div>
             </div>
             <br />
         </div>
