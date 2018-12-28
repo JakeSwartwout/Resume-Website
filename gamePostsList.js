@@ -99,3 +99,30 @@ posts.push(new post(
     "December 1st, 2018",
     "I asked a friend for some feedback on my plot, and we went way beyond, talking about huge plot parts. We went between ideas, but we both really liked the idea of the player having powers they don't know about, guarding an orb (that channels their powers) which goes missing, and the orb before kept the winter out with a physical wall. Then, they would travel to the farm after and experience the beauty of summer to be influenced towards liking eternal summer, but by the end learn that it's bad."
 ));
+
+posts.push(new post(
+    "All alone?",
+    "December 16th, 2018",
+    "Well, while it isn't official, I'm pretty sure that I'm the only one working on this game anymore. On the plus side, that means that I can do it exactly my way, but on the negative side, that means I have to do everything. I just made a copy of it though so I can go as far off the plan as I want and they'll still have the original game."
+));
+
+posts.push(new post(
+    "Collection of Fixes",
+    "December 17th, 2018",
+    "This is a few different fixes that I've made over the past few weeks. </br>1: I partially solved my blurriness problem. Tiled compressed my art into a square and then stretched it back out again, so I just had to upload them as squares.</br>2: I wanted both collisions and no collisions sometimes, so I made both so that I could choose between the two</br>3: I made a way to easily set up the edge of the screen, and lock the camera into it. I want to extend it to the player, but I still need to work on that."
+));
+
+posts.push(new mediaPost(
+    "More drawings",
+    "December 27th, 2018",
+    new Array(
+        "I just did a few more drawings, these are the plants harvested"
+        , " that will eventually go into the players inventory"
+        , pixelArtString("Plants-items.png", "the harvested plants")
+        , " I also gave the path a much nicer border and created the inner"
+        , " curve for the dirt. These were put into that square I mentioned"
+        , " in the previous post"
+        , pixelArtString("SquareGrounds.png", "the grounds compilation")
+        , "I should probably separate those plants now though, shouldn't I. Dang."
+    )
+));

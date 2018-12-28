@@ -9,10 +9,16 @@
         function loadMain() {
             document.getElementById("warning").innerHTML = "";
             addBottomBar();
-            setStickyNav();
+            fillInNav();
             whenResize();
             loadMainPics();
             onscroll();
+        }
+
+        function setActive() {
+            var link = document.getElementById("home");
+            link.classList.add("active");
+            link.href = "";
         }
 
         //make the pics
@@ -51,13 +57,6 @@
                 //set the height to what it should be, and everything else will adjust automatically
                 wrapper.style.height = totHigh + "px";
             }
-        }
-    </script>
-    <script>
-        function setActive() {
-            var link = document.getElementById("home");
-            link.classList.add("active");
-            link.href = "";
         }
     </script>
     <link rel="stylesheet" type="text/css" href="indexStyle.css" />
@@ -148,7 +147,7 @@
             <div id="sideBar">
                 <div class="padder">
                     <div id="aboutMe">
-                        <p style="margin-top:0px;">
+                        <p style="margin-top:0px; text-align: center;">
                             Hi! Welcome to my website
                         </p>
                         <p>
@@ -174,6 +173,7 @@
                         <a href="https://jakeshortstories.blogspot.com/" title="jakesshortstories.blogspot.com">My Writing Blog</a>
                         <br /> <a href="http://bugadventures.us/" title="bugadventures.us">The blog for my books</a>
                         <br /> <a href="https://www.linkedin.com/in/jake-swartwout-3a082a172" title="You need an account to view it">My linkedIn Profile</a>
+                        <br /> <a href="https://github.com/JakeSwartwout" title="so sad">My poor neglected Github</a>
                         <br /> <a href="https://natalieswartwout.wordpress.com/image/you-move-like-a-poem/final-photos/" title="My Sister's Website">Source of Some Photos</a>
                         <br />
                     </div>

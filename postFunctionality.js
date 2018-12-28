@@ -1,3 +1,18 @@
+//how many posts to show at a time
+var numPosts = 5;
+//which posts are showing
+var show;
+
+function loadPosts() {
+    if (posts.length != 0) {
+        show = posts.length - numPosts;
+        setPosts(show, show + numPosts);
+    } else {
+        document.getElementById("postStream").innerHTML = "There are no posts";
+    }
+    whenResize();
+}
+
 var post = function (theTitle, theDate, theContent) {
     this.title = theTitle;
     this.date = theDate;
@@ -32,6 +47,7 @@ var projectPost = function (theTitle, theIDE, theLanguage, theContentArray) {
             break;
         case "visual studio":
         case "jcreator":
+        case "eclipse":
             this.theEnvironment += this.ide + ", using " + this.lang;
             break;
         default:
@@ -96,6 +112,16 @@ function linkString(text, url) {
 }
 
 
+function codeString(linesArray) {
+    var string = "<div class=\"code\">";
+    string += linesArray[0];
+    for (var i = 1; i < linesArray.length; i++) {
+        string += "</br>" + linesArray[i];
+    }
+    return string + "</div>";
+}
+
+
 function setPosts(lowInclusive, highExclusive) {
     //this will be what to add to create all of the posts
     var htmlToAdd = "";
@@ -144,8 +170,11 @@ function showOlderPosts() {
 }
 
 function showNewerPosts() {
-    if (show + numPosts < posts.length) {
+    if (show + numPosts * 2 < posts.length) {
         show += numPosts;
+        setPosts(show, show + numPosts);
+    } else if (show + numPosts < posts.length) {
+        show = posts.length - numPosts;
         setPosts(show, show + numPosts);
     }
 }

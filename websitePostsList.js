@@ -176,10 +176,30 @@ posts.push(new post(
     "I made the 'top of post' links finally work, just by creating an anchor at the top that's positioned further up thatn the text itself. That way, linking to the anchor links to above the post, pushing it down out of the way. Also, I updated my resume to: actually explain my coding experience better, describe Cybersecurity now that I've been in it, and have creativity as a skill."
 ));
 
+posts.push(new mediaPost(
+    "Attempting Design Again",
+    "December 27th, 2018",
+    new Array(
+        "Once again, I'm trying to improve the design of the website."
+        , " This time, I'm just trying to fix the css so that it actually looks"
+        , " okay. Before, I had an orange and red theme, which really wasn't"
+        , " working for me. Instead, I switched to a dark grays, whites, and blue"
+        , " style, and I'm pretty happy with the results. It also matches the"
+        , " front page better now, since both have a dark theme."
+        , " Here's the before and after:"
+        , imageLineString(new Array(
+            imageString("StyleOrange.PNG", "before")
+            , imageString("StyleDark.PNG", "after")
+        ))
+        , "And I did this for all of the pages except the front page."
+        , "</br>Also, I added more projects to the projects page"
+    )
+));
 
-//things I want to try adding:
-/* nicer fonts
- * look more professional
+
+//Keep working on:
+/* fonts
+ * looking more professional
  * Different speed scrolling (background moves slow, overlay moves quicker)
  * resize event listener rather than onresize()
  * ~actually~ important things about me:

@@ -23,17 +23,17 @@
 
 #navbar {
     overflow: auto;
-    background-color: #abafcc;
+    background-color: #2859d6;
     text-align: center;
     border-top: solid;
     border-bottom: solid;
     border-color: black;
-    z-index: 2;
+    z-index: 1;
 }
 
 
     #navbar a {
-        background-color: #b1b5d3;
+        background-color: #c4c4c4;
         text-align: center;
         color: black;
         text-decoration: none;
@@ -52,14 +52,14 @@
         }
 
     #navbar .active {
-        background-color: #afd3be;
+        background-color: #92d1ac;
         border-bottom: solid;
         border-width: 4px;
-        border-bottom-color: #8ca597;
+        border-bottom-color: #28d633;
     }
 
         #navbar .active:hover {
-            background-color: #b9e5cc;
+            background-color: #9ed6b6;
         }
 
 .sticky {
@@ -116,6 +116,7 @@ a:hover {
 
 #aboutMe {
     line-height: 150%;
+    text-align: left;
 }
 
 #bottomBar {
