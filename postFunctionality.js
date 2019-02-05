@@ -29,10 +29,11 @@ var mediaPost = function (theTitle, theDate, contentMediaArray) {
 }
 
 //a dateless post that instead has information about the language environment
-var projectPost = function (theTitle, theIDE, theLanguage, theContentArray) {
+var projectPost = function (theTitle, theIDE, theLanguage, shortDescription, theContentArray) {
     this.title = theTitle;
     this.ide = theIDE;
     this.lang = theLanguage;
+    this.desc = shortDescription;
     this.framework = "";
     this.theEnvironment = "Built in ";
 

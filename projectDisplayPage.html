@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Other Projects</title>
+    <script src="mainCode.js"></script>
+    <script src="postFunctionality.js"></script>
+    <script src="projectsPostsList.js"></script>
+    <script>
+        var displayNum;
+
+        //sets up the page
+        function loadProject() {
+            addBottomBar();
+            fillInNav();
+            setActive();
+            fillInSideBar();
+            refreshPost();
+            whenResize();
+        }
+
+        //highlights the navbar
+        function setActive() {
+            document.getElementById("other").classList.add("active");
+        }
+
+        //reads the url and shows the selected post
+        function refreshPost() {
+            //find the post
+            var search = window.location.search;
+            displayNum = parseInt(search.substring(6));
+            //change the title
+            document.getElementsByTagName("title")[0].innerHTML = posts[displayNum].title;
+            //change the navigation
+            fillInPostNav();
+            //change the post display
+            setPosts(displayNum, displayNum + 1);
+        }
+
+        function fillInPostNav() {
+            var leftRight = "";
+            //left
+            if (displayNum < posts.length - 1) {
+                leftRight += "<a onclick=\"refreshPost()\" href=\"?post=";
+                leftRight += (displayNum + 1);
+                leftRight += "#top\" style=\"float: left\">&lt;-- ";
+                leftRight += posts[displayNum + 1].title;
+                leftRight += "</a > ";
+            }
+            //right
+            if (displayNum > 0) {
+                leftRight += "<a onclick=\"refreshPost()\" href=\"?post="
+                leftRight += (displayNum - 1);
+                leftRight += "#top\" style=\"float: right\">";
+                leftRight += posts[displayNum - 1].title;
+                leftRight += " --&gt;</a > ";
+            }
+
+            var randReturn = "";
+            //random
+            randReturn += "<a onclick=\"refreshPost()\" href=\"?post=";
+            randReturn += Math.floor(Math.random() * posts.length);
+            randReturn += "#top\" style=\"float: left\">";
+            randReturn += "? Random Post ?";
+            randReturn += "</a > ";
+            //return to menu
+            randReturn += "<a onclick=\"refreshPost()\" href=\""
+            randReturn += "projectsPostsPage.html";
+            randReturn += "#top\" style=\"float: right\">";
+            randReturn += "X Return to Menu X";
+            randReturn += "</a > ";
+
+
+            document.getElementById("postNavTop").innerHTML = randReturn + "<br /><br />" + leftRight;
+            document.getElementById("postNavBottom").innerHTML = leftRight + "<br /><br />" + randReturn;
+        }
+
+    </script>
+    <link rel="stylesheet" type="text/css" href="mainStyle.css" />
+    <style>
+        .code {
+            font-size: 11pt;
+            font-style: italic;
+            border: dashed;
+            border-width: 1px;
+            border-color: lightgreen;
+            padding: 4px;
+        }
+    </style>
+</head>
+
+<body id="entireBody"
+      onload="loadProject()"
+      onresize="whenResize()">
+    <a id="top" href="#top"></a>
+    <div id="pageTopper">
+        <div class="mainTopper">Other Projects</div>
+        <div class="underTopper">Various older things that I've created</div>
+    </div>
+    <nav id="navbar"></nav>
+    <div class="padder">
+        <div id="mainWrapper" class="wrapper">
+            <div id="leftSpacer"></div>
+            <div id="contentAndBar" class="wrapper">
+                <div id="content">
+                    <div class="postNavigation" id="postNavTop"></div>
+                    <br /><br />
+                    <div class="padder contentStream">
+                        <div id="postStream">
+                            Posts will load in once the page has loaded.
+                        </div>
+                    </div>
+                    <br />
+                    <div class="postNavigation" id="postNavBottom"></div>
+                    <br />
+                    <hr />
+                    <br />
+                </div>
+                <div id="sideBar"></div>
+            </div>
+            <br />
+        </div>
+    </div>
+    <div id="bottomBar"></div>
+</body>
+</html>

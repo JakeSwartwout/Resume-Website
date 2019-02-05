@@ -3,35 +3,76 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Other Pages</title>
+    <title>Projects Menu</title>
     <script src="mainCode.js"></script>
     <script src="postFunctionality.js"></script>
     <script src="projectsPostsList.js"></script>
     <script>
+        //sets up the page
+        function loadProjectsPage() {
+            addBottomBar();
+            fillInNav();
+            setActive();
+            fillInSideBar();
+            fillInProjectsList();
+            whenResize();
+        }
+
+        //highlights the navbar
         function setActive() {
             document.getElementById("other").classList.add("active");
         }
+
+        function fillInProjectsList() {
+            var inside = "";
+            for (var i = posts.length - 1; i >= 0; i--) {
+                inside += "<div id=\"project" + i + "\" class=\"project\">";
+                inside += "<span class=\"postName\"><a href=\"projectDisplayPage.html?post=" + i + "\">" + posts[i].title + "</a></span>";
+                inside += ":&nbsp;";
+                inside += "<span class=\"postDesc\">" + posts[i].desc + "</span>";
+                inside += "</div>";
+            }
+            /*
+             * <p id="project1" class="project">
+             * <div class="postName"><a href="projectDisplayPage.html?post=1">Post 1</a></div>
+             * <div class="postDesc">&nbsp;This is the first post</div>
+             * </p>
+             */
+            document.getElementById("projectsList").innerHTML = inside;
+        }
+
     </script>
     <link rel="stylesheet" type="text/css" href="mainStyle.css" />
     <style>
-        .code {
-            font-size: 11pt;
-            font-style: italic;
-            border: dashed;
-            border-width: 1px;
-            border-color: lightgreen;
-            padding: 4px;
+        .postDesc {
+            overflow: auto;
+        }
+
+        .postName {
+            overflow: auto;
+            text-decoration: none;
+        }
+
+            .postName a:link, a:visited {
+                font-weight: bold;
+                color: #a2a3b2;
+            }
+
+        .project {
+            overflow: auto;
+            margin-top: 15px;
+            color: #424266;
         }
     </style>
 </head>
 
 <body id="entireBody"
-      onload="fillInPoster(); setActive();"
+      onload="loadProjectsPage()"
       onresize="whenResize()">
     <a id="top" href="#top"></a>
     <div id="pageTopper">
-        <div class="mainTopper">Other Cool Things I've Coded</div>
-        <div class="underTopper">Various old projects I've done, in multiple languages and IDEs</div>
+        <div class="mainTopper">Other Things I've Programmed</div>
+        <div class="underTopper">A list of some of the cooler projects I've worked on</div>
     </div>
     <nav id="navbar"></nav>
     <div class="padder">
@@ -39,25 +80,22 @@
             <div id="leftSpacer"></div>
             <div id="contentAndBar" class="wrapper">
                 <div id="content">
-                    <div class="postNavigation">
-                        <a onclick="showNewerPosts()" href="#top" style="float: left">Go Left</a>
-                        <a onclick="showOlderPosts()" href="#top" style="float: right">Go Right</a>
-                    </div>
-                    <br /><br />
-                    <div class="padder postStream">
-                        <div id="postStream">
-                            Posts will load in once the page has loaded.
+                    <div class="padder contentStream">
+                        <div id="explanation">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Over my years of coding, I've created a lot of different projects.
+                            Some work, other's could never have worked, but none of them were complete failures.
+                            Through all of these projects, I learned something about the language,
+                            program design, the creation process, or even just how I work.
+                            In the end, not only have I bettered my programming skills, but I'm
+                            left with some awesome projects. I hope you enjoy looking at some of
+                            the amazing things that are possible with computing.
+                        </div>
+                        <div id="projectsList">
+                            Posts should load in. If they don't, there must be a bug somewhere! Dang!
                         </div>
                     </div>
-                    <br />
-                    <div class="postNavigation">
-                        <a onclick="showNewerPosts()" href="#top" style="float: left">Newer Posts</a>
-                        <a onclick="showOlderPosts()" href="#top" style="float: right">Older Posts</a>
-                        <br />
-                        <hr />
-                        <br />
-                    </div>
                 </div>
+                <br />&nbsp;
                 <div id="sideBar"></div>
             </div>
             <br />
