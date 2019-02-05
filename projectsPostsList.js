@@ -3,6 +3,7 @@ var posts = [];
 posts.push(new projectPost(
     "Fireworks Display",
     "Processing", "Java",
+    "A simple fireworks animation",
     new Array(
         "One of my friends showed off a small animation they built of"
         , " fireworks. I thought it was pretty unimpressive, so I went and"
@@ -19,6 +20,7 @@ posts.push(new projectPost(
 posts.push(new projectPost(
     "Planets",
     "Processing", "Java",
+    "A 2D planet orbit simulator with an in-simulation menu to change the properties.",
     new Array(
         "Processing is based on drawing shapes and moving them each frame,"
         , " so of course I would want to build a physics simulation. And of"
@@ -41,6 +43,7 @@ posts.push(new projectPost(
 posts.push(new projectPost(
     "Mosaic",
     "Processing", "Java",
+    "Turning any input image into a new picture made up of smaller images from another input set",
     new Array(
         "Inspired by a mosaic puzzle, I felt like it would be fun to code a"
         , " program that turned pixtures into mosaics of other pictures. And,"
@@ -75,6 +78,7 @@ posts.push(new projectPost(
 posts.push(new projectPost(
     "Game of Life",
     "Processing", "Java",
+    "Conway's Game of Life, a grid of tiles that 'live' or 'die' according to rules",
     new Array(
         "Just another small project, I made Conway's Game of Life in"
         , " Processing. I am not very proud of the code for this, but the"
@@ -94,11 +98,35 @@ posts.push(new projectPost(
     )
 ));
 
-//minesweeper
+
+//pong
+//snake
+
+
+posts.push(new projectPost(
+    "Minesweeper",
+    "Processing", "Java",
+    "Given the number of bombs in the 8 surrounding tiles, try to uncover all safe tiles without getting blown up",
+    new Array(
+        "This is just the classic game of Minesweeper, and I'm surprised by how fun it"
+        , " actually is. I can alter the difficulty through number of bombs and the size of"
+        , " the grid, and the code will automatically generate new and random games every"
+        , " time. Now, that means that they won't always be solveable, but that'd be a lot of"
+        , " work. Rather than draw everything, I used a combination of lines, simple shapes,"
+        , " and images from online. Here's partway through one one my games:"
+        , imageString("Minesweeper.PNG", "a partial game")
+        , "As you can see, you can place flags as well. And when you lose..."
+        , imageString("MinesweeperLoss.PNG", "a tragic loss")
+        , "It uncovers all bombs and ends the game."
+        , " You also can't click on a flag, and clicking on a blank tile automatically uncovers all of"
+        , " the tiles surrounding it, recursively displaying large areas."
+    )
+));
 
 posts.push(new projectPost(
     "Blackjack",
     "JCreator", "Java",
+    "A text based game of Blackjack, compete against a computer to draw cards until you are the closest to 21, without going over",
     new Array(
         "Finally, here's a purely text program I built that's actually worth"
         , " mentioning. It's a blackjack game played against a very stupid"
@@ -119,6 +147,7 @@ posts.push(new projectPost(
     "Dinosaur Simulation",
     "Sublime",
     "Javascript",
+    "A simulation of dinosaurs on an island with humans trying to flee them",
     new Array(
         "This was a fun project. My Dad had previously taught a programming class"
         , " at a college, and one of the assignments was to create a dinosaur"
@@ -145,12 +174,12 @@ posts.push(new projectPost(
 
 posts.push(new projectPost(
     "Youtube Analysis",
-    "Eclipse",
-    "Java",
+    "Eclipse", "Java",
+    "Performing basic analysis on my youtube watch history",
     new Array(
         "After downloading an insane amount of watch history data from both of"
         , " my Google accounts, I was very interested to analyze the data and"
-        , " see what I could find. I used something online to turn the HTML"
+        , " see what I could find. I used some dode from online to turn the HTML"
         , " document into a String (crazy, right? my computer could barely load"
         , " the page, yet it all fit into a string?). From that, I broke it into"
         , " individual entries which I could then analyze. At first, I was reading"
@@ -160,7 +189,7 @@ posts.push(new projectPost(
         , "</br>-the most watched video in clusters of x videos (I usually broke it into groups of 100)"
         , "</br>-my most watched channel"
         , "</br>-how many titles contained a certain string"
-        , "</br>-the top x most used words in the title (usually boring unless you go up to 40 or so)"
+        , "</br>-the top x most used words in the titles (usually boring unless you go up to 40 or so)"
         , "</br>Here's a sample run through, only calling some of the functions:"
         , codeString(new Array(
             "Loading"
@@ -209,15 +238,38 @@ posts.push(new projectPost(
 
 
 
-//Pixels to Pixels
+posts.push(new projectPost(
+    "Pixels",
+    "Processing", "Java",
+    "Taking the shape of one image and the colors of another (pixel by pixel) to create a new combination",
+    new Array(
+        "This is one of my favorite projects that I've done. I'll show the results first"
+        , " and then explain how I did it and what exactly it's doing."
+        , imageString("Pixels1.PNG", "the shape of my cat and the colors of jupiter")
+        , "Cool, right? So: This program takes in two input images. It turns them both into"
+        , " my own image format (just an array of a 'Pixel' class) and then starts going."
+        , " It sorts the pixels by some value (I used brightness) and shows this"
+        , " process (I just used bubble sort). Once both are sorted, it 'paints' the pixels"
+        , " of the shape image with the colors of the pixel that was sorted to the same rank."
+        , " Then using the Pixel's stored location, it swaps each pixel back to it's original"
+        , " location. I'm super happy with this program."
+        , imageString("Pixels2.PNG", "the shape of a christmas scene and the colors of a painting")
+        , "And while the program itself works, the results aren't always this great."
+        , " The results aren't as great when there are sharp contrasts or large amounts of the same color in the shape image,"
+        , " or when the color image has a lot of similar-brightness colors of differing hues"
+    )
+))
+
+
+
 //Oregon Trail
 
 
 
 posts.push(new projectPost(
     "Monopoly",
-    "Processing",
-    "Java",
+    "Processing", "Java",
+    "A fish themed game of Monopoly done for a Hackathon with a group of friends",
     new Array(
         "On December 1st, 2018, me and a group of friends attended our local hackathon"
         , ". I was upset that there was nothing that we were supposed to be hacking,"
@@ -242,8 +294,8 @@ posts.push(new projectPost(
 
 posts.push(new projectPost(
     "Flocking Simulation",
-    "Processing",
-    "Java",
+    "Processing", "Java",
+    "A set of 'boid' objects that naturally form complex flocks from simple rules",
     new Array(
         "In attempting to create a neural network (and failing), I watched so many tutorials that my youtube"
         , " feed is now mostly coding videos once more. I'm not upset, but it did inspire me to try making"
