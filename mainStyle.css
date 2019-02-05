@@ -41,6 +41,9 @@
     border-top: solid;
     border-bottom: solid;
     border-color: black;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
     z-index: 1;
 }
 
@@ -75,16 +78,6 @@
             background-color: #9ed6b6;
         }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-    .sticky + p {
-        margin-top: 51.5px;
-    }
-
 .padder {
     padding: 18px;
     overflow: auto;
@@ -106,7 +99,7 @@
     width: 65%;
 }
 
-.postStream {
+.contentStream {
     background-color: #f9fbfc;
     border-radius: 10px;
 }

@@ -9,11 +9,12 @@
         function setActive() {
             document.getElementById("resume").classList.add("active");
         }
-        
+
         function loadResume() {
             checkWidth(950, 950);
             addBottomBar();
             fillInNav();
+            fillInSideBar();
         }
     </script>
     <link rel="stylesheet" type="text/css" href="mainStyle.css" />
@@ -60,6 +61,16 @@
         #sideBar {
             color: black;
         }
+
+            #sideBar a:visited, a:link {
+                text-decoration: none;
+                color: darkslateblue;
+            }
+
+            #sideBar a:hover {
+                text-decoration: underline;
+                color: darkslateblue;
+            }
     </style>
 </head>
 
@@ -228,7 +239,7 @@
                                         </li>
                                         <li>
                                             Also worked in Android Studio, using java to code the
-                                            <a href="appPostsPage.html">apps'</a>
+                                            <a href="appPostsPage.html" class="plainLink">apps'</a>
                                             functionality
                                         </li>
                                     </ul>
@@ -274,6 +285,30 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <li>
+                                    C#
+                                </li>
+                                <li style="list-style:none;">
+                                    <ul>
+                                        <li>
+                                            Minimal knowledge from
+                                            <a href="gamePostsPage.html" class="plainLink">
+                                                building a game
+                                            </a>
+                                            in Unity, which uses c#
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Python
+                                </li>
+                                <li style="list-style:none;">
+                                    <ul>
+                                        <li>
+                                            Only slightly familiar. Used on occasion for a math class
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -311,16 +346,7 @@
                     <br />
 
                 </div>
-                <div id="sideBar">
-                    <strong>Other Places to Visit</strong>
-                    <br />
-                    <div id="linksList">
-                        <a href="https://jakeshortstories.blogspot.com/" title="jakesshortstories.blogspot.com">My Writing Blog</a>
-                        <br /> <a href="http://bugadventures.us/" title="bugadventures.us">The blog for my books</a>
-                        <br /> <a href="https://www.linkedin.com/in/jake-swartwout-3a082a172" title="You need an account to view it">My linkedIn Profile</a>
-                        <br />
-                    </div>
-                </div>
+                <div id="sideBar"></div>
             </div>
             <br />
         </div>

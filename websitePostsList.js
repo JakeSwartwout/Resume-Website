@@ -196,9 +196,33 @@ posts.push(new mediaPost(
     )
 ));
 
+posts.push(new post(
+    "Projects Display",
+    "December 28th, 2018",
+    "I thought I'd try to make the projects' display a little nicer. Instead of displaying the default 5 per page, I thought it would be cool to just display one per page, so that I could link to a specific post. I didn't want to make an html doc for each post, so this seemed extremely difficult. At first, I was going to try to use anchors (that's the only way I knew how to change URLs), setting the anchor to some number and then reading where the anchor was. Luckily, there's a better way: URL parameters and window.location.search and href-ing to a '?' and yeah. It all works pretty well.<br />Oh, also, the nav bar also got an upgrade. It now has the left and right actually say the post and also includes a random and return to menu button. Even cooler, when it's at the end, the arrow for that direction disappears completely!"
+));
+
+posts.push(new post(
+    "Projects Main Page and Sticky2",
+    "December 29th, 2018",
+    "I finished up yesterday's work with the project's page by making the main page. It has a short little intro which is honestly not that great and then a list of the projects.I had to add a description to each of them, which wasn't that bad as apparently there's only about 10 or so.I also created a few more posts of past projects I had been waiting to do.<br />I also fixed the sticky nav bar. Upsettingly, all I had to do was 'position:&nbsp;sticky' in the CSS and it would do exactly what I had done earlier while also doing it better (instant stick, rather than calculated jumpy stick)."
+));
+
+posts.push(new post(
+    "Possible Parallax",
+    "January 22nd, 2019",
+    "Welcome to 2019! New year New website! Ha, I wish I was joking. But no. I got inspired and want to change the front page aesthetics again. I want to make it have a parallax effect, where scrolling makes things move at different speeds. I'm not sure how I want to do it yet though. Some do it with javascript and MANY calculations. Other use CSS perspective to make things 'further away' move slower and 'closer' things faster. There's even just fixing the image in place and letting things scroll over it. I'm currently using powerpoint to try some ideas (using the morph transition like a sort of scrolling) and depending on the design, I'll choose a method to match. Also, I have to be careful with mobile"
+));
+
+posts.push(new post(
+    "Parallax Issues",
+    "February 5th, 2019",
+    "Well, this is a lot harder than I had anticipated. First, I had to actually design the front page. I'm really not sure what sort of style I want to go for. The one I'm liking the best is very troubling though, because it involves at least two different ways of doing parallax, and I don't know if I want to get into that. Also, why is background-size relative to the entire screen? It should be relative to the div, c'mon. Also, what's with images not touching each other unless they are positioned relative? That doesn't make any sense. It should just be margins are naturally some value, not that there's some mysterious thing non padding non margin on two sides of it. *sigh* I'm getting through it though"
+));
 
 //Keep working on:
-/* fonts
+/* main page header design
+ * fonts
  * looking more professional
  * Different speed scrolling (background moves slow, overlay moves quicker)
  * resize event listener rather than onresize()
@@ -208,6 +232,7 @@ posts.push(new mediaPost(
  * add tags to the posts that can be used to search/sort
  * 
  * 
- * sticky header only using the position: sticky?
+ * sticky main page description?
+ * just do the same thing as this site does for itself(not the tutorial, the page itself)
  * https://www.w3schools.com/css/css_positioning.asp
  */
