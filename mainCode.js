@@ -1,8 +1,8 @@
 ﻿function addBottomBar() {
     document.getElementById("bottomBar").innerHTML =
         "&nbsp;<br />----- Built by Jake Swartwout - Last updated " +
-        "December 27th, 2018"
-        + ", ----- <br /> &nbsp; ";
+        "February 5th, 2019"
+        + " ----- <br /> &nbsp; ";
 }
 
 
@@ -25,24 +25,6 @@ function fillInNav() {
     navbar = navbar.concat("<a href=\"gamePostsPage.html\" id=\"game\">Video Game</a>");
     navbar = navbar.concat("<a href=\"projectsPostsPage.html\" id=\"other\">Other Projects</a>");
     document.getElementById("navbar").innerHTML = navbar;
-
-    //set the scroll
-    window.onscroll = function () {
-        var navbar = document.getElementById("navbar");
-        var topStyle = getComputedStyle(document.getElementById("pageTopper"));
-        var topHeight = Number(topStyle.height.substr(0, topStyle.height.length - 2))
-            + Number(topStyle.paddingTop.substr(0, topStyle.paddingTop.length - 2))
-            + Number(topStyle.paddingBottom.substr(0, topStyle.paddingBottom.length - 2));
-        if (window.pageYOffset > topHeight) {
-            var navHeight = getComputedStyle(navbar).height;
-            navbar.classList.add("sticky");
-            navbar.nextElementSibling.style.marginTop = "" + (Number(navHeight.substr(0, navHeight.length - 2)) + 2) + "px";
-        } else {
-            navbar.classList.remove("sticky");
-            navbar.nextElementSibling.style.marginTop = "0px";
-        }
-    }
-
 }
 
 function fillInSideBar() {
@@ -50,9 +32,9 @@ function fillInSideBar() {
     string += "<br />";
     string += "<div id=\"linksList\">";
     string += "<a href=\"https://jakeshortstories.blogspot.com/\" title=\"jakesshortstories.blogspot.com\">My Writing Blog</a>";
-    string += "<br /> <a href=\"http://bugadventures.us/\" title=\"bugadventures.us\">The blog for my books</a>";
-    string += "<br /> <a href=\"https://www.linkedin.com/in/jake-swartwout-3a082a172\" title=\"You need an account to view it\">My linkedIn Profile</a>";
-    string += "<br /> <a href=\"https://github.com/JakeSwartwout\" title=\"so sad\">My poor neglected Github</a>";
+    string += "<br /> <a href=\"http://bugadventures.us/\" title=\"bugadventures.us\">The Blog for My Books</a>";
+    string += "<br /> <a href=\"https://www.linkedin.com/in/jake-swartwout-3a082a172\" title=\"You need an account to view it\">My LinkedIn Profile</a>";
+    string += "<br /> <a href=\"https://github.com/JakeSwartwout\" title=\"not much here\">My Github</a>";
     string += "<br />";
     string += "</div>";
 
