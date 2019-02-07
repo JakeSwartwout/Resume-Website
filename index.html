@@ -10,9 +10,9 @@
             document.getElementById("warning").innerHTML = "";
             addBottomBar();
             fillInNav();
+            setActive();
             whenResize();
             loadMainPics();
-            onscroll();
         }
 
         function setActive() {
@@ -62,7 +62,7 @@
     <link rel="stylesheet" type="text/css" href="indexStyle.css" />
 </head>
 
-<body onload="loadMain(); setActive();"
+<body onload="loadMain();"
       onresize="whenResize(); loadMainPics()">
     <div id="pageTopper">
         <div class="mainTopper">Jake Swartwout</div>
@@ -117,7 +117,7 @@
                     <div class="fade">
                         <img src="./images/Front Page/Spaghetti.jpg" class="pic">
                         <div class="fadeText">
-                            <h1>Food</h1>
+                            <h1>Cooking</h1>
                         </div>
                     </div>
                     <img src="./images/Front Page/Cake.jpg" class="pic">
@@ -173,7 +173,7 @@
                         <a href="https://jakeshortstories.blogspot.com/" title="jakesshortstories.blogspot.com">My Writing Blog</a>
                         <br /> <a href="http://bugadventures.us/" title="bugadventures.us">The blog for my books</a>
                         <br /> <a href="https://www.linkedin.com/in/jake-swartwout-3a082a172" title="You need an account to view it">My linkedIn Profile</a>
-                        <br /> <a href="https://github.com/JakeSwartwout" title="so sad">My poor neglected Github</a>
+                        <br /> <a href="https://github.com/JakeSwartwout" title="kinda empty though">My Github</a>
                         <br /> <a href="https://natalieswartwout.wordpress.com/image/you-move-like-a-poem/final-photos/" title="My Sister's Website">Source of Some Photos</a>
                         <br />
                     </div>
