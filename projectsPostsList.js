@@ -323,14 +323,14 @@ posts.push(new projectPost(
         , " 8 points, and if any of them match (including if rotation is required) a previous command, then"
         , " the node will move to that position. When a new setup is found, the user is prompted to select"
         , " how the node should act in this scenario in the future. Here is the starting menu, when there is only the node:"
-        , imageString("PatternPath (Start).PNG")
+        , imageString("PatternPath(Start).PNG", "a 3x3 grid of dots, the center black and one dot circled")
         , "Each dot stores whether it has been visited or not, and the shape of this is what determines"
         , " the next action. Here are a few runthroughs: "
         , imageLineString(
             new Array(
-                imageString("PatternPath (2).PNG")
-                , imageString("PatternPath (3).PNG")
-                , imageString("PatternPath (1).PNG")
+                imageString("PatternPath(2).PNG", "marching path")
+                , imageString("PatternPath(3).PNG", "winding path")
+                , imageString("PatternPath(1).PNG", "chaotic path")
             )
         )
         , "As you can see, the path can form marches, wind itself up, or even act chaotically."
