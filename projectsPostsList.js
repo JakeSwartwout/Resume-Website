@@ -312,3 +312,51 @@ posts.push(new projectPost(
         , " are the cohesion, and the red lines are the direction alignment."
     )
 ));
+
+posts.push(new projectPost(
+    "Patterned Path",
+    "Processing", "Java",
+    "Users choose how to act when in certain situations, allowing a path to be drawn with repetitive shapes",
+    new Array(
+        "Based on a game I used to play on paper, this program allows the user to \"draw\" intricate paths"
+        , " merely by choosing how the node should react in each scenario. The node inspects the surrounding"
+        , " 8 points, and if any of them match (including if rotation is required) a previous command, then"
+        , " the node will move to that position. When a new setup is found, the user is prompted to select"
+        , " how the node should act in this scenario in the future. Here is the starting menu, when there is only the node:"
+        , imageString("PatternPath (Start).PNG")
+        , "Each dot stores whether it has been visited or not, and the shape of this is what determines"
+        , " the next action. Here are a few runthroughs: "
+        , imageLineString(
+            new Array(
+                imageString("PatternPath (2).PNG")
+                , imageString("PatternPath (3).PNG")
+                , imageString("PatternPath (1).PNG")
+            )
+        )
+        , "As you can see, the path can form marches, wind itself up, or even act chaotically."
+        , "<br />User input: If the current position has an answer, hitting spacebar will advance the path."
+        , " otherwise, spacebar will bring up and hide the menu. With the menu open, the arrow"
+        , " keys are used for selection of the next position, and enter confirms the selection"
+    )
+));
+
+
+posts.push(new projectPost(
+    "Predictive Text",
+    "Atom", "C++",
+    "After reading in sample text, the program uses the history and probability to guess following words and create sentence like chains",
+    new Array(
+        "This was a project that I completed with a team for my Data Structures class."
+        , " Since it was a team project, the results are up "
+        , linkString("on github", "https://github.com/JakeSwartwout/Writing-Analysis")
+        , ". It's attempting to mimic the predcitive text features in keyboards, except"
+        , " on a much simpler scale. We can read in any number of files and save files,"
+        , " storing the data in a weighted directed graph. Each connection"
+        , " represents a word that has previously followed another word, and the weight is"
+        , " how many times that has occurred. Using this, we can form rough sentences"
+        , " by choosing the more common following-words more often. The results are"
+        , " varied, usually depending on the writing. Strong patterns encourage accurate"
+        , " prediction, while varied vocabulary means the program will be get stuck"
+        , " on linking words as they appear at a much higher rate."
+    )
+));
