@@ -1,7 +1,7 @@
 ﻿function addBottomBar() {
     document.getElementById("bottomBar").innerHTML =
         "&nbsp;<br />----- Built by Jake Swartwout - Last updated " +
-        "April 28th, 2019"
+        "July 20th, 2019"
         + " ----- <br /> &nbsp; ";
 }
 
@@ -11,7 +11,6 @@ function fillInPoster() {
     addBottomBar();
     fillInNav();
     fillInSideBar();
-    whenResize();
 }
 
 
@@ -31,53 +30,12 @@ function fillInSideBar() {
     var string = "<strong>Other Places to Visit</strong>";
     string += "<br />";
     string += "<div id=\"linksList\">";
-    string += "<a href=\"https://jakeshortstories.blogspot.com/\" title=\"jakesshortstories.blogspot.com\">My Writing Blog</a>";
-    string += "<br /> <a href=\"http://bugadventures.us/\" title=\"bugadventures.us\">The Blog for My Books</a>";
-    string += "<br /> <a href=\"https://www.linkedin.com/in/jake-swartwout\" title=\"You need an account to view it\">My LinkedIn Profile</a>";
+    string += "<a href=\"https://www.linkedin.com/in/jake-swartwout\" title=\"You need an account to view it\">My LinkedIn Profile</a>";
     string += "<br /> <a href=\"https://github.com/JakeSwartwout\" title=\"not much here\">My Github</a>";
+    string += "<br /> <a href=\"https://jakeshortstories.blogspot.com/\" title=\"jakesshortstories.blogspot.com\">My Writing Blog</a>";
+    string += "<br /> <a href=\"https://bug-adventures.blogspot.com/\" title=\"free to download\">The Blog for My Books</a>";
     string += "<br />";
     string += "</div>";
 
     document.getElementById("sideBar").innerHTML = string;
-}
-
-
-function whenResize() {
-    checkWidth(850, 640);
-}
-
-function checkWidth(maxStretch, minSquish) {
-    var space = window.innerWidth;
-    if (space > maxStretch) {
-        var barWidth = (space - maxStretch - 50) / 2;
-        document.getElementById("leftSpacer").innerHTML = "&nbsp";
-        document.getElementById("leftSpacer").style.width = barWidth + "px";
-
-        document.getElementById("contentAndBar").style.width = maxStretch + "px";
-
-        document.getElementById("sideBar").style.width = "";
-        document.getElementById("content").style.width = "";
-
-        document.getElementById("sideBar").style.textAlign = "left";
-    } else if (space < minSquish) {
-        document.getElementById("leftSpacer").innerHTML = "";
-        document.getElementById("leftSpacer").style.width = "0px";
-
-        document.getElementById("contentAndBar").style.width = "100%";
-
-        document.getElementById("sideBar").style.width = "100%";
-        document.getElementById("content").style.width = "100%";
-
-        document.getElementById("sideBar").style.textAlign = "center";
-    } else {
-        document.getElementById("leftSpacer").innerHTML = "";
-        document.getElementById("leftSpacer").style.width = "0px";
-
-        document.getElementById("contentAndBar").style.width = "100%";
-
-        document.getElementById("content").style.width = "";
-        document.getElementById("sideBar").style.width = "";
-
-        document.getElementById("sideBar").style.textAlign = "left";
-    }
 }

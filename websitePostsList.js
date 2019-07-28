@@ -220,19 +220,45 @@ posts.push(new post(
     "Well, this is a lot harder than I had anticipated. First, I had to actually design the front page. I'm really not sure what sort of style I want to go for. The one I'm liking the best is very troubling though, because it involves at least two different ways of doing parallax, and I don't know if I want to get into that. Also, why is background-size relative to the entire screen? It should be relative to the div, c'mon. Also, what's with images not touching each other unless they are positioned relative? That doesn't make any sense. It should just be margins are naturally some value, not that there's some mysterious thing non padding non margin on two sides of it. *sigh* I'm getting through it though"
 ));
 
+posts.push(new post(
+    "Back to Business",
+    "July 20th, 2019",
+    "I'm back to keep working on the website! I've been interning at Visa this summer, and we've been making a website there. I've been learning soo much about websites, both in backend, construction, tips and tricks, and css styles. It's been a really great experience. We've been working with ASP.NET MVC 5 (which I'm really liking) and now I see why it's been so difficult to make a website using my method. Since I don't want to host it, I'm going to stick with this method, but apply some of the tricks I learned to improve the overall function of the site."
+));
+
+posts.push(new post(
+    "Elegant Layout",
+    "July 20th, 2019",
+    "Okay, I fixed a few things. Before, I was brute forcing a lot of styling since I didn't understand css. Now, I think I've found the so-called 'elegant solution', but to a css problem. The main content was previously centered using javascript to calculate it. Now, I'm using pure css, a combination of max-width, margin: auto, and @media. It works really well. I also changed the navbar a little too. Now, it detects when the window is small and changes the links width. Before, there were certain widths when only a few of the links were two lines tall, but now, they all become two lines tall at the same time."
+));
+
+posts.push(new post(
+    "Front Page Finally",
+    "July 28th, 2019",
+    "I've finally gotten to work on the front page. I thought it would be nice to have something dynamic, like parallax, or some moving background, but I just can't come up with anything that I like. I wasted a bunch of time making a cloud move back and forth raining down words, but it didn't really make sense, nor did it describe me. So, I went back to my original design. I fixed it up with the efficient styling, wrote a new story, removed some of the pictures, and I think it should be good to go. It's still not great, but it'll work for now."
+));
+
 //Keep working on:
-/* main page header design
+/* main page pictures still disappear sometimes
  * fonts
  * looking more professional
  * Different speed scrolling (background moves slow, overlay moves quicker)
- * resize event listener rather than onresize()
  * ~actually~ important things about me:
  *  - light or dark theme
  *  - tabs or spaces
  * add tags to the posts that can be used to search/sort
- * 
- * 
+ *      (filter the projects by language)
+ * add a favicon (little icon for the bookmark)
+ *      hopefully just <link rel="icon" href="/favicon.ico">     
+ * can literally center with just <thing align="center"> ?
+ *      or margin: auto
+ * can use calc(#vh + #% + #px)
+ * new font?
+ *      Bahnschrift semibold: Jake Swartwout
+ *      Tahoma --Bolded: Jake Swartwout      my favorite
+ *      Yu Gothic UI Semibold: Jake Swartwout
+ * resume on mobile looks awful
  * sticky main page description?
- * just do the same thing as this site does for itself(not the tutorial, the page itself)
- * https://www.w3schools.com/css/css_positioning.asp
+ *      just do the same thing as this site does for itself(not the tutorial, the page itself)
+ *      https://www.w3schools.com/css/css_positioning.asp
  */

@@ -1,4 +1,6 @@
-﻿body {
+﻿@import url("navbarStyle.css");
+
+body {
     font-family: Arial;
     text-align: left;
     background-color: #535563;
@@ -34,79 +36,25 @@
     }
 
 
-#navbar {
-    overflow: auto;
-    background-color: #2859d6;
-    text-align: center;
-    border-top: solid;
-    border-bottom: solid;
-    border-color: black;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    z-index: 1;
-}
-
-
-    #navbar a {
-        background-color: #c4c4c4;
-        text-align: center;
-        color: black;
-        text-decoration: none;
-        width: 14.666%;
-        height: inherit;
-        float: left;
-        display: block;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 1%;
-        padding-right: 1%;
-    }
-
-        #navbar a:hover {
-            background-color: #bcc0e0;
-        }
-
-    #navbar .active {
-        background-color: #92d1ac;
-        border-bottom: solid;
-        border-width: 4px;
-        border-bottom-color: #28d633;
-    }
-
-        #navbar .active:hover {
-            background-color: #9ed6b6;
-        }
-
-.padder {
-    padding: 18px;
-    overflow: auto;
-}
-
-#mainWrapper {
-    width: 100%;
-    float: left;
-    overflow: auto;
-}
-
-#leftSpacer {
-    float: left;
-    width: 100px;
-}
-
-#content {
-    float: left;
-    width: 65%;
-}
-
 .contentStream {
     background-color: #f9fbfc;
     border-radius: 10px;
+    padding: 15px;
 }
 
-#contentAndBar {
+
+
+.contentContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 10px;
+}
+
+.content {
     float: left;
-    width: 100%;
+    max-width: 600px;
+    width: 65%;
 }
 
 #sideBar {
@@ -115,6 +63,20 @@
     line-height: 150%;
     padding-left: 5%;
     color: white;
+}
+
+@media (max-width: 600px) {
+    .content {
+        float: none;
+        width: 100%;
+    }
+
+    #sideBar {
+        float: none;
+        text-align: center;
+        margin: auto;
+        width: unset;
+    }
 }
 
 .post {

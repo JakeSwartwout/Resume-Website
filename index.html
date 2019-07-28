@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-
+<!-- merge index-->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -8,10 +8,6 @@
     <script>
         function loadMain() {
             document.getElementById("warning").innerHTML = "";
-            addBottomBar();
-            fillInNav();
-            setActive();
-            whenResize();
             loadMainPics();
         }
 
@@ -53,7 +49,7 @@
                 //the total width then is going to be the sum of widths per height times total height
                 //so the total height should be the total width divided by the sum
                 var totWide = getComputedStyle(wrapper).width;
-                var totHigh = Number(totWide.substring(0, totWide.length - 2)) / (sumWidths + .0075);
+                var totHigh = Number(totWide.substring(0, totWide.length - 2)) / sumWidths;
                 //set the height to what it should be, and everything else will adjust automatically
                 wrapper.style.height = totHigh + "px";
             }
@@ -63,125 +59,70 @@
 </head>
 
 <body onload="loadMain();"
-      onresize="whenResize(); loadMainPics()">
+      onresize="loadMainPics()">
+
     <div id="pageTopper">
         <div class="mainTopper">Jake Swartwout</div>
-        <div class="underTopper">Email: <a class="plainLink" href="mailto:jacob.swartwout@gmail.com">Jacob.Swartwout@gmail.com</a></div>
     </div>
-    <nav id="navbar"></nav>
 
-    <div id="mainWrapper" class="wrapper">
-        <div id="leftSpacer"></div>
-        <div id="contentAndBar" class="wrapper">
+    <nav id="navbar"></nav>
+    <script>fillInNav(); setActive();</script>
+
+    <div id="contentWhole">
+        <div id="contentContainer">
             <div id="content">
-                <p id="warning" style="margin:0">The page is loading. There are a lot of pictures, just give it a moment</p>
-                <div class="picsAcross">
-                    <div class="fade">
-                        <img src="./images/Front Page/MeBricks.jpg" class="pic">
-                        <div class="fadeText">
-                            <h1>This is me</h1>
+                <div id="pictures">
+                    <p id="warning" style="margin:0">The page is loading. There are a lot of pictures, just give it a moment</p>
+                    <div class="picsAcross">
+                        <div class="fade">
+                            <img src="./images/Front Page/MeBricks.jpg" class="pic">
+                            <div class="fadeText">
+                                <h1>This is me</h1>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="picsAcross">
-                    <img src="./images/Front Page/MeSnowdog.jpg" class="pic">
-                    <img src="./images/Front Page/MeSnowman.jpg" class="pic">
-                    <img src="./images/Front Page/MeDoor.jpg" class="pic">
-                </div>
-                <div class="picsAcross">
-                    <img src="./images/Front Page/PanoramaCrop.jpg" class="pic">
-                </div>
-                <div class="picsAcross">
-                    <div class="fade">
-                        <img src="./images/Front Page/View.jpg">
-                        <div class="fadeText">
-                            <h1>Beautiful Colorado</h1>
-                        </div>
+                    <div class="picsAcross">
+                        <img src="./images/Front Page/MeSnowdog.jpg" class="pic">
+                        <img src="./images/Front Page/MeSnowman.jpg" class="pic">
+                        <img src="./images/Front Page/MeDoor.jpg" class="pic">
                     </div>
-                </div>
-                <div class="picsAcross">
-                    <div class="fade">
-                        <img src="./images/Front Page/Cooking.jpg" class="pic">
-                        <div class="fadeText">
-                            <h1>Cooking</h1>
-                        </div>
+                    <div class="picsAcross">
+                        <img src="./images/Front Page/PanoramaCrop.jpg" class="pic">
                     </div>
-                    <div class="fade">
-                        <img src="./images/Front Page/Running.jpg" class="pic">
-                        <div class="fadeText">
-                            <h1>Running</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="picsAcross">
-                    <div class="fade">
-                        <img src="./images/Front Page/Spaghetti.jpg" class="pic">
-                        <div class="fadeText">
-                            <h1>Food</h1>
-                        </div>
-                    </div>
-                    <img src="./images/Front Page/Cake.jpg" class="pic">
-                </div>
-                <div class="picsAcross">
-                    <img src="./images/Front Page/Sunflower.jpg" class="pic">
-                    <div class="fade">
-                        <img src="./images/Front Page/Pansy.jpg" class="pic">
-                        <div class="fadeText">
-                            <h1>Gardening</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="picsAcross">
-                    <img src="./images/Front Page/ScoutCrop.jpg" class="pic">
-                    <img src="./images/Front Page/PutMe.jpg" class="pic">
-                </div>
-                <div class="picsAcross">
-                    <div class="fade">
-                        <img src="./images/Front Page/Backlit.jpg">
-                        <div class="fadeText">
-                            <h1>Writing</h1>
-                        </div>
+                    <div class="picsAcross">
+                        <img src="./images/Front Page/Backlit.jpg" class="pic">
                     </div>
                 </div>
             </div>
-            <div id="sideBar">
-                <div class="padder">
+            <div id="sideDescription">
+                <div id="welcome">
+                    Welcome to my website
                     <div id="aboutMe">
-                        <p style="margin-top:0px; text-align: center;">
-                            Hi! Welcome to my website
-                        </p>
                         <p>
                             My name is Jake Swartwout (pronounced sss-wart-out), and I'm
-                            currently a Freshman at the University of Colorado, Boulder.
-                            In 2022, I'll graduate with a BS in Computer Science and a
-                            minor in Business.
+                            currently a Sophomore at the University of Colorado, Boulder.
+                            In 2022, I'll graduate with a BS in Computer Science, a
+                            minor in Business, and a Minor in Technology, Arts, and Media (TAM).
                         </p>
                         <p>
                             This website is meant to act as an expanded version of a resume.
-                            It will still have a copy of a traditional resume, but will
-                            hopefully also give you a better idea of who I am, along with
-                            showing off some of my skills.
+                            It includes a version of my traditional resume, but will
+                            hopefully also give you a better idea of who I am through the blog posts.
+                            Explore the different pages to see samples of both my work and my personality!
                         </p>
                         <p>
-                            Feel free to contact me at the email above. I'm currently looking
-                            for a summer internship related to computer science, so if you
-                            have something like that, email away!
+                            Feel free to contact me at <a href="mailto:jacob.swartwout@gmail.com" style="text-decoration:underline; opacity: .8; color: inherit;">jacob.swartwout@gmail.com</a>.
+                            I'm currently looking for a part-time position for when I'm in Boulder,
+                            and then a summer internship after that, but any sort of experience is welcome.
                         </p>
                     </div>
-                    <strong>Other Places to Visit</strong>
-                    <div id="linksList">
-                        <a href="https://jakeshortstories.blogspot.com/" title="jakesshortstories.blogspot.com">My Writing Blog</a>
-                        <br /> <a href="http://bugadventures.us/" title="bugadventures.us">The blog for my books</a>
-                        <br /> <a href="https://www.linkedin.com/in/jake-swartwout-3a082a172" title="You need an account to view it">My linkedIn Profile</a>
-                        <br /> <a href="https://github.com/JakeSwartwout" title="kinda empty though">My Github</a>
-                        <br /> <a href="https://natalieswartwout.wordpress.com/image/you-move-like-a-poem/final-photos/" title="My Sister's Website">Source of Some Photos</a>
-                        <br />
-                    </div>
                 </div>
+                <div id="sideBar"></div>
             </div>
         </div>
     </div>
     <br />
     <div id="bottomBar"></div>
+    <script>addBottomBar(); fillInSideBar();</script>
 </body>
 </html>

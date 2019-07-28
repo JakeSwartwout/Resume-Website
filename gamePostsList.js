@@ -126,3 +126,102 @@ posts.push(new mediaPost(
         , "I should probably separate those plants now though, shouldn't I. Dang."
     )
 ));
+
+
+posts.push(new mediaPost(
+    "Inventory",
+    "December 2nd, 2019",
+    new Array(
+        "I drew up and coded an inventory box. It was"
+        , " really difficult because I wanted to create my own input option called inventory"
+        , " but didn't realize that I had to change it to a button type input, so it wouldn't"
+        , " open. I figured it out though, and now it looks pretty good. It opens"
+        , " when you press 'e', stays open, and then closes again when you press 'e' again,"
+        , " just how a classic inventory should. Here's"
+        , " what I drew up as the base, and the slots will fill in with items later."
+        , pixelArtString("Inventory.png", "the inventory I drew")
+        , "Also, I am so proud of that shadow. It looks so good!"
+    )
+));
+
+posts.push(new post(
+    "Total Remake",
+    "December 3rd, 2019",
+    "Well... I totally redid a whole bunch of stuff. I was getting really tired of trying to deal with Tiled to Unity, soo... I just got rid of it. Now, I'm using Tiled for their path drawing tool, then exporting this as a PNG and just putting that in as the background. There's no collisions or alternate layers, but it's really nice to not have gaps between blurry tiles for once. I also changed a few other things too. I simplified the code for player movement, manually selected some things rather than the code trying to find them each time, and tried adding some plants to harvest. The plants were horrible though, as now the player has a second inspector boxCollider, but Unity doesn't like to distinguish between that and the players one for some reason? But I think I'm getting it. There's also an item class now, so I just need to figure out how to make some sweet sweet Carrot Prefabs, and I think I'll be good to go"
+));
+
+posts.push(new mediaPost(
+    "Level Persistance",
+    "December 9th, 2019",
+    new Array(
+        "I finally got it to work! Yes!! Object persistance across levels, that is."
+        , " Oh my gosh did this take forever, and I'm only posting now that I've"
+        , " gotten it to work. Basically, I got the plant harvesting to work"
+        , " (I used triggers which made it not collide anymore) and I was really happy"
+        , " with it, but then they wouldn't stay harvested. Every time I loaded a new"
+        , " scene, it deleted everything, and when I reloaded it, it created everything"
+        , " new again. To try to fix this, I tried so many things:"
+        , "<ol>"
+        , "<li>First, I tried to save the data from each level to reload later,"
+        , " using interfaces to make things loadable. But, this didn't work as I"
+        , " couldn't search for interfaces or give anything IDs.</li>"
+        , "<li>Next, I tried combining everything into a single scene. With this,"
+        , " it completely broke all of my camera borders and just felt horrible.</li>"
+        , "<li>Then, I tried saving all of the gameObjects themselves. I just filled"
+        , " a List with every single GameObject in the level. When loading in an old"
+        , " scene, I would delete everything and then instantiate all of my saved"
+        , " GameObjects. But, for some reason, there was no way to separate the"
+        , " variable from an object in the scene, so it would delete the objects"
+        , " when leaving the scene anyway and then there wasn't anything to load in.</li>"
+        , "<li>Finally though, I went back to a twist on my original. I created an"
+        , " intermediate class between the usual unity behavior and whatever behavior"
+        , " I wanted to add. This means that everything that needs saving will"
+        , " automatically have the saving dynamics. I could now give them IDs, (which"
+        , " I had to use Awake() to make sure they got IDs before others tried to load"
+        , " them [I could use manual IDs, but if I didn't, it would generate an ID based"
+        , " on the position]) and recreate my loading function. The load and save just"
+        , " use a string full of data to use in setup."
+        , "</ol>"
+        , "And it works! I am super happy with it. Not sure how death works now, but I'll work on that."
+    )
+));
+
+posts.push(new post(
+    "Death Non-persistance",
+    "December 9th, 2019",
+    "Okay, I worked out the levels persisting except in cases of death. I just had to have a secondary version of all of my memory varibles, to determine between current memory and actually saved memory. There was a little finagling, like with the inventory re-instantiating itself, things not loading in the right order, the scene teleporters trying to affect player, the camera not moving at the right time, etc etc. It seems to be working? But there's been so many little things that it's tough to know what 'working' is and to know if there's anything that I've missed."
+));
+
+posts.push(new mediaPost(
+    "More Plants",
+    "January 11th, 2019",
+    new Array(
+        "I drew up some more plants. It's funny how some of these posts are hardcore"
+        , " and super frustrating code to help others with their code, and then others"
+        , " are me posting my drawings on an adult version of the fridge."
+        , " Anyway, I drew the plants:"
+        , pixelArtString("6Plants.png", "The plants")
+        , "The plants after being harvested:"
+        , pixelArtString("6Plants-Harvested.png", "the remnants of the plants after harvest")
+        , "And the items that they drop:"
+        , pixelArtString("6Plants-items.png", "the items that drop")
+        , "Since they're my own plants, I had to name them too. The first two are"
+        , " just regular carrots and tomatoes, but the rest are my own."
+        , "The round purple berry is an Opix, the long dark one is a Petra,"
+        , " the tiny green ones are Slucks, and the mushroom is a Chosp."
+        , " I'm pretty happy with how they turned out. Now I actually need to find"
+        , " where to use them."
+    )
+));
+
+posts.push(new post(
+    "Storyline",
+    "January 12th, 2019",
+    "So I thought it'd be fun to work more on the story. Turns out, that means completely changing most of the plot. Now, the main character isn't the powerful person, but just a guy who cares about his family. Along with this, I realized that I had no way of actually getting the character to follow a story. So, I started work on a new component called a storyline. I'm trying to plan it well to make it easier later. Currently, there's the main class, which will look up across files, has goal objects, which each have task objects that need to be completed, and a corresponding goalShell so that I can load, order, and arange them without needing to create and store every goal at once. Hopefully that will work well?"
+));
+
+posts.push(new post(
+    "Goals and Storyline Completed",
+    "January 14th, 2019",
+    "Well, it seems like the storyline is working correctly! Oh shoot, I just realized it doesn't take saving into consideration. Dang. Anyways, it's pretty simple but also weirdly complicated. Like I said, there's an array of shell objects which store the path of unlocking. Every frame, it checks if any new ones should unlock, creating a goal object for them and putting that into a list. These are constantly updated too, checking if they are completed or not. They are considered completed when every task inside of them is completed. Currently, I only have an itemTask type, but I should be able to expand it later. Oh, and each goal has its own file so that I don't load everything at once."
+));
