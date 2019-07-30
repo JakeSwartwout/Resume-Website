@@ -238,6 +238,12 @@ posts.push(new post(
     "I've finally gotten to work on the front page. I thought it would be nice to have something dynamic, like parallax, or some moving background, but I just can't come up with anything that I like. I wasted a bunch of time making a cloud move back and forth raining down words, but it didn't really make sense, nor did it describe me. So, I went back to my original design. I fixed it up with the efficient styling, wrote a new story, removed some of the pictures, and I think it should be good to go. It's still not great, but it'll work for now."
 ));
 
+posts.push(new post(
+    "Mobile Version",
+    "July 29th, 2019",
+    "I found that my website looks really strange on mobile devices, so I thought I should try to fix it. I added a meta tag, so hopefully that allows it to detect a mobile site and tell it to not falsely stretch the screen."
+));
+
 //Keep working on:
 /* main page pictures still disappear sometimes
  * fonts
@@ -250,15 +256,9 @@ posts.push(new post(
  *      (filter the projects by language)
  * add a favicon (little icon for the bookmark)
  *      hopefully just <link rel="icon" href="/favicon.ico">     
- * can literally center with just <thing align="center"> ?
- *      or margin: auto
- * can use calc(#vh + #% + #px)
  * new font?
  *      Bahnschrift semibold: Jake Swartwout
  *      Tahoma --Bolded: Jake Swartwout      my favorite
  *      Yu Gothic UI Semibold: Jake Swartwout
  * resume on mobile looks awful
- * sticky main page description?
- *      just do the same thing as this site does for itself(not the tutorial, the page itself)
- *      https://www.w3schools.com/css/css_positioning.asp
  */

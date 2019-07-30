@@ -39,3 +39,11 @@ function fillInSideBar() {
 
     document.getElementById("sideBar").innerHTML = string;
 }
+
+function checkMobile() {
+    var userAgent = navigator.userAgent;
+    var isMobile = userAgent.indexOf("Mobile") !== -1; //is there mobile in the user agent
+    document.getElementsByTagName("body")[0].classList.add("mobile");
+}
+
+setTimeout(checkMobile, 10);

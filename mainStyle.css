@@ -1,5 +1,10 @@
 ﻿@import url("navBarStyle.css");
 
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+}
+
 body {
     font-family: Arial;
     text-align: left;
@@ -53,7 +58,6 @@ body {
 
 .content {
     float: left;
-    max-width: 600px;
     width: 65%;
 }
 

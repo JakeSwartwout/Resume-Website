@@ -3,6 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Jake Swartwout</title>
     <script src="mainCode.js"></script>
     <script>
@@ -48,8 +49,8 @@
                 }
                 //the total width then is going to be the sum of widths per height times total height
                 //so the total height should be the total width divided by the sum
-                var totWide = getComputedStyle(wrapper).width;
-                var totHigh = Number(totWide.substring(0, totWide.length - 2)) / sumWidths;
+                var totWide = parseFloat(getComputedStyle(wrapper).width) - 1;
+                var totHigh = totWide / sumWidths;
                 //set the height to what it should be, and everything else will adjust automatically
                 wrapper.style.height = totHigh + "px";
             }

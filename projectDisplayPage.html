@@ -17,7 +17,6 @@
             setActive();
             fillInSideBar();
             refreshPost();
-            whenResize();
         }
 
         //highlights the navbar
@@ -91,37 +90,27 @@
 </head>
 
 <body id="entireBody"
-      onload="loadProject()"
-      onresize="whenResize()">
+      onload="loadProject()">
     <a id="top" href="#top"></a>
     <div id="pageTopper">
         <div class="mainTopper">Other Projects</div>
         <div class="underTopper">Various older things that I've created</div>
     </div>
     <nav id="navbar"></nav>
-    <div class="padder">
-        <div id="mainWrapper" class="wrapper">
-            <div id="leftSpacer"></div>
-            <div id="contentAndBar" class="wrapper">
-                <div id="content">
-                    <div class="postNavigation" id="postNavTop"></div>
-                    <br /><br />
-                    <div class="padder contentStream">
-                        <div id="postStream">
-                            Posts will load in once the page has loaded.
-                            <br />
-                            Or, you've tried to access the display without selecting a project. Click 'Other Projects' to return to the menu
-                        </div>
+    <div class="contentWhole">
+        <div class="contentContainer">
+            <div class="content">
+                <div class="postNavigation" id="postNavTop"></div>
+                <br /><br />
+                <div class="padder contentStream">
+                    <div id="postStream">
+                        Posts will display once page is loaded <br>(assuming the javascript is correct)
                     </div>
-                    <br />
-                    <div class="postNavigation" id="postNavBottom"></div>
-                    <br />
-                    <hr />
-                    <br />
                 </div>
-                <div id="sideBar"></div>
+                <br />
+                <div class="postNavigation" id="postNavBottom"></div><br />
             </div>
-            <br />
+            <div id="sideBar"></div>
         </div>
     </div>
     <div id="bottomBar"></div>

@@ -1,5 +1,10 @@
 ﻿@import url("navBarStyle.css");
 
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+}
+
 body {
     font-family: Arial;
     text-align: left;
@@ -96,7 +101,10 @@ a:hover {
 }
 
 .picsAcross {
-    width: 100%;
+    width: calc(100% + 1px);
+}
+
+#pictures{
     overflow: hidden;
 }
 

@@ -42,6 +42,7 @@
             float: left;
             width: 50%;
             overflow: auto;
+            font-style: italic;
         }
 
         .resumeRight {
@@ -55,10 +56,12 @@
             margin: 5px;
         }
 
+        /*white background*/
         #entireBody {
             background: white;
         }
 
+        /*black text*/
         #sideBar {
             color: black;
         }
@@ -72,6 +75,27 @@
                 text-decoration: underline;
                 color: darkslateblue;
             }
+
+        /*wider media*/
+        .contentContainer {
+            max-width: 1000px;
+        }
+
+
+        @media (max-width: 800px) {
+            .content {
+                float: none;
+                width: 100%;
+            }
+
+            #sideBar {
+                float: none;
+                text-align: center;
+                margin: auto;
+                width: unset;
+            }
+        }
+
     </style>
 </head>
 
@@ -101,7 +125,7 @@
                     </div>
                     <div style="float:right; width:60%">
                         <ul>
-                            <li>Persistant</li>
+                            <li>Persistent</li>
                             <li>Excited to Learn</li>
                         </ul>
                     </div>
@@ -141,7 +165,7 @@
                     <div class="resumeEntry">
                         <div class="resumeTwoPart">
                             <div class="resumeLeft">
-                                <a href="https://www.colorado.edu/" class="plainLink"><i>University of Colorado, Boulder</i></a>
+                                <a href="https://www.colorado.edu/" class="plainLink">University of Colorado, Boulder</a>
                             </div>
                             <div class="resumeRight">
                                 August 2018 to Present
@@ -158,7 +182,7 @@
                         <div class="resumeTwoPart">
                             <div class="resumeLeft">
                                 <a href="http://littletonpublicschools.net/schools/heritage-high-school/" class="plainLink">
-                                    <i>Heritage High School</i>
+                                    Heritage High School
                                 </a>
                             </div>
                             <div class="resumeRight">
@@ -180,7 +204,7 @@
                         <div class="resumeTwoPart">
                             <div class="resumeLeft">
                                 <a href="https://www.ssprd.org/Youth-Commission" class="plainLink">
-                                    <i>South Suburban Youth Commission</i>
+                                    South Suburban Youth Commission
                                 </a>
                             </div>
                             <div class="resumeRight">
@@ -204,7 +228,7 @@
                     <div class="resumeEntry">
                         <div class="resumeTwoPart">
                             <div class="resumeLeft">
-                                <i>Link Program</i>
+                                Link Program
                             </div>
                             <div class="resumeRight">
                                 2016/17 and 2017/18 School Years
@@ -220,7 +244,7 @@
                     <div class="resumeEntry">
                         <div class="resumeTwoPart">
                             <div class="resumeLeft">
-                                <i>The Botany Club</i>
+                                The Botany Club
                             </div>
                             <div class="resumeRight">
                                 January 2015 to May 2019
@@ -241,7 +265,7 @@
                         <div class="resumeTwoPart">
                             <div class="resumeLeft">
                                 <a href="https://orgsync.com/156835/chapter" class="plainLink">
-                                    <i>Cybersecurity Club</i>
+                                    Cybersecurity Club
                                 </a>
                             </div>
                             <div class="resumeRight">
