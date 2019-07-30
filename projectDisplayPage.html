@@ -3,6 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Other Projects</title>
     <script src="mainCode.js"></script>
     <script src="postFunctionality.js"></script>
@@ -71,8 +72,8 @@
             randReturn += "</a > ";
 
 
-            document.getElementById("postNavTop").innerHTML = randReturn + "<br /><br />" + leftRight;
-            document.getElementById("postNavBottom").innerHTML = leftRight + "<br /><br />" + randReturn;
+            document.getElementById("postNavTop").innerHTML = "<p>&nbsp;" + randReturn + "</p><p>&nbsp;" + leftRight + "</p>";
+            document.getElementById("postNavBottom").innerHTML = "<p>&nbsp;" + leftRight + "</p><p>&nbsp;" + randReturn + "</p>";
         }
 
     </script>
@@ -101,13 +102,11 @@
         <div class="contentContainer">
             <div class="content">
                 <div class="postNavigation" id="postNavTop"></div>
-                <br /><br />
                 <div class="padder contentStream">
                     <div id="postStream">
                         Posts will display once page is loaded <br>(assuming the javascript is correct)
                     </div>
                 </div>
-                <br />
                 <div class="postNavigation" id="postNavBottom"></div><br />
             </div>
             <div id="sideBar"></div>
