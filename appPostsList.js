@@ -79,3 +79,9 @@ posts.push(new mediaPost(
         , imageString("MadLibs App.png", "the madlibs icon", 20)
     )
 ));
+
+posts.push(new post(
+    "Using Unity?",
+    "December 30th, 2018",
+    "While working with Unity, I found an option to build an Android app. HmmMMMmm. I started fiddling with it and it seems like it'll actually be really easy to use, so I'm excited to try creating something. Currently, I have a ball that moves down slowly, but moves up when you're touching the screen. This shows that I can get touch input, have running programs, and download stuff to my phone. I'm excited to see what I can make."
+));

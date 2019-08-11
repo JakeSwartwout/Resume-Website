@@ -3,6 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Resume</title>
     <script src="mainCode.js"></script>
     <script>
@@ -11,10 +12,10 @@
         }
 
         function loadResume() {
-            checkWidth(950, 950);
             addBottomBar();
-            fillInNav();
             fillInSideBar();
+            fillInNav();
+            setActive();
         }
     </script>
     <link rel="stylesheet" type="text/css" href="mainStyle.css" />
@@ -35,12 +36,14 @@
         .resumeTwoPart {
             overflow: auto;
             margin: 0px;
+            text-align: left;
         }
 
         .resumeLeft {
             float: left;
             width: 50%;
             overflow: auto;
+            font-style: italic;
         }
 
         .resumeRight {
@@ -54,10 +57,12 @@
             margin: 5px;
         }
 
+        /*white background*/
         #entireBody {
             background: white;
         }
 
+        /*black text*/
         #sideBar {
             color: black;
         }
@@ -71,12 +76,31 @@
                 text-decoration: underline;
                 color: darkslateblue;
             }
+
+        /*wider media*/
+        .contentContainer {
+            max-width: 1000px;
+        }
+
+
+        @media (max-width: 800px) {
+            .content {
+                float: none;
+                width: 100%;
+            }
+
+            #sideBar {
+                float: none;
+                text-align: center;
+                margin: auto;
+                width: unset;
+            }
+        }
     </style>
 </head>
 
 <body id="entireBody"
-      onload="loadResume(); setActive();"
-      onresize="checkWidth(950,950)">
+      onload="loadResume();">
     <div id="pageTopper">
         <div class="mainTopper">Jake Swartwout</div>
         <div class="underTopper">
@@ -87,268 +111,279 @@
         </div>
     </div>
     <nav id="navbar"></nav>
-    <div class="padder">
-        <div id="mainWrapper" class="wrapper">
-            <div id="leftSpacer"></div>
-            <div id="contentAndBar" class="wrapper">
-                <div id="content">
-                    <div id="strongTraits" class="resumeSection">
-                        <b>Strongest Traits</b>
-                        <hr />
-                        <div style="float:left; width:40%;">
-                            <ul>
-                                <li>Reliable</li>
-                                <li>Punctual</li>
-                            </ul>
-                        </div>
-                        <div style="float:right; width:60%">
-                            <ul>
-                                <li>Follows directions well</li>
-                                <li>Works well in groups</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div id="education" class="resumeSection">
-                        <b>Education</b>
-                        <hr />
-                        <div class="resumeEntry">
-                            <div class="resumeTwoPart">
-                                <div class="resumeLeft">
-                                    <a href="https://www.colorado.edu/" class="plainLink"><i>University of Colorado, Boulder</i></a>
-                                </div>
-                                <div class="resumeRight">
-                                    August 2018 to Present
-                                </div>
-                            </div>
-                        </div>
-                        <div class="resumeEntry">
-                            <div class="resumeTwoPart">
-                                <div class="resumeLeft">
-                                    <a href="http://littletonpublicschools.net/schools/heritage-high-school/" class="plainLink"><i>Heritage High School</i></a>
-                                </div>
-                                <div class="resumeRight">
-                                    August 2014 to May 2018
-                                </div>
-                            </div>
-                            <div>
-                                <ul>
-                                    <li>Cumulative Weighted GPA: 4.316</li>
-                                    <li>Class Rank: 14 of 404</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="leadership" class="resumeSection">
-                        <b>Leadership Experience</b>
-                        <hr />
-                        <div class="resumeEntry">
-                            <div class="resumeTwoPart">
-                                <div class="resumeLeft">
-                                    <a href="https://www.ssprd.org/Youth-Commission" class="plainLink">
-                                        <i>South Suburban Youth Commission</i>
-                                    </a>
-                                </div>
-                                <div class="resumeRight">
-                                    <a href="https://www.ssprd.org/News-And-Events/Post/17389/District-welcomes-2017-Youth-Commission" class="plainLink">
-                                        January 2017
-                                    </a>
-                                    to
-                                    <a href="https://www.ssprd.org/News-And-Events/Post/18007/District-welcomes-2018-Youth-Commission" class="plainLink">
-                                        December 2017
-                                    </a>
-                                </div>
-                            </div>
-                            <div>
-                                <ul>
-                                    <li>A committee of 11 teenagers with the purpose of involving youth in government
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="resumeEntry">
-                            <div class="resumeTwoPart">
-                                <div class="resumeLeft">
-                                    <i>Link Program</i>
-                                </div>
-                                <div class="resumeRight">
-                                    2016/17 and 2017/18 School Years
-                                </div>
-                            </div>
-                            <div>
-                                <ul>
-                                    <li>Upperclassmen that guide the Freshman class through their first year</li>
-                                    <li>Groups of 4 leaders are given classes of about 20 students to meet with weekly</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="resumeEntry">
-                            <div class="resumeTwoPart">
-                                <div class="resumeLeft">
-                                    <i>The Botany Club</i>
-                                </div>
-                                <div class="resumeRight">
-                                    January 2015 to May 2019
-                                </div>
-                            </div>
-                            <div>
-                                <ul>
-                                    <li>Focused on growing and caring for plants to sell at an annual sale</li>
-                                    <li>Member for two years, Club Leader for 2 years</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="extracurricular" class="resumeSection">
-                        <b>Extracurricular Involvement</b>
-                        <hr />
-                        <div class="resumeEntry">
-                            <div class="resumeTwoPart">
-                                <div class="resumeLeft">
-                                    <a href="https://orgsync.com/156835/chapter" class="plainLink">
-                                        <i>Cybersecurity Club</i>
-                                    </a>
-                                </div>
-                                <div class="resumeRight">
-                                    September 2018 to Present
-                                </div>
-                            </div>
-                            <div>
-                                <ul>
-                                    <li>Meetings alternate between information sessions and interactive hack nights</li>
-                                    <li>Introduced to many of the basic concepts of cybersecurity, focusing on potential weak points, ways to exploit these, and preventing others from getting through</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="coding" class="resumeSection">
-                        <b>Programming Experience</b>
-                        <hr />
-                        <div>
-                            <ul>
-                                <li>
-                                    Java:
-                                </li>
-                                <li style="list-style:none;">
-                                    <ul>
-                                        <li>
-                                            Took AP Computer Science A, doing many text based projects and eventually scoring a 5 (the highest score) on the official exam.
-                                        </li>
-                                        <li>
-                                            Went beyond the class to create my own programs in
-                                            <a href="https://processing.org/" class="plainLink">Processing,</a>
-                                            where java is used to create visual programs of shapes and images
-                                        </li>
-                                        <li>
-                                            Also worked in Android Studio, using java to code the
-                                            <a href="appPostsPage.html" class="plainLink">apps'</a>
-                                            functionality
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    C++:
-                                </li>
-                                <li style="list-style:none;">
-                                    <ul>
-                                        <li>
-                                            Re-learned the fundamentals of programming in
-                                            <a href="https://www.colorado.edu/cs/csci-1300-computer-science-1-starting-computing" class="plainLink">
-                                                a class lecture
-                                            </a>
-                                            with many text based projects
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Javascript:
-                                </li>
-                                <li style="list-style:none;">
-                                    <ul>
-                                        <li>
-                                            Self taught to a rough understanding by working with the
-                                            <a href="https://p5js.org/" class="plainLink">p5.js</a>
-                                            library, which creates a canvas and shapes for the user to display onto
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    HTML and CSS:
-                                </li>
-                                <li style="list-style:none;">
-                                    <ul>
-                                        <li>
-                                            Self-taught through
-                                            <a href="websitePostsPage.html" class="plainLink">
-                                                the creation of this website
-                                            </a>
-                                            and reading other's code
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    C#
-                                </li>
-                                <li style="list-style:none;">
-                                    <ul>
-                                        <li>
-                                            Minimal knowledge from
-                                            <a href="gamePostsPage.html" class="plainLink">
-                                                building a game
-                                            </a>
-                                            in Unity, which uses c#
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Python
-                                </li>
-                                <li style="list-style:none;">
-                                    <ul>
-                                        <li>
-                                            Only slightly familiar. Used on occasion for a math class
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div id="skills" class="resumeSection">
-                        <b>Other Skills</b>
-                        <hr />
-                        <div>
-                            <ul>
-                                <li>Foreign Language Skills</li>
-                                <li style="list-style:none;">
-                                    <ul>
-                                        <li>Completed 4 years of high school level Spanish (moderate ability to read, write, and speak)</li>
-                                        <li>
-                                            Involved in the
-                                            <a href="http://globalengineeringrap.org/" class="plainLink">
-                                                Global Engineering RAP
-                                            </a>
-                                            Living Community
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>Tech Skills - Familiar with Google Docs; Microsoft Word, Excel, and Powerpoint;</li>
-                                <li>
-                                    Creativity - Wrote a series of 16
-                                    <a href="http://bugadventures.us" class="plainLink">illustrated books</a>
-                                    and self-published them
-                                    <a href="https://www.amazon.com/Wendys-Adventure-Bug-Adventures-Book-ebook/dp/B010YNL268/ref=sr_1_1?ie=UTF8&qid=1543091077&sr=8-1&keywords=jake+swartwout" class="plainLink">online</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <br />
+    <div class="contentWhole">
+        <div class="contentContainer">
+            <div class="content">
+                <div id="strongTraits" class="resumeSection">
+                    <b>Strongest Traits</b>
                     <hr />
-                    <hr />
-                    <br />
-
+                    <div style="float:left; width:40%;">
+                        <ul>
+                            <li>Punctual</li>
+                            <li>Reliable</li>
+                        </ul>
+                    </div>
+                    <div style="float:right; width:60%">
+                        <ul>
+                            <li>Persistent</li>
+                            <li>Excited to Learn</li>
+                        </ul>
+                    </div>
                 </div>
-                <div id="sideBar"></div>
+                <div id="work" class="resumeSection">
+                    <b>Work Experience</b>
+                    <hr />
+                    <div class="resumeEntry">
+                        <div class="resumeTwoPart">
+                            <div class="resumeLeft">
+                                Visa Software Engineering Internship
+                            </div>
+                            <div class="resumeRight">
+                                May 2019 to August 2019
+                            </div>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>
+                                    Built a functioning website that hosts a sample dashboard, filter page, and report I designed, all according to specifications given by a technical design lead
+                                </li>
+                                <li>
+                                    Learned several new technologies (including ASP.net MVC, PowerBI, SSRS, and SSAS)
+                                    and methods (including Database design, SQL queries and procedures, report terminology, and the Agile methodology)
+                                    to create a complete demonstration that will result in a switch to more modern and powerful business intelligence services
+                                </li>
+                                <li>
+                                    Worked on a team with two others, distributing portions of the project to different members and sharing files through a remote vm
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="education" class="resumeSection">
+                    <b>Education</b>
+                    <hr />
+                    <div class="resumeEntry">
+                        <div class="resumeTwoPart">
+                            <div class="resumeLeft">
+                                <a href="https://www.colorado.edu/" class="plainLink">University of Colorado, Boulder</a>
+                            </div>
+                            <div class="resumeRight">
+                                August 2018 to Present
+                            </div>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>Pursuing a BS in Computer Science with a Minor in Business and a Minor in Technology, Arts, and Media</li>
+                                <li>Cumulative GPA: 4.000</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="resumeEntry">
+                        <div class="resumeTwoPart">
+                            <div class="resumeLeft">
+                                <a href="http://littletonpublicschools.net/schools/heritage-high-school/" class="plainLink">
+                                    Heritage High School
+                                </a>
+                            </div>
+                            <div class="resumeRight">
+                                August 2014 to May 2018
+                            </div>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>Cumulative Weighted GPA: 4.316</li>
+                                <li>Class Rank: 14 of 404</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="leadership" class="resumeSection">
+                    <b>Leadership Experience</b>
+                    <hr />
+                    <div class="resumeEntry">
+                        <div class="resumeTwoPart">
+                            <div class="resumeLeft">
+                                <a href="https://www.ssprd.org/Youth-Commission" class="plainLink">
+                                    South Suburban Youth Commission
+                                </a>
+                            </div>
+                            <div class="resumeRight">
+                                <a href="https://www.ssprd.org/News-And-Events/Post/17389/District-welcomes-2017-Youth-Commission" class="plainLink">
+                                    January 2017
+                                </a>
+                                to
+                                <a href="https://www.ssprd.org/News-And-Events/Post/18007/District-welcomes-2018-Youth-Commission" class="plainLink">
+                                    December 2017
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>
+                                    A committee of 11 teenagers with the purpose of involving youth in government
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="resumeEntry">
+                        <div class="resumeTwoPart">
+                            <div class="resumeLeft">
+                                Link Program
+                            </div>
+                            <div class="resumeRight">
+                                2016/17 and 2017/18 School Years
+                            </div>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>Upperclassmen that guide the Freshman class through their first year</li>
+                                <li>Groups of 4 leaders are given classes of about 20 students to meet with weekly</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="resumeEntry">
+                        <div class="resumeTwoPart">
+                            <div class="resumeLeft">
+                                The Botany Club
+                            </div>
+                            <div class="resumeRight">
+                                January 2015 to May 2019
+                            </div>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>Focused on growing and caring for plants to sell at an annual sale</li>
+                                <li>Member for two years, Club Leader for 2 years</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="extracurricular" class="resumeSection">
+                    <b>Extracurricular Involvement</b>
+                    <hr />
+                    <div class="resumeEntry">
+                        <div class="resumeTwoPart">
+                            <div class="resumeLeft">
+                                <a href="https://orgsync.com/156835/chapter" class="plainLink">
+                                    Cybersecurity Club
+                                </a>
+                            </div>
+                            <div class="resumeRight">
+                                September 2018 to Present
+                            </div>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>Meetings alternate between information sessions and interactive hack nights</li>
+                                <li>Introduced to many of the basic concepts of cybersecurity, focusing on potential weak points, ways to exploit these, and preventing others from getting through</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="coding" class="resumeSection">
+                    <b>Programming Experience</b>
+                    <hr />
+                    <div>
+                        <ul>
+                            <li>
+                                C++:
+                            </li>
+                            <li style="list-style:none;">
+                                <ul>
+                                    <li>
+                                        Currently the main language taught in my classes. Last used in Data Structures, where I constructed the base code of several data structures manually to study memory and processing efficiency.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Javascript, HTML, and CSS:
+                            </li>
+                            <li style="list-style:none;">
+                                <ul>
+                                    <li>
+                                        Self-taught, first through
+                                        <a href="websitePostsPage.html" class="plainLink">
+                                            the creation of this website
+                                        </a>
+                                        and reading other's code, then further in depth by creating a website during my internship at Visa
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                C#
+                            </li>
+                            <li style="list-style:none;">
+                                <ul>
+                                    <li>
+                                        Used to build a website with ASP.NET MVC 5 while interning at Visa
+                                    </li>
+                                    <li>
+                                        Worked to
+                                        <a href="gamePostsPage.html" class="plainLink">
+                                            build a game
+                                        </a>
+                                        in Unity, which uses c#
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Java:
+                            </li>
+                            <li style="list-style:none;">
+                                <ul>
+                                    <li>
+                                        Took AP Computer Science A, doing many text based projects and eventually scoring a 5 (the highest score) on the official exam.
+                                    </li>
+                                    <li>
+                                        Went beyond the class to create my own programs in
+                                        <a href="https://processing.org/" class="plainLink">Processing,</a>
+                                        where java is used to create visual programs of shapes and images
+                                    </li>
+                                    <li>
+                                        Also worked in Android Studio, using java to code the
+                                        <a href="appPostsPage.html" class="plainLink">apps'</a>
+                                        functionality
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="skills" class="resumeSection">
+                    <b>Other Skills</b>
+                    <hr />
+                    <div>
+                        <ul>
+                            <li>Foreign Language Skills</li>
+                            <li style="list-style:none;">
+                                <ul>
+                                    <li>Completed 4 years of high school level Spanish (moderate ability to read, write, and speak)</li>
+                                    <li>
+                                        Involved in the
+                                        <a href="http://globalengineeringrap.org/" class="plainLink">
+                                            Global Engineering RAP
+                                        </a>
+                                        Living Community
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Tech Skills - Familiar with Google Docs; Microsoft Word, Excel, and Powerpoint;</li>
+                            <li>
+                                Creativity - Wrote a series of 16
+                                <a href="http://bugadventures.us" class="plainLink">illustrated books</a>
+                                and self-published them
+                                <a href="https://www.amazon.com/Wendys-Adventure-Bug-Adventures-Book-ebook/dp/B010YNL268/ref=sr_1_1?ie=UTF8&qid=1543091077&sr=8-1&keywords=jake+swartwout" class="plainLink">online</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <br />
+                <hr />
+                <hr />
+                <br />
+
             </div>
-            <br />
+            <div id="sideBar"></div>
         </div>
     </div>
     <br />

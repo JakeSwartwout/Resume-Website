@@ -3,6 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Projects Menu</title>
     <script src="mainCode.js"></script>
     <script src="postFunctionality.js"></script>
@@ -15,7 +16,6 @@
             setActive();
             fillInSideBar();
             fillInProjectsList();
-            whenResize();
         }
 
         //highlights the navbar
@@ -67,38 +67,32 @@
 </head>
 
 <body id="entireBody"
-      onload="loadProjectsPage()"
-      onresize="whenResize()">
+      onload="loadProjectsPage()">
     <a id="top" href="#top"></a>
     <div id="pageTopper">
         <div class="mainTopper">Other Things I've Programmed</div>
         <div class="underTopper">A list of some of the cooler projects I've worked on</div>
     </div>
     <nav id="navbar"></nav>
-    <div class="padder">
-        <div id="mainWrapper" class="wrapper">
-            <div id="leftSpacer"></div>
-            <div id="contentAndBar" class="wrapper">
-                <div id="content">
-                    <div class="padder contentStream">
-                        <div id="explanation">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Over my years of coding, I've created a lot of different projects.
-                            Some work, other's could never have worked, but none of them were complete failures.
-                            Through all of these projects, I learned something about the language,
-                            program design, the creation process, or even just how I work.
-                            In the end, not only have I bettered my programming skills, but I'm
-                            left with some awesome projects. I hope you enjoy looking at some of
-                            the amazing things that are possible with computing.
-                        </div>
-                        <div id="projectsList">
-                            Posts should load in. If they don't, there must be a bug somewhere! Dang!
-                        </div>
+    <div class="contentWhole">
+        <div class="contentContainer">
+            <div class="content">
+                <div class="padder contentStream">
+                    <div id="explanation">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Over my years of coding, I've created a lot of different projects.
+                        Some work, other's could never have worked, but none of them were complete failures.
+                        Through all of these projects, I learned something about the language,
+                        program design, the creation process, or even just how I work.
+                        In the end, not only have I bettered my programming skills, but I'm
+                        left with some awesome projects. I hope you enjoy looking at some of
+                        the amazing things that are possible with computing.
+                    </div>
+                    <div id="projectsList">
+                        Posts should load in. If they don't, there must be a bug somewhere! Dang!
                     </div>
                 </div>
-                <br />&nbsp;
-                <div id="sideBar"></div>
             </div>
-            <br />
+            <div id="sideBar"></div>
         </div>
     </div>
     <div id="bottomBar"></div>

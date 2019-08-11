@@ -3,6 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Posts About My Apps</title>
     <script src="mainCode.js"></script>
     <script src="postFunctionality.js"></script>
@@ -16,40 +17,36 @@
 </head>
 
 <body id="entireBody"
-      onload="fillInPoster(); setActive();"
-      onresize="whenResize()">
+      onload="fillInPoster(); setActive();">
     <a id="top" href="#top"></a>
     <div id="pageTopper">
         <div class="mainTopper">Creating Android Apps</div>
         <div class="underTopper">Blog posts showing the apps I've created for my phone</div>
     </div>
     <nav id="navbar"></nav>
-    <div class="padder">
-        <div id="mainWrapper" class="wrapper">
-            <div id="leftSpacer"></div>
-            <div id="contentAndBar" class="wrapper">
-                <div id="content">
-                    <div class="postNavigation">
-                        <a onclick="showNewerPosts()" href="#top" style="float: left">Newer Posts</a>
-                        <a onclick="showOlderPosts()" href="#top" style="float: right">Older Posts</a>
-                    </div>
-                    <br /><br />
-                    <div class="padder contentStream">
-                        <div id="postStream">
-                            Posts will display once page is loaded <br>(assuming the javascript is correct)
-                        </div>
-                    </div>
-                    <br />
-                    <div class="postNavigation">
-                        <a onclick="showNewerPosts()" href="#top" style="float: left">Newer Posts</a>
-                        <a onclick="showOlderPosts()" href="#top" style="float: right">Older Posts</a>
-                        <br />
-                        <hr />
-                        <br />
+    <div class="contentWhole">
+        <div class="contentContainer">
+            <div class="content">
+                <div class="postNavigation">
+                    <a onclick="showNewerPosts()" href="#top" style="float: left">Newer Posts</a>
+                    <a onclick="showOlderPosts()" href="#top" style="float: right">Older Posts</a>
+                </div>
+                <br /><br />
+                <div class="padder contentStream">
+                    <div id="postStream">
+                        Posts will display once page is loaded <br>(assuming the javascript is correct)
                     </div>
                 </div>
-                <div id="sideBar"></div>
+                <br />
+                <div class="postNavigation">
+                    <a onclick="showNewerPosts()" href="#top" style="float: left">Newer Posts</a>
+                    <a onclick="showOlderPosts()" href="#top" style="float: right">Older Posts</a>
+                    <br />
+                    <hr />
+                    <br />
+                </div>
             </div>
+            <div id="sideBar"></div>
         </div>
     </div>
     <br />

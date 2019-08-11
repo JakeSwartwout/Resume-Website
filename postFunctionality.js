@@ -10,7 +10,6 @@ function loadPosts() {
     } else {
         document.getElementById("postStream").innerHTML = "There are no posts";
     }
-    whenResize();
 }
 
 var post = function (theTitle, theDate, theContent) {

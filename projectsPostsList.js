@@ -179,7 +179,7 @@ posts.push(new projectPost(
     new Array(
         "After downloading an insane amount of watch history data from both of"
         , " my Google accounts, I was very interested to analyze the data and"
-        , " see what I could find. I used some dode from online to turn the HTML"
+        , " see what I could find. I used some code from online to turn the HTML"
         , " document into a String (crazy, right? my computer could barely load"
         , " the page, yet it all fit into a string?). From that, I broke it into"
         , " individual entries which I could then analyze. At first, I was reading"

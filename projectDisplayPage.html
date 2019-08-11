@@ -3,6 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Other Projects</title>
     <script src="mainCode.js"></script>
     <script src="postFunctionality.js"></script>
@@ -17,7 +18,6 @@
             setActive();
             fillInSideBar();
             refreshPost();
-            whenResize();
         }
 
         //highlights the navbar
@@ -72,8 +72,8 @@
             randReturn += "</a > ";
 
 
-            document.getElementById("postNavTop").innerHTML = randReturn + "<br /><br />" + leftRight;
-            document.getElementById("postNavBottom").innerHTML = leftRight + "<br /><br />" + randReturn;
+            document.getElementById("postNavTop").innerHTML = "<p>&nbsp;" + randReturn + "</p><p>&nbsp;" + leftRight + "</p>";
+            document.getElementById("postNavBottom").innerHTML = "<p>&nbsp;" + leftRight + "</p><p>&nbsp;" + randReturn + "</p>";
         }
 
     </script>
@@ -91,37 +91,25 @@
 </head>
 
 <body id="entireBody"
-      onload="loadProject()"
-      onresize="whenResize()">
+      onload="loadProject()">
     <a id="top" href="#top"></a>
     <div id="pageTopper">
         <div class="mainTopper">Other Projects</div>
         <div class="underTopper">Various older things that I've created</div>
     </div>
     <nav id="navbar"></nav>
-    <div class="padder">
-        <div id="mainWrapper" class="wrapper">
-            <div id="leftSpacer"></div>
-            <div id="contentAndBar" class="wrapper">
-                <div id="content">
-                    <div class="postNavigation" id="postNavTop"></div>
-                    <br /><br />
-                    <div class="padder contentStream">
-                        <div id="postStream">
-                            Posts will load in once the page has loaded.
-                            <br />
-                            Or, you've tried to access the display without selecting a project. Click 'Other Projects' to return to the menu
-                        </div>
+    <div class="contentWhole">
+        <div class="contentContainer">
+            <div class="content">
+                <div class="postNavigation" id="postNavTop"></div>
+                <div class="padder contentStream">
+                    <div id="postStream">
+                        Posts will display once page is loaded <br>(assuming the javascript is correct)
                     </div>
-                    <br />
-                    <div class="postNavigation" id="postNavBottom"></div>
-                    <br />
-                    <hr />
-                    <br />
                 </div>
-                <div id="sideBar"></div>
+                <div class="postNavigation" id="postNavBottom"></div><br />
             </div>
-            <br />
+            <div id="sideBar"></div>
         </div>
     </div>
     <div id="bottomBar"></div>
