@@ -360,3 +360,36 @@ posts.push(new projectPost(
         , " on linking words as they appear at a much higher rate."
     )
 ));
+
+posts.push(new projectPost(
+    "Mushroom Neural Net",
+    "VS Code", "Rust",
+    "A neural network built from scratch, which trains on a list of mushroom characteristics to then predict the likelihood that it is edible or poisonous.",
+    new Array(
+        "A neural network built from scratch in the Rust programming language, which"
+        , " decides if a mushroom is poisonous or edible. The source code for this project"
+        , " is posted "
+        , linkString("on github", "https://github.com/JakeSwartwout/Mushroom-Edibility-Neural-Network")
+        , ", but I'm also pasting the description here. <br /> I built this program to"
+        , " both learn Rust and learn how Neural Networks operate. The data is sourced"
+        , " from the UCI machine learning repository site. Specifically, "
+        , linkString("Here", "https://archive.ics.uci.edu/ml/datasets/mushroom")
+        , ". It contains about 8000 mushroom descriptions, which are made up of selections"
+        , " in specific descriptive categories, such as shape, texture, color, and odor."
+        , "<br />The program is a 4 layer network (consisting of an input, two hidden, and one"
+        , " output layer). I employ the sigmoid activation function to make back-propagation"
+        , " easier, and used "
+        , linkString("this website", "https://takinginitiative.wordpress.com/2008/04/03/basic-neural-network-tutorial-theory/")
+        , " to get the equations necessary to back-propagate (train the program)."
+        , "<br />I trained it on 75% of the data, which was about 6000 mushrooms. After"
+        , " passing through this three times, I then tested it against the remaining 25%"
+        , " of the data, or about 2000 mushrooms. It generally had an accuracy between 93"
+        , " to 95%. I built it to store the weights and biases so that each run would add"
+        , " upon the previous progress, so within a short amount of time (likely about 20"
+        , " total passes), I achieved an accuracy of 98.13%. The weights for this accuracy"
+        , " are stored in a file that uploaded, so you can run it with my results if you wish"
+        , " . < br /> In the future, I plan to"
+        , " make a way to construct the network to check a single user - unputted mushroom"
+        , " (rather than train on the data set)."
+    )
+));

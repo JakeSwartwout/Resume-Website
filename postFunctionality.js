@@ -45,16 +45,11 @@ var projectPost = function (theTitle, theIDE, theLanguage, shortDescription, the
             this.framework = "p5.js";
             this.theEnvironment += this.ide + ", using " + this.lang + " and the " + this.framework + " framework";
             break;
-        case "visual studio":
-        case "jcreator":
-        case "eclipse":
-            this.theEnvironment += this.ide + ", using " + this.lang;
-            break;
         default:
-            this.theEnvironment += this.ide;
+            this.theEnvironment += this.lang;
             break;
     }
-    this.content = ""
+    this.content = "";
     for (var i = 0; i < theContentArray.length; i++) {
         this.content += theContentArray[i];
     }
