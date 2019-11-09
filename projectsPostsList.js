@@ -388,8 +388,8 @@ posts.push(new projectPost(
         , " upon the previous progress, so within a short amount of time (likely about 20"
         , " total passes), I achieved an accuracy of 98.13%. The weights for this accuracy"
         , " are stored in a file that uploaded, so you can run it with my results if you wish"
-        , " . < br /> In the future, I plan to"
-        , " make a way to construct the network to check a single user - unputted mushroom"
+        , " . <br /> In the future, I plan to"
+        , " make a way to construct the network to check a single user-inputted mushroom"
         , " (rather than train on the data set)."
     )
 ));
