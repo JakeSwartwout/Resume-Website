@@ -1,7 +1,7 @@
 ﻿function addBottomBar() {
     document.getElementById("bottomBar").innerHTML =
         "&nbsp;<br />----- Built by Jake Swartwout - Last updated " +
-        "November 3rd, 2019"
+        "March 9th, 2020"
         + " ----- <br /> &nbsp; ";
 }
 
@@ -19,7 +19,7 @@ function fillInNav() {
     //build the navbar
     var navbar = "<a href=\"index.html\" id=\"home\">Home Page</a>";
     navbar = navbar.concat("<a href=\"resume.html\" id=\"resume\">My Resume</a>");
-    navbar = navbar.concat("<a href=\"aboutMePage.html\" id=\"about\">About Me</a>");
+    navbar = navbar.concat("<a href=\"appPostsPage.html\" id=\"apps\">App Building</a>");
     navbar = navbar.concat("<a href=\"websitePostsPage.html\" id=\"website\">Website Build</a>");
     navbar = navbar.concat("<a href=\"gamePostsPage.html\" id=\"game\">Video Game</a>");
     navbar = navbar.concat("<a href=\"projectsPostsPage.html\" id=\"other\">Other Projects</a>");

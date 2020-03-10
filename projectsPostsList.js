@@ -393,3 +393,121 @@ posts.push(new projectPost(
         , " (rather than train on the data set)."
     )
 ));
+
+posts.push(new projectPost(
+    "BUFFimg",
+    "Visual Studio", "C# through ASP.NET MVC",
+    "Am image hosting website built in a team of 6 for my software development class",
+    new Array(
+        "This project is one of my least favorites :/ <br/>"
+        , "This was an assignment for my Software Development class. We were tasked"
+        , " with building a website in a semester. We were put in a group of 6 people"
+        , " (which was purposefully stratified by skill level, ie, one super smart,"
+        , " one smarter than average, one average, one struggling, etc)"
+        , " and got to decide the project for ourselves. We went with an image"
+        , " hosting website, where students from CU could post public and private"
+        , " pictures to share with their friends. It was built in ASP.NET MVC and"
+        , " then hosted on Heroku. If you want to see the working link, it is still live"
+        , linkString("here", "http://buffimg.herokuapp.com/")
+        , ", although Heroku routinely deletes any images that you actually upload.<br/>"
+        , "If you want to learn more, check out the github repositories for it:"
+        , "<ol><li>"
+        , linkString("The Actual Project", "https://github.com/SamFeig/BUFFiMG")
+        , "</li><li>"
+        , linkString("The Milestone Results", "https://github.com/SamFeig/CSCI_3308_Milestone_Submissions")
+        , "</li><li>"
+        , linkString("The Meeting Logs", "https://github.com/SamFeig/CSCI_3308_Meeting_Logs")
+        , "</li></ol>"
+        , "I did most of the meeting logs and organizing for the project, but"
+        , " unfortunately didn't help much in the project itself. The more advanced"
+        , " members kinda went off and did their own thing and didn't communicate"
+        , " what they were doing, how they did it, or what they planned to do next"
+        , "<br/>Check out the githubs for a more detailed description of the project and progress"
+    )
+));
+
+
+
+posts.push(new projectPost(
+    "Stock Market Predictor",
+    "Jupyter Notebook", "Python and Tensorflow",
+    "A convolutional neural network built in Tensorflow to predict the buy/sell decisions of stocks based on past data. (has cool graphs!)",
+    new Array(
+        "While mostly an exploration of Tensorflow (a machine learning framework that makes"
+        , " it easier to do machine learning), I had also recently started investing and"
+        , " had hoped that this could help me give some predictions (it didn't)."
+        , " I chose to do this in python as I knew it would be a lot of data manipulation,"
+        , " and I knew how to use the python Pandas module which is powerful in this regard"
+        , " and tensorflow has a python version that has a lot of online examples."
+        , " Then to visualize everything, I also used the matplotlib library to make some"
+        , " nice visualizations of the data to ensure everything was making sense."
+        , "<br />For my data, I used real stock market data (sourced from yahoo finance) of Walmart."
+        , " I then inspected, limited, and formatted, it, then calculated metrics to suggest"
+        , " buy and sell levels."
+        , "<br />For buy/sell data, I had two metrics, one for the level of buy and one"
+        , " for the level of sell. Combining these two gave an indication on what the"
+        , " stock would do in the future, according to this chart:"
+        , imageString("Color_meanings.png", "the meanings of the colors", 50)
+        , "To generate these values, I looked 70 days into the future, in growing"
+        , " chunks. So, in the week ahead, I used each day, then in the next week every 2 days"
+        , " were grouped together, then 5, then finally two groups of 15 days. For each of"
+        , " these date ranges I calculated the absolute highest and absolute lowest value."
+        , " When comparing the current(opening) price to this range, I could check to see"
+        , " if it was inside the range or not. Being outside the range indicated a"
+        , " guaranteed gain / loss, and so only if it was outside of the range would the"
+        , " values change. If the value was above the range, this meant our stock price"
+        , " would likely fall and we should sell. If it was below the range, the stock"
+        , " price was likely to rise, and we should buy. They are also scaled down by"
+        , " the current price, so all changes are relative and not dependent on actual"
+        , " price, but rather percent change. This worked really well, and produced"
+        , " these super cool looking graphs of buy and sell decisions:"        
+        , imageString("stock_buy_sell_graph_walmart.png", "a sample buy/sell graph", 100)
+        , imageString("stock_buy_sell_graph_walmart2.png", "sample graph 2", 100)
+        , imageString("stock_buy_sell_graph_walmart3.png", "saple graph 3", 100)
+        , "Beyond this, I prepped all of the data and prepped my model."
+        , " I used a convolutional nerual net with 3 convolutions (all with kernels of"
+        , " 9, one with 10 filters, 20, and 30), three layer of 20 neurons, and then"
+        , " the 2 neurons for the output layer. I trained it for 15 epochs on 11,337"
+        , " business days each."
+        , "<br />However, the results were dissapointing. The model didn't make strong"
+        , "(or correct) predictions, instead opting to leave both buy and sell likelihoods"
+        , " close to 0. I'm guessing that this is because the stock market is too random"
+        , " (well, actually is more reliant on other factors than previous price points),"
+        , " so it is difficult for the model to actually find any patterns."
+        , "<br />But, I still had a great time making it and learned a lot in the process."
+        , " The notebook is available"
+        , linkString("on github", "https://github.com/JakeSwartwout/Stock-Market-Predictor")
+        , " if you'd like to mess around with it."
+    )
+));
+
+posts.push(new projectPost(
+    "Sentiment Analyzer",
+    "VS Code", "Python",
+    "Given a hotel review, predict whether the review was positive or negative. Implemented in two ways, both a Naive Bayes Classifier, and a Featurized Feedforward 2-layer Neural Network.",
+    new Array(
+        "While for a class, this was a super fun project. We were given a bunch"
+        , " of hotel reviews labeled as either positive or negative. We had to"
+        , " read them in, train a model, and then predict whether some unseen"
+        , " reviews were positive or negative. The first part of the project was"
+        , " to build a Naive Bayes Classifier to do this. This works with the"
+        , " \"bag of words\" model, and simply multiplies together probabilities"
+        , " of each word being positive/negative, then finds which class has a"
+        , " higher probability for that sentence."
+        , " The baseline we were aiming for was an f1 score of .75"
+        , "<br/>The second part of this was to improve it in some way. I decided"
+        , " to go with a featurized feedforward 2 layer neural network, since"
+        , " I had already built one before with my "
+        , linkString("mushroom program", "projectDisplayPage.html?post=13")
+        , ", so I already understood all of the math behind it."
+        , " To explain all that jargon above, featurized means that"
+        , " I extracted features from the sentence (like length, number of comparison words"
+        , " number of negative words, average word length, etc)"
+        , " and used these as the inputs. These inputs were passed to a hidden layer"
+        , ", and then to a single output node (2-layer total, feeding information forward only)."
+        , " For my improved model, I achieved an f1 score of .95, which I am pretty proud of."
+        , "<br/>Overall, this was a super fun project, and super interesting to see how"
+        , " far we could get with the naive bayes approach (which doesn't seem like"
+        , " it would be that good)."
+    )
+));

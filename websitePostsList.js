@@ -244,20 +244,36 @@ posts.push(new post(
     "I found that my website looks really strange on mobile devices, so I thought I should try to fix it. I added a meta tag, so hopefully that allows it to detect a mobile site and tell it to not falsely stretch the screen."
 ));
 
+posts.push(new post(
+    "Adding Fonts",
+    "August 12th, 2019",
+    "After a long irrelevant chain of events, my resume now has two fonts. I wanted to bring those into my website to keep the theme consistant, so that everything feels right if someone goes to my website after seeing my resume. They are 'Bahnschrift' and 'Source Sans Pro'. Bahnschrift was already supported, but I had to import Source Sans Pro from the Google Fonts API. From there, I set them on a few different titles and descriptions, making sure to only import the weights that I needed. As an added bonus, I understand fonts in CSS so much more now."
+));
+
+posts.push(new post(
+    "Fixing the broken page",
+    "March 9th, 2020",
+    "Well oops. I didn't realize, but I created a link to an \"about me\" page without actually creating the page. So that looked pretty bad :/ <br/>But, now I've changed it back to the app tab. If I ever feel like doing somemore css (unlikely), I'll go fix that. Otherwise, I also updated my resume and added more projects"
+));
+
 //Keep working on:
-/* main page pictures still disappear sometimes
- * fonts
- * looking more professional
- * Different speed scrolling (background moves slow, overlay moves quicker)
- * ~actually~ important things about me:
- *  - light or dark theme
- *  - tabs or spaces
- * add tags to the posts that can be used to search/sort
+/* add tags to the posts that can be used to search/sort
  *      (filter the projects by language)
  * add a favicon (little icon for the bookmark)
  *      hopefully just <link rel="icon" href="/favicon.ico">     
- * new font?
- *      Bahnschrift semibold: Jake Swartwout
- *      Tahoma --Bolded: Jake Swartwout      my favorite
- *      Yu Gothic UI Semibold: Jake Swartwout
+ * fonts to match resume:
+ *      Bahnschrift
+ *      Source Sans Pro
+ * about me tab
+ *      move apps posts to the projects page (I don't want people to think I want to do app development)
+ *      move some of the information on the front page to there
+ *      put back the personality pictures
+ *      do the John McWade method of having a box and then a png on the corner to break it up
+ *      maybe do alternating text / pictures
+ *
+ *      []  running
+ *      coding   []
+ *      []  writing
+ * picture of me at visa?
+ * actually use the sliding things on the front page, that was tough!
  */
