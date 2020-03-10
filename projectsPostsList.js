@@ -407,7 +407,7 @@ posts.push(new projectPost(
         , " and got to decide the project for ourselves. We went with an image"
         , " hosting website, where students from CU could post public and private"
         , " pictures to share with their friends. It was built in ASP.NET MVC and"
-        , " then hosted on Heroku. If you want to see the working link, it is still live"
+        , " then hosted on Heroku. If you want to see the working link, it is still live "
         , linkString("here", "http://buffimg.herokuapp.com/")
         , ", although Heroku routinely deletes any images that you actually upload.<br/>"
         , "If you want to learn more, check out the github repositories for it:"
