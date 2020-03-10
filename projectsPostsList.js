@@ -447,7 +447,7 @@ posts.push(new projectPost(
         , "<br />For buy/sell data, I had two metrics, one for the level of buy and one"
         , " for the level of sell. Combining these two gave an indication on what the"
         , " stock would do in the future, according to this chart:"
-        , imageString("Color_meanings.png", "the meanings of the colors", 50)
+        , imageString("Color_meanings.PNG", "the meanings of the colors", 50)
         , "To generate these values, I looked 70 days into the future, in growing"
         , " chunks. So, in the week ahead, I used each day, then in the next week every 2 days"
         , " were grouped together, then 5, then finally two groups of 15 days. For each of"
