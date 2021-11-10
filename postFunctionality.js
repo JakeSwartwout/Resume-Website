@@ -12,12 +12,14 @@ function loadPosts() {
     }
 }
 
+// the base post
 var post = function (theTitle, theDate, theContent) {
     this.title = theTitle;
     this.date = theDate;
     this.content = theContent;
 }
 
+// a post but you can pass it a list of strings instead of a single string
 var mediaPost = function (theTitle, theDate, contentMediaArray) {
     this.theContent = "";
     for (var i = 0; i < contentMediaArray.length; i++) {
@@ -64,7 +66,7 @@ var projectPost = function (theTitle, theIDE, theLanguage, shortDescription, the
 }
 
 
-//to specify the image's size
+// a string to load in an image
 function imageString(location, description, size) {
     var string = "<img src=\"./images/" + location + "\"";
     string += "alt=\"" + description + "\"";
@@ -85,7 +87,7 @@ function imageString(location, description, size) {
     return string;
 }
 
-//for making pixel art non-pixelated
+// loading in images, but for making pixel art non-pixelated
 function pixelArtString(location, description) {
     var string = "<img src=\"./images/Videogame/" + location + "\"";
     string += "alt=\"" + description + "\"";
@@ -94,7 +96,7 @@ function pixelArtString(location, description) {
     return string;
 }
 
-//to place multiple images in the same line
+// to place multiple images in the same line
 function imageLineString(imageStringArray) {
     var string = "<div style=\"text-align:center;\"><div class=\"imageBoxWrapper\">";
     var width = 99.5 / imageStringArray.length;
@@ -106,6 +108,7 @@ function imageLineString(imageStringArray) {
     return string + "</div></div>";
 }
 
+// to auto-format a link
 function linkString(text, url) {
     var string = "";
     string += "<a href=\"" + url + "\">";
@@ -113,7 +116,7 @@ function linkString(text, url) {
     return string;
 }
 
-
+// to auto format code
 function codeString(linesArray) {
     var string = "<div class=\"code\">";
     string += linesArray[0];
@@ -123,7 +126,7 @@ function codeString(linesArray) {
     return string + "</div>";
 }
 
-
+// to auto-format lists
 function listString(isNumbered, linesArray) {
     var string = isNumbered? "<ol>" : "<ul>";
     for (var i = 0; i < linesArray.length; i++) {

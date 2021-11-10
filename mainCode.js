@@ -1,7 +1,7 @@
 ﻿function addBottomBar() {
     document.getElementById("bottomBar").innerHTML =
         "&nbsp;<br />----- Built by Jake Swartwout - Last updated " +
-        "March 9th, 2020"
+        "November 9th, 2021"
         + " ----- <br /> &nbsp; ";
 }
 
@@ -33,7 +33,7 @@ function fillInSideBar() {
     string += "<a href=\"https://www.linkedin.com/in/jake-swartwout\" title=\"You need an account to view it\">My LinkedIn Profile</a>";
     string += "<br /> <a href=\"https://github.com/JakeSwartwout\" title=\"not much here\">My Github</a>";
     string += "<br /> <a href=\"https://jakeswartwout.wordpress.com/\" title=\"Not hand-made\">My Design Progress Blog</a>";
-    string += "<br /> <a href=\"https://jakeshortstories.blogspot.com/\" title=\"jakesshortstories.blogspot.com\">My Writing Blog</a>";
+    // string += "<br /> <a href=\"https://jakeshortstories.blogspot.com/\" title=\"jakesshortstories.blogspot.com\">My Writing Blog</a>";
     string += "<br /> <a href=\"https://bug-adventures.blogspot.com/\" title=\"free to download\">The Blog for My Books</a>";
     string += "<br />";
     string += "</div>";
