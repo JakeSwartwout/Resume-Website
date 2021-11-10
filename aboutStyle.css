@@ -1,0 +1,172 @@
+﻿@import url("navBarStyle.css");
+
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+}
+
+body {
+    font-family: Arial;
+    text-align: left;
+    background-color: #535563;
+    margin: 0px;
+}
+
+
+#pageTopper {
+    background-color: darkslategrey;
+    padding: 8px;
+    overflow: auto;
+    font-family: 'Source Sans Pro';
+}
+
+.mainTopper {
+    font-size: 33px;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.underTopper {
+    font-size: 20px;
+    text-align: center;
+    color: lightgrey;
+}
+
+#contentContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+#content {
+    float: left;
+    width: 60%;
+}
+
+
+#welcome {
+    font-family: Bahnschrift;
+    font-weight: bold;
+    color: lightgray;
+    padding: 10px 15px;
+    margin: 0 auto;
+    background-color: darkslategray;
+    border-radius: 0 10px 10px 0;
+}
+
+    #welcome p {
+        text-indent: 15px;
+        padding: 0 10px;
+        font-weight: normal;
+        margin-top: 10px;
+    }
+
+    #welcomeTitle {
+        font-family: 'Source Sans Pro';
+        font-size: 19px;
+    }
+
+
+#sideDescription {
+    float: right;
+    width: 40%;
+    line-height: 150%;
+    color: white;
+}
+
+a:link, a:visited {
+    color: #b6b7c1;
+}
+
+a:hover {
+    color: #d7daea;
+}
+
+#sideBar {
+    text-align: center;
+    margin: auto;
+    width: unset;
+    padding-top: 10px;
+    font-family: 'Source Sans Pro';
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#linksList {
+    font-family: Bahnschrift;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@media (max-width: 750px) {
+    #content {
+        float: none;
+        width: 100%;
+    }
+
+    #sideDescription{
+        float: none;
+        width: 100%;
+    }
+
+    #welcome {
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+.picsAcross {
+    width: calc(100% + 1px);
+}
+
+#pictures{
+    overflow: hidden;
+}
+
+img {
+    float: left;
+    height: 100%;
+    position: relative;
+}
+
+.fadeAcross {
+    width: 100%;
+}
+
+.fade {
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.fadeText {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+    .fadeText h1 {
+        opacity: 0;
+        transition: .5s ease;
+        padding: 5px;
+        width: 100%;
+    }
+
+.fade:hover .fadeText h1 {
+    margin-bottom: 0px;
+    opacity: 1;
+    transition: .5s ease;
+    background-color: rgba(66, 90, 130, .8);
+}
+
+#bottomBar {
+    text-align: center;
+    font-style: italic;
+    font-size: 10px;
+    width: 100%;
+    bottom: 5px;
+}

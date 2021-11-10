@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<!-- merge index-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <!-- to make mobile devices not scale to the incorrect size-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- to import the font 'Source Sans Pro' -->
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold' rel='stylesheet' type='text/css'>
+    <title>Jake Swartwout</title>
+    <script src="mainCode.js"></script>
+    <script>
+        function loadMain() {
+            document.getElementById("warning").innerHTML = "";
+        }
+
+        function setActive() {
+            var link = document.getElementById("about");
+            link.classList.add("active");
+            link.href = "";
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="aboutStyle.css" />
+</head>
+
+<body onload="loadMain();"
+      onresize="loadMainPics()">
+
+    <div id="pageTopper">
+        <div class="mainTopper">Jake Swartwout</div>
+    </div>
+
+    <nav id="navbar"></nav>
+    <script>fillInNav(); setActive();</script>
+
+    <div id="contentWhole">
+        <div id="contentContainer">
+            <div id="content">
+                <div id="pictures">
+                    <p id="warning" style="margin:0">The page is loading. There are a lot of pictures, just give it a moment</p>
+                    Some good content
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div id="bottomBar"></div>
+    <script>addBottomBar();</script>
+</body>
+</html>

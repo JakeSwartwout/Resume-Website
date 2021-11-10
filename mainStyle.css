@@ -1,4 +1,5 @@
 ﻿@import url("navBarStyle.css");
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,semibold');
 
 @viewport {
     width: device-width;
@@ -16,19 +17,21 @@ body {
     background-color: darkslategrey;
     padding: 8px;
     overflow: auto;
-    font-weight: bold;
+    font-family: 'Source Sans Pro';
 }
 
 .mainTopper {
     font-size: 33px;
     text-align: center;
     color: whitesmoke;
+    font-weight: 600;
 }
 
 .underTopper {
     font-size: 20px;
     text-align: center;
     color: lightgrey;
+    font-weight: normal;
 }
 
     .underTopper a:link, a:visited {
@@ -67,6 +70,16 @@ body {
     line-height: 150%;
     padding-left: 5%;
     color: white;
+    font-family: 'Source Sans Pro';
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#linksList {
+    font-family: Bahnschrift;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 @media (max-width: 600px) {
@@ -108,6 +121,11 @@ body {
 
 .postContent {
     line-height: 135%;
+}
+
+.postNavigation {
+    font-family: 'Source Sans Pro';
+    font-size: 18px;
 }
 
 .imageBoxWrapper {

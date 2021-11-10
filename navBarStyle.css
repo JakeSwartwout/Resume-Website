@@ -9,6 +9,9 @@
     position: -webkit-sticky;
     top: 0;
     z-index: 1;
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    font-size: 17px;
 }
 
 
@@ -30,15 +33,16 @@
         }
 
 
-
-@media (max-width: 716px) {
+/*when the first one makes a second line*/
+@media (max-width: 735px) {
     #navbar a {
-        width: 12%;
-        padding: 5px 2.33%;
+        width: 8.666%;
+        padding: 5px 4%;
     }
 }
 
-@media (max-width: 500px) {
+/*when all would be on their own line*/
+@media (max-width: 428px) {
     #navbar a {
         width: 16.6666%;
         padding: 5px 0;
