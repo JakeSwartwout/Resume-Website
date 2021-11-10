@@ -256,6 +256,27 @@ posts.push(new post(
     "Well oops. I didn't realize, but I created a link to an \"about me\" page without actually creating the page. So that looked pretty bad :/ <br/>But, now I've changed it back to the app tab. If I ever feel like doing somemore css (unlikely), I'll go fix that. Otherwise, I also updated my resume and added more projects"
 ));
 
+posts.push(new mediaPost(
+    "Fixing up the github",
+    "November 9th, 2021",
+    new Array(
+        "Wow I didn't realize I stopped working on this over a year ago!"
+        , " I came back to try to find a list of all of my projects, and it turns out"
+        , " I really haven't been keeping this updated well."
+        , " So here I am now, updating some of the functionality and adding on"
+        , " a whole bunch of my more recent projects."
+        , "<br/>The most obvious change to the website is how I use github actually."
+        , " I used to not understand remote vs local repos, so I would drag and drop every"
+        , " single file into the github website in order to upload them. And then"
+        , " deleting things was a pain because I had to do a pull request for each and"
+        , " every single one! Thankfully, I've figured git out by now! Now working in my remote"
+        , " repo and just pushing the changes all at once. I also added a few branches now too"
+        , " so I can try messing around with having an 'about me' page. And then of course,"
+        , " adding a whole bunch more projects! Check them out in the "
+        , linkString("projects page", "projectsPostsPage.html")
+    )
+));
+
 //Keep working on:
 /* add tags to the posts that can be used to search/sort
  *      (filter the projects by language)

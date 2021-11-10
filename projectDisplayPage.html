@@ -29,13 +29,20 @@
         function refreshPost() {
             //find the post
             var search = window.location.search;
-            displayNum = parseInt(search.substring(6));
-            //change the title
-            document.getElementsByTagName("title")[0].innerHTML = posts[displayNum].title;
-            //change the navigation
-            fillInPostNav();
-            //change the post display
-            setPosts(displayNum, displayNum + 1);
+            var num_part = search.substring(6);
+            // ensure they picked a post
+            if (num_part != ""){
+                displayNum = parseInt(num_part);
+                //change the title
+                document.getElementsByTagName("title")[0].innerHTML = posts[displayNum].title;
+                //change the navigation
+                fillInPostNav();
+                //change the post display
+                setPosts(displayNum, displayNum + 1);
+            // no post chosen, redirect to the main projects page
+            } else {
+                window.location.replace("projectsPostsPage.html");
+            }
         }
 
         function fillInPostNav() {
