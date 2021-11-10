@@ -647,20 +647,36 @@ posts.push(new projectPost(
 ));
 
 // May 2021
+// Vibe check analysis
+// doing a survey every single morning and night, and then doing
+// data analysis on it to see how certain things impact my mood and feelings
+
+// May 2021
 // Flowers language
 // trying to do word2vec on flowers and the information about flowers in order to
 // build a language with a focus on flowers
+// C:\Users\Jake\Programs\Python
 
 // July 2021
 // Recommendation algorithm
 // something something about making random functions based on a random number of variables
 // then trying to make vectors to predict the content that they like using a word2vec style algorithm
+// C:\Users\Jake\Programs\Python
 
-
-//
+// February 2021
 // monsters vs humans vs zombies vs vampires vs priests vs children simulator
 // just a fun time
+// C:\Users\Jake\Documents\CU Junior Year
+
+// February 2021
+// maze search frontier
+// working off of a maze, doing a heatmap of the best possible path through it
+// to show the search frontier of various search algorithms
 
 // October 2021
 // Cookie simulator for Object Oriented
+// C:\Users\Jake\Documents\CU Senior Year\OO
 
+
+// TODO: give the posts both a number and also a permanent name, so that
+// I don't have to link to 11, I could link to "luka"
