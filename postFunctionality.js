@@ -45,6 +45,13 @@ var projectPost = function (theTitle, theIDE, theLanguage, shortDescription, the
             this.framework = "p5.js";
             this.theEnvironment += this.ide + ", using " + this.lang + " and the " + this.framework + " framework";
             break;
+        case "paper":
+            this.theEnvironment = "A written research paper";
+            break;
+        case "jupyter notebook":
+        case "jupyter":
+            this.theEnvironment += this.lang + " in a Jupyter Notebook";
+            break;
         default:
             this.theEnvironment += this.lang;
             break;
@@ -114,6 +121,15 @@ function codeString(linesArray) {
         string += "</br>" + linesArray[i];
     }
     return string + "</div>";
+}
+
+
+function listString(isNumbered, linesArray) {
+    var string = isNumbered? "<ol>" : "<ul>";
+    for (var i = 0; i < linesArray.length; i++) {
+        string += "\n<li>" + linesArray[i] + "</li>";
+    }
+    return string + isNumbered? "\n</ol>" : "\n</ul>";
 }
 
 

@@ -475,12 +475,13 @@ posts.push(new projectPost(
         , " (well, actually is more reliant on other factors than previous price points),"
         , " so it is difficult for the model to actually find any patterns."
         , "<br />But, I still had a great time making it and learned a lot in the process."
-        , " The notebook is available"
+        , " The notebook is available "
         , linkString("on github", "https://github.com/JakeSwartwout/Stock-Market-Predictor")
         , " if you'd like to mess around with it."
     )
 ));
 
+// Spring 2020
 posts.push(new projectPost(
     "Sentiment Analyzer",
     "VS Code", "Python",
@@ -511,3 +512,155 @@ posts.push(new projectPost(
         , " it would be that good)."
     )
 ));
+
+// Spring 2020
+posts.push(new projectPost(
+    "Goldpanning Problem",
+    "Processing", "Java",
+    "An algorithms practice problem, for optimizing value based off of a tree and non-adjacent vertices.",
+    new Array(
+        "This was a fairly simple project. For my algorithms class, one assignment was to design an algorithm"
+        , " to solve the following problem (reworded from the original description):"
+        , "<br/><i>You and your friends are in a branching river network (which can be represented by a rooted tree)."
+        , " You can pan for gold at each vertex of the tree, and each location will yield a certain amount."
+        , " But, you don't want to be too close to your friends, so you can't mine any adjacent vertices (so in"
+        , " your final solution, no chosen vertices can be connected by a river edge). You all combine your gold"
+        , " at the end, so how do you choose where everyone pans, to maximize the total amount of gold?</i>"
+        , "<br/>It was super satisfying once I came up with the solution, and I really wanted a way to visualize it,"
+        , " so of course I had to implement it. Each node gets a slice of the area, and each child then gets a slice"
+        , " of that area, which gives it a really cool branching structure. Lighter colors roughly represent higher values"
+        , " (increasing, but not linear)"
+        , imageString("goldpanning.png", "an example")
+        , "For the actual algorithm, the answer was extremely satisfying. The intuitive sense is to use the sub-tree's"
+        , " maximum values, which is almost correct. We actually need two maximums, one if we take the node and one if"
+        , " we don't. Those can be found from finding the optimal combinations of the children when we do and don't"
+        , " have the vertex. So starting with the root, we can go down the tree (and then back up it)"
+        , " finding the maxes recursively. Then we just pick the best of the two options for the root and can"
+        , " go backwards to find the best choices. In this diagram, a node being selected is represented by a"
+        , " dark border. Here are a few more examples, just so you can see that it is changing shape:"
+        , imageLineString(new Array(
+            imageString("goldpanning2.png", "a second example")
+            , imageString("goldpanning3.png", "a third example")
+            , imageString("goldpanning4.png", "a fourth example")
+        ))
+    )
+));
+
+// Spring 2020 / probably may
+posts.push(new projectPost(
+    "Reducing Bias in Emotion Labeling",
+    "Paper", "N/A",
+    "A full research paper looking into the effects that certain demographics have on how people label emotions from facial images.",
+    new Array(
+        "While actually a project for my Digital Identity class, this paper turned out super impressive"
+        , "<br/>This is a full research paper looking into various sources"
+        , " of bias in emotion labeling. It was done in a group of 5 members, all with"
+        , " various talents and able to contribute to the part that they did best."
+        , "<br/>We began by reading other research papers relevant to our project area."
+        , " From this, we got a lot of useful information as to what to look for and what"
+        , " to avoid. From here, we get to my main contribution."
+        , "<br/>My main job was to construct a dataset of facial images."
+        , " I did this by scraping them from instagram. I then filtered, equalized (similar numbers per category)"
+        , ", agreed upon (needed 80% agreement to keep), and then numbered all of them."
+        , " We ended up with 309 images."
+        , "<br/>We then published these images into a survey, and distributed it"
+        , " for people to take. This allowed us to analyze"
+        , " how other people labeled the images and compare it to their demographics."
+        , " We found several interesting results relating to gender, race, age, and income"
+        , ", so definitely read the paper if you're interested in finding out more."
+        , "<br/>The paper is linked "
+        , linkString("here", "Reducing_Bias_in_Emotion_Labeling.pdf")
+    )
+));
+
+// March 2021
+posts.push(new projectPost(
+    "Time-Card Randomizer",
+    "Jupyter Notebook", "Python",
+    "Taking tasks and their importance and mapping them onto a deck of cards",
+    new Array(
+        "Being incredibly bad at making decision, I thought it might help if I could use a deck of cards to help choose"
+        , " what task I should work on next. So each task is given an importance level (which should be a combo"
+        , " of both importance and deadline level), then the program is run. It outputs a grid of the tasks randomly arranged,"
+        , " mapped to a standard 52 card deck with 2 jokers for the most important and most urgent."
+        , " Then you can either have it pick one programatically, or physically draw a card from a shuffled deck of cards. Whatever you get,"
+        , " that's the task you'll do. This was surprisingly fun and effective at ranking what was important to me,"
+        , " as well as overriding the choice paralysis from having too many important tasks all at once."
+        , "<br/>Another small feature was that there could also be static cards added, so you could specify that no matter what,"
+        , " X cards would be left for that task. For example, I often kept 4 cards aside, each one for a different rest activity"
+        , " so that no matter what, I always had the possibility of getting a break"
+        , "<br/>Here's an example of the inputs you may give it:"
+        , imageString("timecard_randomizer_input.jpg", "the input of different activities ranked by importance")
+        , "And here's the output for that:"
+        , imageString("timecard_randomizer_output.jpg", "the output grid of randomized events mapped to playing card types", 100)
+    )
+));
+
+// April 2021
+posts.push(new projectPost(
+    "Luka Compiler and Processor",
+    "VS Code", "Python and SystemVerilog",
+    "A basic compiler for a personal coding language, performing all of the steps down to simulating the hardware processor",
+    new Array(
+        "Built a basic compiler for my own coding language to better understand the entire process of computing."
+        , " Having just taken both a Computer Organization class (processor design) as well as a Principles"
+        , " of Programming Languages class (building grammars), I felt like I had a strong understanding of every step of the"
+        , " computing process, except for compiling. So, I thought it would be a fun challenge to try to build"
+        , " a program /entirely/ from scratch. This includes the compiler, the assembler, the binary representations,"
+        , " and then building a processor to run/simulate my code."
+        , " I ended up creating 5 different python scripts to perform these intermediate steps:"
+        , listString(true, new Array(
+            "Compiling the code into a Grammar"
+            , "Assembling that into a modified version of RISC-V assembly"
+            , "Encoding this into a homemade binary representation"
+            , "Formatting this binary code into a format readable by SystemVerilog"
+            , "Simulating the processor with my binary file and storing the output"
+        ))
+        , "The project isn't fully completed yet (as school gets in the way of quite a lot), but"
+        , " you can still check out my current progress "
+        , linkString("here", "https://github.com/JakeSwartwout/Luka")
+        , " read more about my implemenations there."
+        , "<br/>There was quite a lot that I enjoyed about this project. I added in a VS Code highlighter so"
+        , " I could actually see my key words being highlighted when opening my special .luka files."
+        , " I also really liked the pride that came from it actually compiling and working. The files"
+        , " are passed in basically as a txt file, so it feels incredibly impressive to have them actually"
+        , " be able to be interpreted and run. And finally, I really loved planning out the binary representations"
+        , " of them. It was a fun challenge to try to fit all of the data in to the same length of instruction,"
+        , " trying to pick how long would be a good balance between the longer instructions and the shorter ones."
+        , " The linker was also very fun to try to build out, figuring out how to allocate registers as needed,"
+        , " what was in scope, what could be taken out of scope, all of that was incredibly interesting."
+        , "<br/>Where I stopped, I was trying to get the processor to actually run my code. It should be mostly functional"
+        , " but I think I was demanding a little much for SystemVerilog, so it was really struggling quite a bit to"
+        , " simulate right. Of course, there could also be a small bug somewhere too. I was also in the process of"
+        , " expanding the project to include sub-scopes, which would have required a massive overhaul of how I did"
+        , " the command interpreting. Currently, it splits into commands based on lines or semi-colons, but to add scope,"
+        , " I would have wanted to more of a nested structure."
+        , "<br/>Here's a few screenshots of examples of what the final language looks like:"
+        , imageString("Luka Examples (1).png", "showing basic type specification and variable assignment")
+        , imageString("Luka Examples (2).png", "variable assignment from other variables and math")
+        , imageString("Luka Examples (3).png", "Capturing boolean variables of logical operators")
+        , "This code can be compiled into a grammar and then executed. Or, it could be translated down into the binary"
+        , " representation. These are also available as examples in the repo, titled test#A.luka, and then when compiled"
+        , " down, they increase the letter and move to the output folder. So test5A.luka goes to test5B.py, goes to"
+        , " test5C.json to test5D.vh"
+    )
+));
+
+// May 2021
+// Flowers language
+// trying to do word2vec on flowers and the information about flowers in order to
+// build a language with a focus on flowers
+
+// July 2021
+// Recommendation algorithm
+// something something about making random functions based on a random number of variables
+// then trying to make vectors to predict the content that they like using a word2vec style algorithm
+
+
+//
+// monsters vs humans vs zombies vs vampires vs priests vs children simulator
+// just a fun time
+
+// October 2021
+// Cookie simulator for Object Oriented
+
