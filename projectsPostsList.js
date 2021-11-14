@@ -658,15 +658,118 @@ posts.push(new projectPost(
 // C:\Users\Jake\Programs\Python
 
 // July 2021
-// Recommendation algorithm
-// something something about making random functions based on a random number of variables
-// then trying to make vectors to predict the content that they like using a word2vec style algorithm
-// C:\Users\Jake\Programs\Python
+posts.push(new projectPost(
+    "Recommendation Algorithm",
+    "Jupyter Notebook", "Python",
+    "Using vector similarities to predict if a user will enjoy content or not",
+    new Array(
+        "Inspired by the word2vec algorithm of using vectors to extract"
+        , " and represent information, I thought it would be interesting"
+        , " to try this to build a reccomendation algorithm."
+        , "<br/>The word2vec"
+        , " algorithm works by assigning two vectors to each word, one where"
+        , " the word is the target, and one where it's the context. Then it"
+        , " scans through a body of text, using each word as a target and"
+        , " aligning that vector with the context vectors of the words around"
+        , " it. This allows us to track which words show up in similar situations."
+        , " My favorite example is how you could expect the words Spinach and Kale"
+        , " to both show up in areas like recipes, around words like salt, oil,"
+        , " or garlic, or maybe by words like green, bitter, healthy, or eat."
+        , " So, these two vectors will be very close to each other which makes sense"
+        , " because these are indeed similar items. But a word like Book would"
+        , " maybe only show up around green or healthy, so it would be very dissimilar"
+        , " both spinach and kale. And so as we read through text, we constantly"
+        , " update these vectors, using the dot product/angle between them as a metric"
+        , " for how similar they are."
+        , "<br/>So applying that here, the context vector is our videos, and then"
+        , " the users are our target vectors. Each user has a randomized function"
+        , " and cutoff point that they use to judge the video and say whether they"
+        , " like it or not. Liking a video moves both of their vectors closer,"
+        , " while disliking it moves both further apart."
+        , "<br/>And just to make it interesting, each video has a list of features"
+        , " that are passed into the user's judgement function, and the user"
+        , " takes approximately between 1 to 7 or so of them into account"
+        , "<br/>The results were unfortunately not that great. The algorithm"
+        , " correctly predicted if they would like a movie 162 out of 1000 times."
+        , " Since that is lower than the 50% you'd get just guessing, I wonder if my algorithm"
+        , " has a bug somewhere to make it so bad. It is updating the vectors well though, as I can"
+        , " see that users with similar functions do accurately get mapped to similar"
+        , " vectors. This was definitely an interesting and enjoyable project, even"
+        , " if the results weren't what I was hoping for."
+    )
+));
 
 // February 2021
-// monsters vs humans vs zombies vs vampires vs priests vs children simulator
-// just a fun time
-// C:\Users\Jake\Documents\CU Junior Year
+posts.push(new projectPost(
+    "Humans vs Monsters",
+    "Jupyter Notebook", "Python",
+    "Just a fun halloween simulation, randomly making monsters interact and seeing what story unfolds",
+    new Array(
+        "While this project did absolutely nothing important or useful"
+        , " (not even sure if I learned that much), it was definitely super"
+        , " fun and a great memory."
+        , "<br/>The basic idea is that there is a collection of humans and monsters."
+        , " The simulation randomly picks two from the list and then pits them against"
+        , " each other. For every possible interaction, I defined a story line"
+        , " to say and the creates who will walk away from the interaction."
+        , " An example of defining these for a potion is as follows:"
+        , codeString(new Array(
+            "creatures.challenger: ('Story string', [creature.original?, creature.challenger?, creature.otherOutput?]),"
+        ))
+        , codeString(new Array(
+            "interactions[creatures.potion] = {"
+            , "    creatures.potion: ('Two potions clink together', [creatures.potion, creatures.potion]),"
+            , "    creatures.witch: ('A witch uses a potion to summon a ghost', [creatures.witch, creatures.ghost]),"
+            , "    creatures.mystfig: ('A child mysteriously shows up in town', [creatures.child]),"
+            , "    creatures.priest: ('A priest blesses a potion', [creatures.potion, creatures.priest]),"
+            , "    creatures.child: ('With a potion a child grows up', [creatures.human]),"
+            , "    creatures.zombie: ('A zombie is cured and becomes human again', [creatures.human]),"
+            , "    creatures.corpse: ('A potion sits on a corpse', [creatures.potion, creatures.corpse]),"
+            , "    creatures.ghost: ('A potion helps a ghost form a physical body', [creatures.human]),"
+            , "    creatures.vampire: ('A vampire drinks a potion to no effect', [creatures.vampire]),"
+            , "    creatures.human: ('A holy potion converts a human to priesthood', [creatures.priest])"
+            , "}"
+            , "interactions[creatures.priest][creatures.priest] = ('Two priests bless water into a potion', [creatures.priest, creatures.priest, creatures.potion])"
+            , "interactions[creatures.witch][creatures.witch] = ('Two witches brew a potion together', [creatures.witch, creatures.witch, creatures.potion])"
+            , "interactions[creatures.mystfig][creatures.corpse] = ('A corpse is mysteriously dissolved to form a potion', [creatures.mystfig, creatures.potion])"
+            , "interactions[creatures.witch][creatures.corpse] = ('A witch dissolves a corpse into a magic potion', [creatures.witch, creatures.potion])            "
+        ))
+        , "You'll also notice that at the end, I also overwrote previous interactions."
+        , " This is because I wanted to make it expandable, so rather than"
+        , " going back and changing the original strings, I just changed them"
+        , " once the relevant creature has been introduced."
+        , "<br/>I also made some functions to go through and find all of the ways"
+        , " to make a certain creature, which was neat to see all the ways"
+        , " they could come about"
+        , "<br/>And here's a sample story:"
+        , "<br/><p>"
+        , "{'Human': 63, 'Vampire': 16, 'Ghost': 6, 'Corpse': 2, 'Zombie': 6, 'Child': 8, 'Priest': 8, 'Mysterious Figure': 5, 'Witch': 10, 'Strange Potion': 0, 'Mad Scientist': 9, 'Werewolf': 10, 'Wereman': 7}"
+        , "<br/>A human is converted into a zombie!"
+        , "<br/>A priest trains a human into another priest"
+        , "<br/>A vampire turns a human into another vampire!"
+        , "<br/>Two humans have a child together :D"
+        , "<br/>A vampire and wereman get into a standoff"
+        , "<br/>A priest exorcises a ghost"
+        , "<br/>Two humans have a child together :D"
+        , "<br/>A werewolf kills a vampire"
+        , "<br/>Two scientists brew a potion"
+        , "<br/>Two humans have a child together :D"
+        , "<br/>{'Human': 60, 'Vampire': 16, 'Ghost': 5, 'Corpse': 2, 'Zombie': 7, 'Child': 11, 'Priest': 9, 'Mysterious Figure': 5, 'Witch': 10, 'Strange Potion': 1, 'Mad Scientist': 9, 'Werewolf': 10, 'Wereman': 7}"
+        , "<br/>A person is mysteriously murdered"
+        , "<br/>A human is converted into a zombie!"
+        , "<br/>A priest trains a human into another priest"
+        , "<br/>A vampire turns a human into another vampire!"
+        , "<br/>A person mysteriously transforms into a werewolf!"
+        , "<br/>A vampire and wereman get into a standoff"
+        , "<br/>A witch worships a ghost"
+        , "<br/>A priest slays a vampire!"
+        , "<br/>Two humans have a child together :D"
+        , "<br/>A zombie eats a scientist's brain"
+        , "<br/>{'Human': 56, 'Vampire': 16, 'Ghost': 6, 'Corpse': 4, 'Zombie': 8, 'Child': 12, 'Priest': 10, 'Mysterious Figure': 5, 'Witch': 10, 'Strange Potion': 1, 'Mad Scientist': 8, 'Werewolf': 11, 'Wereman': 6}"
+        , "</p>"
+    )
+));
+
 
 // February 2021
 // maze search frontier
@@ -680,3 +783,8 @@ posts.push(new projectPost(
 
 // TODO: give the posts both a number and also a permanent name, so that
 // I don't have to link to 11, I could link to "luka"
+
+// TODO: instead of making a massive javascript file of my projects,
+// instead make a python program to format them all instead?
+// and then just upload all the resulting files? rather than having
+// the user have to load them all every time?
