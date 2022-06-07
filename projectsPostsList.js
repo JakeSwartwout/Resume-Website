@@ -777,8 +777,82 @@ posts.push(new projectPost(
 // to show the search frontier of various search algorithms
 
 // October 2021
-// Cookie simulator for Object Oriented
+// Game store simulator for Object Oriented
 // C:\Users\Jake\Documents\CU Senior Year\OO
+
+
+// january 2022
+// Image tagger
+
+
+// April 2022
+posts.push(new projectPost(
+    "Static Gravity Simulator",
+    "Processing", "Java",
+    "Drawing colorful gravity force maps and flying satellites through them",
+    new Array(
+        "For my Pathway to Space class, I had to create a sample of work that"
+        , " combined both space and my field (computer science). So, I decided"
+        , " to make a program to draw simulated gravity maps of celestial bodies,"
+        , " with the ability to then fly a small satellite through the created space."
+        , imageString(
+            "elliptical orbit.gif",
+            "a satellite flying in an elliptical orbit around a body with a colorful gravity map"
+        )
+        , "The writeup for the class is hoted "
+        , linkString(
+            "here on Wordpress",
+            "https://jakespathwaytospace.wordpress.com/sample-of-work/"
+        )
+        , " if you want to read it, and there is also an in-depth description in "
+        , linkString(
+            "the github repo",
+            "https://github.com/JakeSwartwout/GravitySim#code-explanation"
+        )
+        , ", where the code is heaivily commented so it should be fairly easy to read through."
+        , "<br/>I built the program in "
+        , linkString(
+            "Processing",
+            "https://processing.org"
+        )
+        , ", a framework that lets me write Java code to display images and shapes on the screen each frame."
+        , " Mostly, it was to build off my previous gravity sim project "
+        , linkString(
+            "Planets",
+            "https://jakeswartwout.github.io/Resume-Website/projectDisplayPage.html?post=1"
+        )
+        , ", but do it in a new fashion. I really liked the mode where it showed the strength of gravity as a"
+        , " grayscale color for each pixel, and thought I could do better with my improved coding knowledge."
+        , " So rather than having one sun and many satellites that all affect the gravity map, I allowed for"
+        , " multiple static suns that all create a static gravity representation (to conserve computing power)"
+        , " then still allowed for smaller satellites to be flown through it (to be able to actually test the physics)."
+        , "<br/>It's a really cute simulation! I'm super happy with how the coloring all turned out, and it's"
+        , " really enjoyable to launch satellites through it. I also included a way to video record a launch"
+        , " if you want to keep a particularly cool one, and that's how I got these gifs:"
+        , imageString(
+            "lunar mission.gif",
+            "a satellite flying from a large planet to a smaller moon"
+        )
+        , imageString(
+            "weaving.gif",
+            "a satellite weaving between a row of planets"
+        )
+        , " Since the gif format is quite low quality, here's a high quality screenshot of what the simulation actually"
+        , " looks like! Because I think it's so pretty that it deserved to be shown uncompressed:"
+        , imageString(
+            "quality pic of many bodies.png",
+            "a higher resolution static picture of the simulation",
+            100
+        )
+        , "One final fun tid-bit, since the rules of gravity are the same in space and on Earth,"
+        , " if we line up a bunch of equal sized (and so here equal mass) bodies, it creates a near-uniform"
+        , " gravity field like that on Earth, and so we can create close to parabolic launches!"
+        , imageString(
+            "parabolic ground.gif",
+            "a satellite flying through along parabolic arc as if it was shot into the air from the ground"
+        )
+    )
+));
 
 
 // TODO: give the posts both a number and also a permanent name, so that
@@ -788,3 +862,8 @@ posts.push(new projectPost(
 // instead make a python program to format them all instead?
 // and then just upload all the resulting files? rather than having
 // the user have to load them all every time?
+
+
+// ALSO!
+// please change the nav bar to actually be relevant stuff
+// probably make it just Home/Resume/Projects/Other Posts and then jam apps, game, and website build under other posts
