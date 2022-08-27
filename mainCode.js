@@ -16,13 +16,24 @@ function fillInPoster() {
 
 
 function fillInNav() {
+    formatNavTab = function(pageName, id, tagText) {
+        output = "<div id=\"" + id + "\">"
+            output += "<a href=\"" + pageName + ".html\">"
+                output += tagText
+            output += "</a>"
+        output += "</div>"
+        // output = "<a id=\"" + id + "\" href=\"" + pageName + ".html\">"
+        //     output += tagText
+        // output += "</a>"
+        return output
+    }
     //build the navbar
-    var navbar = "<a href=\"index.html\" id=\"home\">Home Page</a>";
-    navbar = navbar.concat("<a href=\"resume.html\" id=\"resume\">My Resume</a>");
-    navbar = navbar.concat("<a href=\"appPostsPage.html\" id=\"apps\">App Building</a>");
-    navbar = navbar.concat("<a href=\"websitePostsPage.html\" id=\"website\">Website Build</a>");
-    navbar = navbar.concat("<a href=\"gamePostsPage.html\" id=\"game\">Video Game</a>");
-    navbar = navbar.concat("<a href=\"projectsPostsPage.html\" id=\"other\">Other Projects</a>");
+    var navbar = formatNavTab("index", "home", "Home Page");
+    navbar += formatNavTab("resume", "resume", "My Resume");
+    // // navbar = navbar.concat("<a href=\"appPostsPage.html\" id=\"apps\">App Building</a>");
+    navbar += formatNavTab("websitePostsPage", "website", "Website updates");
+    // // navbar = navbar.concat("<a href=\"gamePostsPage.html\" id=\"game\">Video Game</a>");
+    navbar += formatNavTab("projectsPostsPage", "other", "Projects");
     document.getElementById("navbar").innerHTML = navbar;
 }
 

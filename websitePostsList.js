@@ -277,14 +277,31 @@ posts.push(new mediaPost(
     )
 ));
 
+posts.push(new mediaPost(
+    "Updating front page images and navbar",
+    "8/27/2022",
+    new Array(
+        "I noticed that all of my pictures were really outdated and so I looked super young in all of them."
+        , " So, I came back through and updated them with some various new pictures and descriptions and"
+        , " also fixed up that fade code a bit so we can use any header type"
+        , "</br>"
+        , "I also was tired of the nav-bar having misleading tabs on it (it had game design and android app design,"
+        , " neither of which I want to do (on the graphics side of things, anyway). So I removed those and fixed"
+        , " up that code as well to actually dynamically resize the height rather than relying on my"
+        , " weird previous method of manually finding the pixel locations to change it. Definitely cleaner now!"
+        , "</br>"
+        , linkString("The apps posts still exist", "appPostsPage.html")
+        , " aren't linked to, and "
+        , linkString("the games posts", "gamePostsPage.html")
+        , " I linked in the projects list. Still working on adding that About Me page though."
+    )
+));
+
 //Keep working on:
 /* add tags to the posts that can be used to search/sort
  *      (filter the projects by language)
  * add a favicon (little icon for the bookmark)
- *      hopefully just <link rel="icon" href="/favicon.ico">     
- * fonts to match resume:
- *      Bahnschrift
- *      Source Sans Pro
+ *      hopefully just <link rel="icon" href="/favicon.ico">
  * about me tab
  *      move apps posts to the projects page (I don't want people to think I want to do app development)
  *      move some of the information on the front page to there
@@ -295,6 +312,8 @@ posts.push(new mediaPost(
  *      []  running
  *      coding   []
  *      []  writing
- * picture of me at visa?
  * actually use the sliding things on the front page, that was tough!
+ * 
+ * overhaul how the projects pages work
+ * see that js file for what I want to do
  */

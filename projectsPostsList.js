@@ -427,6 +427,17 @@ posts.push(new projectPost(
 ));
 
 
+posts.push(new projectPost(
+    "Tempus, the Video Game",
+    "Unity", "C#",
+    "The start of a 2.5D video game I built with some friends",
+    new Array(
+        "Check out the blog posts I wrote about the development process here:</br>",
+        linkString("Game Dev Log", "./gamePostsPage.html")
+    )
+));
+
+
 
 posts.push(new projectPost(
     "Stock Market Predictor",
@@ -862,8 +873,3 @@ posts.push(new projectPost(
 // instead make a python program to format them all instead?
 // and then just upload all the resulting files? rather than having
 // the user have to load them all every time?
-
-
-// ALSO!
-// please change the nav bar to actually be relevant stuff
-// probably make it just Home/Resume/Projects/Other Posts and then jam apps, game, and website build under other posts
