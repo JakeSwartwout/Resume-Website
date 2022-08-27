@@ -1,7 +1,7 @@
 ﻿function addBottomBar() {
     document.getElementById("bottomBar").innerHTML =
         "&nbsp;<br />----- Built by Jake Swartwout - Last updated " +
-        "June 2nd, 2022"
+        "August 27th, 2022"
         + " ----- <br /> &nbsp; ";
 }
 

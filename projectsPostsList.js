@@ -866,6 +866,11 @@ posts.push(new projectPost(
 ));
 
 
+// Skeleton Code Generator
+
+
+
+
 // TODO: give the posts both a number and also a permanent name, so that
 // I don't have to link to 11, I could link to "luka"
 
@@ -873,3 +878,8 @@ posts.push(new projectPost(
 // instead make a python program to format them all instead?
 // and then just upload all the resulting files? rather than having
 // the user have to load them all every time?
+
+// TODO: add a way to separate the projects into times/groups now. There's a lot!
+// Could do like a tagging system, then they can pick the tag to group by?
+// Or just manually group them into blocks by appending to a different list
+// Thinking could split by date, by coding language, and maybe by cool imagery
