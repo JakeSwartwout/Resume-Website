@@ -682,7 +682,8 @@ posts.push(new projectPost(
         , " the word is the target, and one where it's the context. Then it"
         , " scans through a body of text, using each word as a target and"
         , " aligning that vector with the context vectors of the words around"
-        , " it. This allows us to track which words show up in similar situations."
+        , " it. In a sense, this is a single node neural network."
+        , "<br/>This allows us to track which words show up in similar situations."
         , " My favorite example is how you could expect the words Spinach and Kale"
         , " to both show up in areas like recipes, around words like salt, oil,"
         , " or garlic, or maybe by words like green, bitter, healthy, or eat."
@@ -699,14 +700,43 @@ posts.push(new projectPost(
         , " while disliking it moves both further apart."
         , "<br/>And just to make it interesting, each video has a list of features"
         , " that are passed into the user's judgement function, and the user"
-        , " takes approximately between 1 to 7 or so of them into account"
-        , "<br/>The results were unfortunately not that great. The algorithm"
-        , " correctly predicted if they would like a movie 162 out of 1000 times."
-        , " Since that is lower than the 50% you'd get just guessing, I wonder if my algorithm"
-        , " has a bug somewhere to make it so bad. It is updating the vectors well though, as I can"
-        , " see that users with similar functions do accurately get mapped to similar"
-        , " vectors. This was definitely an interesting and enjoyable project, even"
-        , " if the results weren't what I was hoping for."
+        , " takes only the first few of them into account (a few meaning most use less than 7)."
+        , " You can see the investigation written up in a python-based jupyter notebook,"
+        , " which I've uploaded so it's now viewable "
+        , linkString("here on google colab", "https://colab.research.google.com/drive/1PFPFOiWcWjnem7WncqdzCHm81FymCxVh")
+        , ".<br/>I was working with 1,000 users, 10,000 videos, which each had 10 features between [-10,10)"
+        , "<br/>The results were decent enough for the little amount of training I did."
+        , " I first updated the vectors by training them on 'bots', or basically throway users."
+        , " Each video was reviewed by different 25 bots, over 4 rounds."
+        , " I then had each actual user randomly assigned a number of videos to watch each day (between 20 and 500),"
+        , " and had them watch videos for a week."
+        , " I only showed them videos that were decent suggestions for them, to save on having to find the"
+        , " true best video in the massive number of choices."
+        , "<br/> And the results were decent! Over the course of the week, the average percentage of liked videos went up"
+        , " each day (albeit a small amount). As for the best video we could suggest,"
+        , " random suggested videos were liked around 50% of the time, while"
+        , " our absolute best suggestions were liked around 70% of the time! So definitely an improvement,"
+        , " especially given that we're testing on 1000 users."
+        , "<br/>I also wanted to look at other metrics that are true in word2vec, and see if they"
+        , " are also true here."
+        , "<br/>The first, I compared videos to each other using the true features of them."
+        , " Since not all users used the full"
+        , " list of features, I weighted them based on the population use and did a sort of modified dot product."
+        , " I could then compare videos with their most similar other video."
+        , " The data was generally skewed towards more simlar (around 1), which is better than the"
+        , " random guessing skew of a uniform distribution between -1 and 1."
+        , "<br/>I also wanted to compare the users to each other. This was more difficult as the functions"
+        , " were very difficult to programmatically compare. I instead found users and their best match,"
+        , " had them both watch a random set of videos, and checked if their likes were independent or not."
+        , " The results were bad, as they didn't seem to be any more independent than random selections,"
+        , " although I could definitely have made a statistical error somewhere."
+        , "<br/>Overall, this was a super fun project. I really enjoyed pretending to make bots"
+        , " and build out personalities for the different people. Like making variables for bobs_account"
+        , " and bobs_bestie and then calling bobs_bestie.watch(bobs_suggestion), it was just a fun project."
+        , " Even better, my original results didn't work, and only on trying to fix it up to publish did I"
+        , " realize that I had indeed made a huge bug in the validation of the results. So I was able to"
+        , " fix that, as well as adding a check to ensure the users were realistic, and now have a much"
+        , " cooler project!"
     )
 ));
 
@@ -793,7 +823,7 @@ posts.push(new projectPost(
 
 
 // january 2022
-// Image tagger
+// Image tagger, antileaks
 
 
 // April 2022
@@ -866,7 +896,12 @@ posts.push(new projectPost(
 ));
 
 
+// August 2022
 // Skeleton Code Generator
+
+
+// jan 2023
+// Primitive Shapes
 
 
 
@@ -877,7 +912,8 @@ posts.push(new projectPost(
 // TODO: instead of making a massive javascript file of my projects,
 // instead make a python program to format them all instead?
 // and then just upload all the resulting files? rather than having
-// the user have to load them all every time?
+// the user have to load them all every time? Or even better, have
+// them as individual files here as well, then just load the right one
 
 // TODO: add a way to separate the projects into times/groups now. There's a lot!
 // Could do like a tagging system, then they can pick the tag to group by?

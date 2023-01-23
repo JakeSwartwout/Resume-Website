@@ -110,6 +110,10 @@ body {
     line-height: 135%;
 }
 
+.postContent br {
+    margin-bottom: 7pt;
+}
+
 .imageBoxWrapper {
     width: 99%;
     overflow: auto;
