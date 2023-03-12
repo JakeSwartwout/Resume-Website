@@ -905,6 +905,56 @@ posts.push(new projectPost(
 
 
 
+// Feb 2023
+// Tempus take 2
+
+
+// March 10th 2023
+posts.push(new projectPost(
+    "Screensaver",
+    "Processing", "Java",
+    "Copying a simple Mac screensaver",
+    new Array(
+        "I recently have needed to do some work on a Mac for my job. While I'm doing two things"
+        , " at once, it turns off a lot and shows me this fun screensaver. I was initially shocked"
+        , " that they did a super complex flocking/fluid simulation, until I realized it was likely"
+        , " just perlin noise and my brain was creating more structure than was there."
+        , "<br/>"
+        , "So, I decided to quickly recreate it! It took me under an hour or two."
+        , imageString(
+            "screensaver1.gif",
+            "a grid of rods rotating and growing in a sort of windswept pattern."
+        )
+        , "The results are super"
+        , " satisfying to watch, and I've definitely gotten distracted just staring at it."
+        , imageString(
+            "screensaver2.gif",
+            "a second image of the output program, rods rotating and growing in a windswept pattern"
+        )
+        , "The values are sampled from 3D perlin noise (the max Processing can do). Two of the dimensions"
+        , " are taken for the x and y locations on the screen, so that they remain similar."
+        , " The third value is reserved for time, so that the values evolve over time in a uniform way."
+        , " I considered using a velocity based approach for the time, but it didn't seem worth the effort."
+        , "<br/>"
+        , "The third value is actually used twice, for both the X and Y components of the direction. To do"
+        , " this, I just sampled the Y quite a ways in the future."
+        , "<br/>"
+        , " After finishing, I realized I should have chosen radius and angle instead. I wanted the lines to"
+        , " be either large or small (skipping middle length lines), so ended up converting into magnitude"
+        , " anyways."
+        , "<br/>"
+        , "Definitely a small project though, ended up being just one short file. Suprisingly, the hardest"
+        , " part was that the resolution of my perlin noise wasn't high enough. The animation would sit somewhere,"
+        , " then morph to another form, then sit there again. To solve this, I just had the time component"
+        , " be offset by the y value as well, so if you look closely, you can see virtual lines moving"
+        , " upwards of where it's updating faster."
+        , "<br/>"
+        , "And I was definitely right about reognizing patterns though! I see a lot of swirls in there"
+        , " which are completely random."
+    )
+));
+
+
 
 // TODO: give the posts both a number and also a permanent name, so that
 // I don't have to link to 11, I could link to "luka"
